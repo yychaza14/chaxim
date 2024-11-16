@@ -18,7 +18,7 @@ jobs:
       with:
         fetch-depth: 0
         # Use token with write permissions
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.PAT }}
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -72,6 +72,6 @@ jobs:
         git push
         
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PAT }}
 
       
