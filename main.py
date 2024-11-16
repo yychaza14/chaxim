@@ -392,7 +392,7 @@ def save_to_excel(data: List[List[Any]], filename_prefix: str = "binance_p2p_dat
         logger.error(f"Failed to save data to Excel: {str(e)}")
         raise
 
-def main():
+def mains():
     """Main function to demonstrate API usage."""
     try:
         api = BinanceP2PAPI()
@@ -420,5 +420,5 @@ def main():
         logger.error(f"An unexpected error occurred: {str(e)}")
 
 if __name__ == "__main__":
-    main()
+    mains()
     
