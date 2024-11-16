@@ -63,13 +63,23 @@ jobs:
       env:
         PYTHONUNBUFFERED: 1
 
+     
     - name: Commit and push if there are changes
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        # Configure git
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        
+        # Pull latest changes with rebase
+        git pull --rebase origin main
+        
+        # Add and commit changes
         git add pb2b/
-        git commit -m "Update P2P data $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
-        git push
+        timestamp=$(date -u +'%Y-%m-%d %H:%M:%S UTC')
+        git commit -m "Update P2P data ${timestamp}" || echo "No changes to commit"
+        
+        # Push changes with force if needed (be careful with this!)
+        git push --force-with-lease origin main
         
       env:
         GITHUB_TOKEN: ${{ secrets.PAT }}
