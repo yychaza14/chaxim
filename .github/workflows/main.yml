@@ -65,28 +65,36 @@ jobs:
 
      
       
+     
     - name: Commit and push if there are changes
       run: |
         # Configure git
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         
-        # Stash any changes
-        git stash
+        # Create pb2b directories if they don't exist
+        mkdir -p pb2b/excel pb2b/json pb2b/screenshots pb2b/logs
         
-        # Pull latest changes
-        git pull origin main
+        # Fetch the latest changes
+        git fetch origin main
         
-        # Pop stashed changes
-        git stash pop
+        # Reset to match remote main branch
+        git reset --hard origin/main
         
-        # Add and commit new changes
-        git add pb2b/
-        timestamp=$(date -u +'%Y-%m-%d %H:%M:%S UTC')
-        git commit -m "Update P2P data ${timestamp}" || echo "No changes to commit"
+        # Add all new files and changes
+        git add -f pb2b/excel/*.xlsx
+        git add -f pb2b/json/*.json
+        git add -f pb2b/screenshots/*.png
+        git add -f pb2b/logs/*.log
         
-        # Push changes
-        git push origin main
+        # Create commit if there are changes
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          timestamp=$(date -u +'%Y-%m-%d %H:%M:%S UTC')
+          git commit -m "Update P2P data ${timestamp}"
+          git push origin main
+        fi
         
       env:
         GITHUB_TOKEN: ${{ secrets.PAT }}
