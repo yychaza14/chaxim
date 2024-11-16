@@ -25,13 +25,7 @@ jobs:
       with:
         python-version: '3.9'
         cache: 'pip'
-
-    - name: Update package lists and upgrade packages
-    -run: |
-    -sudo apt-get update
-    -sudo apt-get upgrade -y
-    -continue-on-error: true
-
+        
     - name: Install Chrome and ChromeDriver
       run: |
         # Install or update Chrome
