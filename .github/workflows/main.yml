@@ -9,16 +9,22 @@ on:
 jobs:
   collect-data:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Explicitly grant write permission
+    
 
     steps:
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
+        # Use token with write permissions
+        token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.9'
+        cache: 'pip'
 
     - name: Update package lists and upgrade packages
       run: |
@@ -54,6 +60,8 @@ jobs:
     
     - name: Run scraper
       run: python main.py
+      env:
+        PYTHONUNBUFFERED: 1
 
     - name: Commit and push if there are changes
       run: |
@@ -62,3 +70,8 @@ jobs:
         git add pb2b/
         git commit -m "Update P2P data $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
         git push
+        
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      
