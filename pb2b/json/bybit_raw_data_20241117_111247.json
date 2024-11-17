@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "data": [
+    {
+      "price": 1739.0,
+      "timestamp": "2024-11-17T11:12:47.024489",
+      "available_amount": "69.8976 USDT\n5,000.00 ~ 18,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1740.0,
+      "timestamp": "2024-11-17T11:12:47.070422",
+      "available_amount": "222.0313 USDT\n17,000.00 ~ 17,400.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1740.2,
+      "timestamp": "2024-11-17T11:12:47.115334",
+      "available_amount": "15.5500 USDT\n4,500.00 ~ 17,500.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1740.4,
+      "timestamp": "2024-11-17T11:12:47.160441",
+      "available_amount": "76.5083 USDT\n18,000.00 ~ 20,000.00 NGN",
+      "payment_methods": "Carbon microfinance bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1745.0,
+      "timestamp": "2024-11-17T11:12:46.971093",
+      "available_amount": "48.1349 USDT\n50,000.00 ~ 83,995.40 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "metadata": {
+    "token": "USDT",
+    "fiat": "NGN",
+    "action_type": "buy",
+    "timestamp": "2024-11-17T11:12:47.420082",
+    "total_rows_found": 11,
+    "valid_listings_found": 5
+  }
+}
