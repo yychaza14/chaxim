@@ -347,7 +347,7 @@ def ensure_data_directory(base_dir: str = "p2b") -> str:
         str: Path to the data directory
     """
     # Get the current working directory
-    current_dir = pathlib.Path.cwd()
+    current_dir = Path.cwd()
     
     # Create the data directory path
     data_dir = current_dir / base_dir
