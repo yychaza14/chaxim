@@ -246,4 +246,269 @@ if __name__ == "__main__":
     main()
 
 
+import requests
+import json
+from datetime import datetime
+import pandas as pd
+import logging
+from pathlib import Path
+from typing import Dict, List, Optional, Union
+import time
+from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.util.retry import Retry
+import os
+import sys
+
+class BinanceP2PAPI:
+    """Binance P2P API client with enhanced features and error handling."""
+    
+    BASE_URL = "https://p2p.binance.com/bapi/c2c/v2/friendly/c2c/adv/search"
+    
+    def __init__(self, data_dir: str = "binance_data"):
+        """
+        Initialize the Binance P2P API client.
+        
+        Args:
+            data_dir: Base directory for storing data files
+        """
+        self.data_dir = Path(data_dir)
+        self._setup_directories()
+        self._setup_logging()
+        self._setup_session()
+        
+    def _setup_directories(self) -> None:
+        """Create necessary directory structure for data storage."""
+        directories = {
+            'logs': self.data_dir / 'logs',
+            'excel': self.data_dir / 'excel',
+            'json': self.data_dir / 'json'
+        }
+        
+        # Create directories if they don't exist
+        for directory in directories.values():
+            directory.mkdir(parents=True, exist_ok=True)
+            
+        self.directories = directories
+        
+    def _setup_logging(self) -> None:
+        """Configure logging with rotation and formatting."""
+        log_file = self.directories['logs'] / f'binance_p2p_{datetime.now().strftime("%Y%m%d")}.log'
+        
+        logging.basicConfig(
+            level=logging.INFO,
+            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+            handlers=[
+                logging.FileHandler(log_file),
+                logging.StreamHandler(),
+                logging.handlers.RotatingFileHandler(
+                    log_file, maxBytes=5*1024*1024, backupCount=5
+                )
+            ]
+        )
+        self.logger = logging.getLogger('BinanceP2PAPI')
+        
+    def _setup_session(self) -> None:
+        """Configure requests session with retries and headers."""
+        self.session = requests.Session()
+        
+        # Configure retries
+        retry_strategy = Retry(
+            total=3,
+            backoff_factor=1,
+            status_forcelist=[429, 500, 502, 503, 504]
+        )
+        
+        adapter = HTTPAdapter(max_retries=retry_strategy)
+        self.session.mount("https://", adapter)
+        self.session.mount("http://", adapter)
+        
+        # Set default headers
+        self.session.headers.update({
+            'Accept': '*/*',
+            'Accept-Language': 'en-US,en;q=0.9',
+            'Content-Type': 'application/json',
+            'Origin': 'https://p2p.binance.com',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        })
+
+    def search_advertisements(
+        self,
+        asset: str = "USDT",
+        fiat: str = "XAF",
+        trade_type: str = "BUY",
+        payment_method: Optional[str] = None,
+        page: int = 1,
+        rows: int = 10
+    ) -> Dict:
+        """
+        Search P2P advertisements on Binance.
+        
+        Args:
+            asset: Cryptocurrency asset (e.g., "USDT")
+            fiat: Fiat currency (e.g., "XAF")
+            trade_type: Type of trade ("BUY" or "SELL")
+            payment_method: Optional payment method filter
+            page: Page number for pagination
+            rows: Number of rows per page
+            
+        Returns:
+            Dictionary containing API response or error information
+        """
+        payload = {
+            "asset": asset,
+            "fiat": fiat,
+            "merchantCheck": True,
+            "page": page,
+            "payTypes": [payment_method] if payment_method else [],
+            "publisherType": None,
+            "rows": rows,
+            "tradeType": trade_type
+        }
+        
+        self.logger.info(f"Searching advertisements: {asset}/{fiat} - {trade_type}")
+        
+        try:
+            response = self.session.post(self.BASE_URL, json=payload)
+            response.raise_for_status()
+            
+            return {
+                "success": True,
+                "data": response.json().get("data", []),
+                "metadata": {
+                    "asset": asset,
+                    "fiat": fiat,
+                    "trade_type": trade_type,
+                    "timestamp": datetime.now().isoformat(),
+                    "total_rows": len(response.json().get("data", []))
+                }
+            }
+            
+        except requests.exceptions.RequestException as e:
+            error_msg = f"Request failed: {str(e)}"
+            self.logger.error(error_msg)
+            return {
+                "success": False,
+                "code": "request_failed",
+                "message": error_msg,
+                "data": None
+            }
+        except Exception as e:
+            error_msg = f"Unexpected error: {str(e)}"
+            self.logger.error(error_msg)
+            return {
+                "success": False,
+                "code": "unexpected_error",
+                "message": error_msg,
+                "data": None
+            }
+
+    def save_data(self, response: Dict, prefix: str = "") -> Dict[str, Path]:
+        """
+        Save API response data to files.
+        
+        Args:
+            response: API response dictionary
+            prefix: Optional prefix for filenames
+            
+        Returns:
+            Dictionary with paths to saved files
+        """
+        if not response["success"]:
+            self.logger.error("Cannot save unsuccessful response")
+            return {}
+        
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        base_filename = f"{prefix}_{timestamp}" if prefix else timestamp
+        saved_files = {}
+        
+        try:
+            # Save raw JSON
+            json_path = self.directories['json'] / f"{base_filename}.json"
+            with open(json_path, 'w') as f:
+                json.dump(response, f, indent=2)
+            saved_files['json'] = json_path
+            
+            # Save to Excel
+            if response.get("data"):
+                excel_data = []
+                for ad in response["data"]:
+                    excel_data.append({
+                        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                        "price": ad["adv"]["price"],
+                        "amount": ad["adv"]["surplusAmount"],
+                        "merchant": ad["advertiser"].get("nickName", "Unknown"),
+                        "payment_methods": ", ".join(method["identifier"] for method in ad["adv"]["tradeMethods"])
+                    })
+                
+                df = pd.DataFrame(excel_data)
+                excel_path = self.directories['excel'] / f"{base_filename}.xlsx"
+                df.to_excel(excel_path, index=False)
+                saved_files['excel'] = excel_path
+            
+            self.logger.info(f"Data saved successfully: {', '.join(str(p) for p in saved_files.values())}")
+            return saved_files
+            
+        except Exception as e:
+            self.logger.error(f"Error saving data: {str(e)}")
+            return {}
+
+def setup_github_actions_env():
+    """Configure environment for GitHub Actions."""
+    if os.getenv('GITHUB_ACTIONS') == 'true':
+        # Create artifact directory
+        artifact_dir = Path(os.getenv('GITHUB_WORKSPACE', '.')) / 'artifacts'
+        artifact_dir.mkdir(exist_ok=True)
+        return artifact_dir
+    return None
+
+def main():
+    # Setup for GitHub Actions if running in that environment
+    artifact_dir = setup_github_actions_env()
+    base_dir = artifact_dir if artifact_dir else "binance_data"
+    
+    api = BinanceP2PAPI(data_dir=base_dir)
+    
+    try:
+        # Multiple currency pairs can be processed
+        pairs = [
+            {"asset": "USDT", "fiat": "XAF"},
+            {"asset": "USDT", "fiat": "NGN"}
+        ]
+        
+        for pair in pairs:
+            response = api.search_advertisements(
+                asset=pair["asset"],
+                fiat=pair["fiat"],
+                trade_type="BUY",
+                rows=20
+            )
+            
+            if response["success"]:
+                saved_files = api.save_data(
+                    response,
+                    prefix=f"binance_p2p_{pair['asset']}_{pair['fiat']}"
+                )
+                
+                if saved_files:
+                    print(f"\nData saved for {pair['asset']}/{pair['fiat']}:")
+                    for file_type, path in saved_files.items():
+                        print(f"{file_type.upper()}: {path}")
+                    
+                    if response["data"]:
+                        prices = [float(ad["adv"]["price"]) for ad in response["data"]]
+                        print(f"\nPrice Summary ({pair['fiat']}):")
+                        print(f"Lowest: {min(prices)}")
+                        print(f"Highest: {max(prices)}")
+                        print(f"Average: {sum(prices)/len(prices):.2f}")
+            else:
+                print(f"Error fetching {pair['asset']}/{pair['fiat']}: {response['message']}")
+                
+    except Exception as e:
+        print(f"Error in main execution: {str(e)}")
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()
+
+
 
