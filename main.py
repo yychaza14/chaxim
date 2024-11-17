@@ -287,7 +287,7 @@ class BinanceP2PAPI:
             'Origin': 'https://p2p.binance.com',
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
         })
-        self._setup_directories()
+        self.ensure_data_directory()
 
     def search_advertisements(
         self,
