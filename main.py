@@ -272,11 +272,11 @@ class BinanceP2PAPI:
             data_dir: Base directory for storing data files
         """
         self.data_dir = Path(data_dir)
-        self._setup_directoriess()
-        self._setup_loggings()
-        self._setup_sessions()
+        self._setup_directories()
+        self._setup_logging()
+        self._setup_session()
         
-    def _setup_directoriess(self) -> None:
+    def _setup_directories(self) -> None:
         """Create necessary directory structure for data storage."""
         directories = {
             'logs': self.data_dir / 'logs',
@@ -290,24 +290,22 @@ class BinanceP2PAPI:
             
         self.directories = directories
         
-    def _setup_loggings(self) -> None:
-        """Configure logging with rotation and formatting."""
+    def _setup_logging(self) -> None:
+        """Configure logging with basic configuration."""
         log_file = self.directories['logs'] / f'binance_p2p_{datetime.now().strftime("%Y%m%d")}.log'
         
+        # Simpler logging setup without rotation
         logging.basicConfig(
             level=logging.INFO,
             format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
             handlers=[
                 logging.FileHandler(log_file),
-                logging.StreamHandler(),
-                logging.handlers.RotatingFileHandler(
-                    log_file, maxBytes=5*1024*1024, backupCount=5
-                )
+                logging.StreamHandler()
             ]
         )
         self.logger = logging.getLogger('BinanceP2PAPI')
         
-    def _setup_sessions(self) -> None:
+    def _setup_session(self) -> None:
         """Configure requests session with retries and headers."""
         self.session = requests.Session()
         
