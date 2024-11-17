@@ -271,26 +271,25 @@ class BinanceP2PAPI:
         Args:
             data_dir: Base directory for storing data files
         """
-        self.data_dir = Path(data_dir)
+        #self.data_dir = Path(data_dir)
         self._setup_directories()
         self._setup_logging()
         self._setup_session()
         
-    def _setup_directories(self) -> None:
+    def _setup_directories(self):
         """Create necessary directory structure for data storage."""
         # Define directories relative to the base data directory
-        self.directories = {
-            'logs': self.data_dir / 'logs',
-            'excel': self.data_dir / 'excel',
-            'json': self.data_dir / 'json'
-        }
+        self.data_dir = Path('binance_data')
+        self.data_dir.mkdir(exist_ok=True)
         
-        # Create directories with proper permissions
-        for directory in self.directories.values():
-            directory.mkdir(parents=True, exist_ok=True)
-            # Ensure directory has write permissions
-            if os.name != 'nt':  # Skip on Windows
-                os.chmod(directory, 0o777)
+        # Create subdirectories for different types of data
+        self.logs_dir = self.data_dir / 'logs'
+        self.excel_dir = self.data_dir / 'excel'
+        self.json_dir = self.data_dir / 'json'
+        
+        for directory in [self.logs_dir, self.excel_dir, self.json_dir]:
+            directory.mkdir(exist_ok=True)
+
             
     def _setup_logging(self) -> None:
         """Configure logging with GitHub Actions-compatible setup."""
