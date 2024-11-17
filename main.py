@@ -336,61 +336,16 @@ class BinanceP2PAPI:
                 "data": None
             }
 
-def ensure_data_directory(base_dir: str = "p2b") -> str:
-    """
-    Ensure the data directory exists and return its path.
-    
-    Args:
-        base_dir (str): Base directory name for storing data files
-        
-    Returns:
-        str: Path to the data directory
-    """
-    # Get the current working directory
-    current_dir = Path.cwd()
-    
-    # Create the data directory path
-    data_dir = current_dir / base_dir
-    
-    # Create the directory if it doesn't exist
-    data_dir.mkdir(parents=True, exist_ok=True)
-    
-    logger.info(f"Using data directory: {data_dir}")
-    return str(data_dir)
+def ensure_data_directory(self):
+        """Set up necessary directories for storing data and logs."""
+        # Create base directory for all data
+        self.data_dir = Path('p2b')
+        self.data_dir.mkdir(exist_ok=True)
 
-def save_to_excel(data: List[List[Any]], filename_prefix: str = "binance_p2p_data") -> str:
-    """
-    Save the provided data to an Excel file with timestamp in the p2b directory.
-    
-    Args:
-        data (List[List[Any]]): List of rows containing timestamp and price data
-        filename_prefix (str): Prefix for the output filename
-        
-    Returns:
-        str: The name of the created file
-    """
-    try:
-        # Ensure the data directory exists
-        data_dir = ensure_data_directory()
-        
-        # Create DataFrame
-        df = pd.DataFrame(data, columns=["Timestamp", "Price"])
-        
-        # Generate filename with timestamp
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        filename = f"{filename_prefix}_{timestamp}.xlsx"
-        
-        # Create full file path
-        file_path = os.path.join(data_dir, filename)
-        
-        # Save the file
-        df.to_excel(file_path, index=False)
-        logger.info(f"Data successfully saved to {file_path}")
-        
-        return file_path
-    except Exception as e:
-        logger.error(f"Failed to save data to Excel: {str(e)}")
-        raise
+def save_to_excels(self, data: List[Dict]):
+    """Save the scraped data to an Excel file in the excel directory."""
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    filename = self.excel_dir / f"binance{timestamp}.xlsx"
 
 def mains():
     """Main function to demonstrate API usage."""
@@ -411,7 +366,7 @@ def mains():
                 for ad in response["data"]
             ]
             
-            filename = save_to_excel(data)
+            filename = save_to_excels(data)
             logger.info(f"Data successfully saved to {filename}")
         else:
             logger.error(f"API request failed: {response.get('message', 'Unknown error')}")
