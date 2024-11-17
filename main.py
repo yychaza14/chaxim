@@ -278,29 +278,34 @@ class BinanceP2PAPI:
         
     def _setup_directories(self) -> None:
         """Create necessary directory structure for data storage."""
-        directories = {
+        # Define directories relative to the base data directory
+        self.directories = {
             'logs': self.data_dir / 'logs',
             'excel': self.data_dir / 'excel',
             'json': self.data_dir / 'json'
         }
         
-        # Create directories if they don't exist
-        for directory in directories.values():
+        # Create directories with proper permissions
+        for directory in self.directories.values():
             directory.mkdir(parents=True, exist_ok=True)
+            # Ensure directory has write permissions
+            if os.name != 'nt':  # Skip on Windows
+                os.chmod(directory, 0o777)
             
-        self.directories = directories
-        
     def _setup_logging(self) -> None:
-        """Configure logging with basic configuration."""
+        """Configure logging with GitHub Actions-compatible setup."""
         log_file = self.directories['logs'] / f'binance_p2p_{datetime.now().strftime("%Y%m%d")}.log'
         
-        # Simpler logging setup without rotation
+        # Ensure log directory exists and is writable
+        log_file.parent.mkdir(parents=True, exist_ok=True)
+        
+        # Configure logging to both file and console
         logging.basicConfig(
             level=logging.INFO,
             format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
             handlers=[
-                logging.FileHandler(log_file),
-                logging.StreamHandler()
+                logging.FileHandler(log_file, mode='a'),
+                logging.StreamHandler(sys.stdout)  # Explicitly log to stdout for GitHub Actions
             ]
         )
         self.logger = logging.getLogger('BinanceP2PAPI')
@@ -309,7 +314,6 @@ class BinanceP2PAPI:
         """Configure requests session with retries and headers."""
         self.session = requests.Session()
         
-        # Configure retries
         retry_strategy = Retry(
             total=3,
             backoff_factor=1,
@@ -320,13 +324,12 @@ class BinanceP2PAPI:
         self.session.mount("https://", adapter)
         self.session.mount("http://", adapter)
         
-        # Set default headers
         self.session.headers.update({
             'Accept': '*/*',
             'Accept-Language': 'en-US,en;q=0.9',
             'Content-Type': 'application/json',
             'Origin': 'https://p2p.binance.com',
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
         })
 
     def search_advertisements(
@@ -338,20 +341,7 @@ class BinanceP2PAPI:
         page: int = 1,
         rows: int = 10
     ) -> Dict:
-        """
-        Search P2P advertisements on Binance.
-        
-        Args:
-            asset: Cryptocurrency asset (e.g., "USDT")
-            fiat: Fiat currency (e.g., "XAF")
-            trade_type: Type of trade ("BUY" or "SELL")
-            payment_method: Optional payment method filter
-            page: Page number for pagination
-            rows: Number of rows per page
-            
-        Returns:
-            Dictionary containing API response or error information
-        """
+        """Search P2P advertisements on Binance."""
         payload = {
             "asset": asset,
             "fiat": fiat,
@@ -369,49 +359,34 @@ class BinanceP2PAPI:
             response = self.session.post(self.BASE_URL, json=payload)
             response.raise_for_status()
             
+            data = response.json()
+            if not isinstance(data, dict) or "data" not in data:
+                raise ValueError("Invalid response format from Binance API")
+                
             return {
                 "success": True,
-                "data": response.json().get("data", []),
+                "data": data.get("data", []),
                 "metadata": {
                     "asset": asset,
                     "fiat": fiat,
                     "trade_type": trade_type,
                     "timestamp": datetime.now().isoformat(),
-                    "total_rows": len(response.json().get("data", []))
+                    "total_rows": len(data.get("data", []))
                 }
             }
             
         except requests.exceptions.RequestException as e:
             error_msg = f"Request failed: {str(e)}"
             self.logger.error(error_msg)
-            return {
-                "success": False,
-                "code": "request_failed",
-                "message": error_msg,
-                "data": None
-            }
+            return {"success": False, "code": "request_failed", "message": error_msg}
         except Exception as e:
             error_msg = f"Unexpected error: {str(e)}"
             self.logger.error(error_msg)
-            return {
-                "success": False,
-                "code": "unexpected_error",
-                "message": error_msg,
-                "data": None
-            }
+            return {"success": False, "code": "unexpected_error", "message": error_msg}
 
     def save_data(self, response: Dict, prefix: str = "") -> Dict[str, Path]:
-        """
-        Save API response data to files.
-        
-        Args:
-            response: API response dictionary
-            prefix: Optional prefix for filenames
-            
-        Returns:
-            Dictionary with paths to saved files
-        """
-        if not response["success"]:
+        """Save API response data to files."""
+        if not response.get("success"):
             self.logger.error("Cannot save unsuccessful response")
             return {}
         
@@ -420,13 +395,13 @@ class BinanceP2PAPI:
         saved_files = {}
         
         try:
-            # Save raw JSON
+            # Save JSON with explicit encoding
             json_path = self.directories['json'] / f"{base_filename}.json"
-            with open(json_path, 'w') as f:
-                json.dump(response, f, indent=2)
+            with open(json_path, 'w', encoding='utf-8') as f:
+                json.dump(response, f, indent=2, ensure_ascii=False)
             saved_files['json'] = json_path
             
-            # Save to Excel
+            # Save Excel if we have data
             if response.get("data"):
                 excel_data = []
                 for ad in response["data"]:
@@ -443,6 +418,11 @@ class BinanceP2PAPI:
                 df.to_excel(excel_path, index=False)
                 saved_files['excel'] = excel_path
             
+            # Ensure files are readable by GitHub Actions
+            for file_path in saved_files.values():
+                if os.name != 'nt':  # Skip on Windows
+                    os.chmod(file_path, 0o666)
+            
             self.logger.info(f"Data saved successfully: {', '.join(str(p) for p in saved_files.values())}")
             return saved_files
             
@@ -450,24 +430,31 @@ class BinanceP2PAPI:
             self.logger.error(f"Error saving data: {str(e)}")
             return {}
 
-def setup_github_actions_env():
-    """Configure environment for GitHub Actions."""
+def setup_github_actions_env() -> Optional[Path]:
+    """Configure environment for GitHub Actions with proper artifact handling."""
     if os.getenv('GITHUB_ACTIONS') == 'true':
-        # Create artifact directory
-        artifact_dir = Path(os.getenv('GITHUB_WORKSPACE', '.')) / 'artifacts'
-        artifact_dir.mkdir(exist_ok=True)
+        # Use GITHUB_WORKSPACE as base directory
+        workspace = Path(os.getenv('GITHUB_WORKSPACE', '.'))
+        
+        # Create artifact directory within workspace
+        artifact_dir = workspace / 'artifacts'
+        artifact_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Ensure directory is writable
+        if os.name != 'nt':  # Skip on Windows
+            os.chmod(artifact_dir, 0o777)
+        
         return artifact_dir
     return None
 
 def mains():
-    # Setup for GitHub Actions if running in that environment
-    artifact_dir = setup_github_actions_env()
-    base_dir = artifact_dir if artifact_dir else "binance_data"
-    
-    api = BinanceP2PAPI(data_dir=base_dir)
-    
+    # Setup for GitHub Actions with proper error handling
     try:
-        # Multiple currency pairs can be processed
+        artifact_dir = setup_github_actions_env()
+        base_dir = str(artifact_dir) if artifact_dir else "binance_data"
+        
+        api = BinanceP2PAPI(data_dir=base_dir)
+        
         pairs = [
             {"asset": "USDT", "fiat": "XAF"},
             {"asset": "USDT", "fiat": "NGN"}
@@ -499,10 +486,10 @@ def mains():
                         print(f"Highest: {max(prices)}")
                         print(f"Average: {sum(prices)/len(prices):.2f}")
             else:
-                print(f"Error fetching {pair['asset']}/{pair['fiat']}: {response['message']}")
+                print(f"Error fetching {pair['asset']}/{pair['fiat']}: {response.get('message')}")
                 
     except Exception as e:
-        print(f"Error in main execution: {str(e)}")
+        print(f"Critical error in main execution: {str(e)}")
         sys.exit(1)
 
 if __name__ == "__main__":
