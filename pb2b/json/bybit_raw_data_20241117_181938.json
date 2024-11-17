@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "data": [
+    {
+      "price": 1739.99,
+      "timestamp": "2024-11-17T18:19:37.808519",
+      "available_amount": "177.6438 USDT\n10,000.00 ~ 25,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1740.0,
+      "timestamp": "2024-11-17T18:19:37.854307",
+      "available_amount": "12.5286 USDT\n20,000.00 ~ 21,799.76 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1740.0,
+      "timestamp": "2024-11-17T18:19:37.897994",
+      "available_amount": "370.2892 USDT\n10,000.00 ~ 20,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1740.0,
+      "timestamp": "2024-11-17T18:19:37.942886",
+      "available_amount": "129.5589 USDT\n5,000.00 ~ 225,432.48 NGN",
+      "payment_methods": "Kuda BankPalmPayOpay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1745.98,
+      "timestamp": "2024-11-17T18:19:37.751160",
+      "available_amount": "314.0540 USDT\n20,000.00 ~ 300,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "metadata": {
+    "token": "USDT",
+    "fiat": "NGN",
+    "action_type": "buy",
+    "timestamp": "2024-11-17T18:19:38.061254",
+    "total_rows_found": 11,
+    "valid_listings_found": 5
+  }
+}
