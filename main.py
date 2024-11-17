@@ -272,11 +272,11 @@ class BinanceP2PAPI:
             data_dir: Base directory for storing data files
         """
         self.data_dir = Path(data_dir)
-        self._setup_directories()
-        self._setup_logging()
-        self._setup_session()
+        self._setup_directoriess()
+        self._setup_loggings()
+        self._setup_sessions()
         
-    def _setup_directories(self) -> None:
+    def _setup_directoriess(self) -> None:
         """Create necessary directory structure for data storage."""
         directories = {
             'logs': self.data_dir / 'logs',
@@ -290,7 +290,7 @@ class BinanceP2PAPI:
             
         self.directories = directories
         
-    def _setup_logging(self) -> None:
+    def _setup_loggings(self) -> None:
         """Configure logging with rotation and formatting."""
         log_file = self.directories['logs'] / f'binance_p2p_{datetime.now().strftime("%Y%m%d")}.log'
         
@@ -307,7 +307,7 @@ class BinanceP2PAPI:
         )
         self.logger = logging.getLogger('BinanceP2PAPI')
         
-    def _setup_session(self) -> None:
+    def _setup_sessions(self) -> None:
         """Configure requests session with retries and headers."""
         self.session = requests.Session()
         
@@ -461,7 +461,7 @@ def setup_github_actions_env():
         return artifact_dir
     return None
 
-def main():
+def mains():
     # Setup for GitHub Actions if running in that environment
     artifact_dir = setup_github_actions_env()
     base_dir = artifact_dir if artifact_dir else "binance_data"
@@ -508,7 +508,7 @@ def main():
         sys.exit(1)
 
 if __name__ == "__main__":
-    main()
+    mains()
 
 
 
