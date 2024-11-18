@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write  # Explicitly grant write permission
+      files: write
     
 
     steps:
@@ -19,6 +20,11 @@ jobs:
         fetch-depth: 0
         # Use token with write permissions
         token: ${{ secrets.PAT }}
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: binance-p2p-data
+        path: ${{ github.workspace }}/artifacts
 
     - name: Set up Python
       uses: actions/setup-python@v4
