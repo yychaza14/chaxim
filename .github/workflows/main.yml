@@ -61,46 +61,67 @@ jobs:
         mkdir -p pb2b/{excel,json,screenshots,logs}
         mkdir -p binance_data/{excel,json,logs}
         
-        # Attempt to push changes with retry logic
-        MAX_RETRIES=3
-        RETRY_COUNT=0
-        
-        while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
-          # Pull latest changes with rebase
-          git pull --rebase origin main
+        # Function to handle git operations with retry logic
+        handle_git_operations() {
+          MAX_RETRIES=3
+          RETRY_COUNT=0
           
-          # Add all new files
-          git add -f pb2b/excel/*.xlsx pb2b/json/*.json pb2b/screenshots/*.png pb2b/logs/*.log
-          git add -f binance_data/excel/*.xlsx binance_data/json/*.json binance_data/logs/*.log
-          
-          # Check if there are changes to commit
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-          
-          # Create timestamp for commit message
-          timestamp=$(date -u +'%Y-%m-%d %H:%M:%S UTC')
-          
-          # Commit changes
-          git commit -m "Update P2P data ${timestamp}"
-          
-          # Try to push changes
-          if git push origin main; then
-            echo "Successfully pushed changes"
-            exit 0
-          else
-            echo "Push failed, attempt $(($RETRY_COUNT + 1)) of $MAX_RETRIES"
-            RETRY_COUNT=$(($RETRY_COUNT + 1))
-            if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
-              echo "Waiting before retry..."
-              sleep 10
+          while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+            echo "Attempt $(($RETRY_COUNT + 1)) of $MAX_RETRIES"
+            
+            # Reset any changes and clean untracked files
+            git reset --hard
+            git clean -fd
+            
+            # Fetch latest changes
+            git fetch origin main
+            
+            # Reset to origin/main
+            git reset --hard origin/main
+            
+            # Stage all new files
+            git add -f pb2b/excel/*.xlsx 2>/dev/null || true
+            git add -f pb2b/json/*.json 2>/dev/null || true
+            git add -f pb2b/screenshots/*.png 2>/dev/null || true
+            git add -f pb2b/logs/*.log 2>/dev/null || true
+            git add -f binance_data/excel/*.xlsx 2>/dev/null || true
+            git add -f binance_data/json/*.json 2>/dev/null || true
+            git add -f binance_data/logs/*.log 2>/dev/null || true
+            
+            # Check if there are changes to commit
+            if git diff --staged --quiet; then
+              echo "No changes to commit"
+              return 0
             fi
-          fi
-        done
-        
-        if [ $RETRY_COUNT -eq $MAX_RETRIES ]; then
+            
+            # Create timestamp and commit
+            timestamp=$(date -u +'%Y-%m-%d %H:%M:%S UTC')
+            git commit -m "Update P2P data ${timestamp}"
+            
+            # Try to push
+            if git push origin main; then
+              echo "Successfully pushed changes"
+              return 0
+            else
+              echo "Push failed, retrying..."
+              RETRY_COUNT=$(($RETRY_COUNT + 1))
+              if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
+                echo "Waiting 10 seconds before retry..."
+                sleep 10
+              fi
+            fi
+          done
+          
           echo "Failed to push changes after $MAX_RETRIES attempts"
+          return 1
+        }
+        
+        # Execute git operations
+        handle_git_operations
+        exit_code=$?
+        
+        if [ $exit_code -ne 0 ]; then
+          echo "Git operations failed"
           exit 1
         fi
       env:
