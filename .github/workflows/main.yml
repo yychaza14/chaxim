@@ -20,15 +20,6 @@ jobs:
         # Use token with write permissions
         token: ${{ secrets.PAT }}
         
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: binance-p2p-data
-        path: ${{ github.workspace }}/artifacts
-        # Optional parameters for v4:
-        retention-days: 90  # How long to retain artifacts (default is 90 days)
-        if-no-files-found: warn  # Options: warn, error, ignore
-        compression-level: normal # Options: none, fast, normal, maximum
 
     - name: Set up Python
       uses: actions/setup-python@v4
