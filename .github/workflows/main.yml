@@ -2,7 +2,7 @@ name: Bybit and Binance P2P Data Collection
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '*/10 * * * *'  # Run every 10 minutes
   workflow_dispatch:
 
 jobs:
