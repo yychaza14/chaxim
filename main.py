@@ -461,7 +461,7 @@ def mains():
         
         pairs = [
             {"asset": "USDT", "fiat": "XAF"},
-            {"asset": "USDT", "fiat": "NGN"}
+            {"asset": "USDT", "fiat": "EUR"}
         ]
         
         for pair in pairs:
