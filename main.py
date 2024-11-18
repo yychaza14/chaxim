@@ -270,7 +270,7 @@ class BinanceP2PAPI:
         Args:
             data_dir: Base directory for storing data files
         """
-        self.data_dir = Path(data_dir)
+        self.data_dir = Path('binanace_data')
         self._setup_directories()
         self._setup_logging()
         self._setup_session()
