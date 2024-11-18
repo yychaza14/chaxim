@@ -90,6 +90,29 @@ jobs:
           git commit -m "Update P2P data ${timestamp}"
           git push origin main
         fi
+
+        # Create pb2b directories if they don't exist
+        mkdir -p binance_data/excel binance_data/json binance_data/logs
+        
+        # Fetch the latest changes
+        git fetch origin main
+        
+        # Reset to match remote main branch
+        git reset --hard origin/main
+        
+        # Add all new files and changes
+        git add -f binance_data/excel/*.xlsx
+        git add -f binance_data/json/*.json
+        git add -f binance_data/logs/*.log
+        
+        # Create commit if there are changes
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          timestamp=$(date -u +'%Y-%m-%d %H:%M:%S UTC')
+          git commit -m "Update binance_data data ${timestamp}"
+          git push origin main
+        fi
         
       env:
         GITHUB_TOKEN: ${{ secrets.PAT }}
