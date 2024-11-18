@@ -1,26 +1,22 @@
-name: Bybit and binance P2P Data Collection
+name: Bybit and Binance P2P Data Collection
 
 on:
   schedule:
-    # Run every hour
     - cron: '0 * * * *'
-  workflow_dispatch:  # Allows manual triggering
+  workflow_dispatch:
 
 jobs:
   collect-data:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # Explicitly grant write permission
+      contents: write
     
-
     steps:
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
-        # Use token with write permissions
         token: ${{ secrets.PAT }}
         
-
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
@@ -29,17 +25,14 @@ jobs:
         
     - name: Install Chrome and ChromeDriver
       run: |
-        # Install or update Chrome
         wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/google.gpg
         echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google.list
         sudo apt-get update
         sudo apt-get install -y google-chrome-stable || echo "Chrome is already installed"
           
-        # Install matching ChromeDriver version
         CHROME_VERSION=$(google-chrome --version | cut -d ' ' -f3 | cut -d '.' -f1)
         CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
         
-        # Only download and install ChromeDriver if not already present or if version mismatch
         if ! command -v chromedriver &> /dev/null || \
            [[ $(chromedriver --version | cut -d ' ' -f2 | cut -d '.' -f1) != $CHROME_VERSION ]]; then
           wget -q "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
@@ -57,64 +50,58 @@ jobs:
       run: python main.py
       env:
         PYTHONUNBUFFERED: 1
-
-     
-      
-     
-    - name: Commit and push if there are changes
+    
+    - name: Commit and push changes
       run: |
         # Configure git
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         
-        # Create pb2b directories if they don't exist
-        mkdir -p pb2b/excel pb2b/json pb2b/screenshots pb2b/logs
+        # Create directories if they don't exist
+        mkdir -p pb2b/{excel,json,screenshots,logs}
+        mkdir -p binance_data/{excel,json,logs}
         
-        # Fetch the latest changes
-        git fetch origin main
+        # Attempt to push changes with retry logic
+        MAX_RETRIES=3
+        RETRY_COUNT=0
         
-        # Reset to match remote main branch
-        git reset --hard origin/main
-        
-        # Add all new files and changes
-        git add -f pb2b/excel/*.xlsx
-        git add -f pb2b/json/*.json
-        git add -f pb2b/screenshots/*.png
-        git add -f pb2b/logs/*.log
-        
-        # Create commit if there are changes
-        if git diff --staged --quiet; then
-          echo "No changes to commit"
-        else
+        while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+          # Pull latest changes with rebase
+          git pull --rebase origin main
+          
+          # Add all new files
+          git add -f pb2b/excel/*.xlsx pb2b/json/*.json pb2b/screenshots/*.png pb2b/logs/*.log
+          git add -f binance_data/excel/*.xlsx binance_data/json/*.json binance_data/logs/*.log
+          
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          
+          # Create timestamp for commit message
           timestamp=$(date -u +'%Y-%m-%d %H:%M:%S UTC')
+          
+          # Commit changes
           git commit -m "Update P2P data ${timestamp}"
-          git push origin main
+          
+          # Try to push changes
+          if git push origin main; then
+            echo "Successfully pushed changes"
+            exit 0
+          else
+            echo "Push failed, attempt $(($RETRY_COUNT + 1)) of $MAX_RETRIES"
+            RETRY_COUNT=$(($RETRY_COUNT + 1))
+            if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
+              echo "Waiting before retry..."
+              sleep 10
+            fi
+          fi
+        done
+        
+        if [ $RETRY_COUNT -eq $MAX_RETRIES ]; then
+          echo "Failed to push changes after $MAX_RETRIES attempts"
+          exit 1
         fi
-
-        # Create pb2b directories if they don't exist
-        mkdir -p binance_data/excel binance_data/json binance_data/logs
-        
-        # Fetch the latest changes
-        git fetch origin main
-        
-        # Reset to match remote main branch
-        git reset --hard origin/main
-        
-        # Add all new files and changes
-        git add -f binance_data/excel/*.xlsx
-        git add -f binance_data/json/*.json
-        git add -f binance_data/logs/*.log
-        
-        # Create commit if there are changes
-        if git diff --staged --quiet; then
-          echo "No changes to commit"
-        else
-          timestamp=$(date -u +'%Y-%m-%d %H:%M:%S UTC')
-          git commit -m "Update binance_data data ${timestamp}"
-          git push origin main
-        fi
-        
       env:
         GITHUB_TOKEN: ${{ secrets.PAT }}
-
-      
