@@ -244,7 +244,7 @@ def main():
 
 if __name__ == "__main__":
     main()'''
-
+'''
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -870,6 +870,275 @@ def mains():
         sys.exit(1)
 
 if __name__ == "__main__":
-    mains()
+    mains()'''
+
+
+import pandas as pd
+import json
+import logging
+from datetime import datetime
+from pathlib import Path
+from typing import Dict, List, Optional, Union
+
+class CombinedDataSaver:
+    """A class responsible for saving combined P2P marketplace data."""
+    
+    def __init__(self, base_directory: Union[str, Path] = 'p2p_data'):
+        """
+        Initialize the CombinedDataSaver with a base directory for storing files.
+        
+        Args:
+            base_directory (Union[str, Path]): Base directory for storing all data files
+        """
+        self.base_dir = Path(base_directory)
+        self._setup_directories()
+        self._setup_logging()
+
+    def _setup_directories(self) -> None:
+        """Create necessary directories for storing different types of data."""
+        # Create base directory if it doesn't exist
+        self.base_dir.mkdir(exist_ok=True)
+        
+        # Create subdirectories for different data types
+        self.logs_dir = self.base_dir / 'logs'
+        self.excel_dir = self.base_dir / 'excel'
+        self.json_dir = self.base_dir / 'json'
+        
+        for directory in [self.logs_dir, self.excel_dir, self.json_dir]:
+            directory.mkdir(exist_ok=True)
+
+    def _setup_logging(self) -> None:
+        """Set up logging configuration."""
+        log_file = self.logs_dir / f'combined_p2p_data_{datetime.now().strftime("%Y%m%d")}.log'
+        
+        logging.basicConfig(
+            level=logging.INFO,
+            format='%(asctime)s - %(levelname)s - %(message)s',
+            datefmt='%Y-%m-%d %H:%M:%S',
+            handlers=[
+                logging.FileHandler(log_file),
+                logging.StreamHandler()
+            ]
+        )
+        self.logger = logging.getLogger(__name__)
+        self.logger.info(f"CombinedDataSaver logging initialized. Log file: {log_file}")
+
+    def _generate_filename(self, prefix: str, extension: str) -> str:
+        """
+        Generate a filename with timestamp.
+        
+        Args:
+            prefix (str): Prefix for the filename
+            extension (str): File extension
+            
+        Returns:
+            str: Generated filename
+        """
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        return f"{prefix}_{timestamp}.{extension}"
+
+    def combine_p2p_data(
+        self, 
+        bybit_data: Dict[str, Union[bool, List[Dict], str]], 
+        binance_data: Dict[str, Union[bool, List[Dict], str]]
+    ) -> Dict[str, Union[bool, List[Dict], str]]:
+        """
+        Combine data from Bybit and Binance P2P sources.
+        
+        Args:
+            bybit_data (Dict): Data from Bybit P2P scraper
+            binance_data (Dict): Data from Binance P2P API
+            
+        Returns:
+            Dict: Combined P2P marketplace data
+        """
+        combined_data = {
+            "success": bybit_data.get("success", False) or binance_data.get("success", False),
+            "data": [],
+            "metadata": {
+                "sources": [],
+                "timestamp": datetime.now().isoformat()
+            }
+        }
+        
+        # Normalize and add Bybit data
+        if bybit_data.get("success") and bybit_data.get("data"):
+            combined_data["data"].extend([
+                {
+                    "source": "Bybit",
+                    **entry,
+                    "platform_metadata": bybit_data.get("metadata", {})
+                } for entry in bybit_data["data"]
+            ])
+            combined_data["metadata"]["sources"].append("Bybit")
+        
+        # Normalize and add Binance data
+        if binance_data.get("success") and binance_data.get("data"):
+            combined_data["data"].extend([
+                {
+                    "source": "Binance",
+                    "price": float(ad["adv"]["price"]),
+                    "available_amount": ad["adv"]["surplusAmount"],
+                    "merchant_name": ad["advertiser"].get("nickName", "Unknown"),
+                    "payment_methods": ", ".join(method["identifier"] for method in ad["adv"]["tradeMethods"]),
+                    "timestamp": datetime.now().isoformat(),
+                    "platform_metadata": binance_data.get("metadata", {})
+                } for ad in binance_data["data"]
+            ])
+            combined_data["metadata"]["sources"].append("Binance")
+        
+        # Sort combined data by price
+        combined_data["data"].sort(key=lambda x: x["price"])
+        
+        # Add aggregated statistics
+        if combined_data["data"]:
+            prices = [entry["price"] for entry in combined_data["data"]]
+            combined_data["metadata"].update({
+                "total_listings": len(combined_data["data"]),
+                "price_stats": {
+                    "lowest_price": min(prices),
+                    "highest_price": max(prices),
+                    "average_price": sum(prices) / len(prices)
+                }
+            })
+        
+        return combined_data
+
+    def save_to_excel(
+        self, 
+        data: List[Dict],
+        filename_prefix: str = "combined_p2p_data",
+        sheet_name: str = "P2P Listings"
+    ) -> Optional[Path]:
+        """
+        Save combined data to Excel file.
+        
+        Args:
+            data (List[Dict]): Data to save
+            filename_prefix (str): Prefix for the filename
+            sheet_name (str): Name of the Excel sheet
+            
+        Returns:
+            Optional[Path]: Path to saved file if successful, None otherwise
+        """
+        filename = self.excel_dir / self._generate_filename(filename_prefix, "xlsx")
+        
+        try:
+            df = pd.DataFrame(data)
+            df.to_excel(filename, sheet_name=sheet_name, index=False)
+            self.logger.info(f"Combined data successfully saved to Excel: {filename}")
+            return filename
+        except Exception as e:
+            self.logger.error(f"Error saving to Excel: {str(e)}")
+            return None
+
+    def save_to_json(
+        self, 
+        data: Dict,
+        filename_prefix: str = "combined_p2p_data",
+        indent: int = 2
+    ) -> Optional[Path]:
+        """
+        Save combined data to JSON file.
+        
+        Args:
+            data (Dict): Data to save
+            filename_prefix (str): Prefix for the filename
+            indent (int): Number of spaces for JSON indentation
+            
+        Returns:
+            Optional[Path]: Path to saved file if successful, None otherwise
+        """
+        filename = self.json_dir / self._generate_filename(filename_prefix, "json")
+        
+        try:
+            with open(filename, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=indent)
+            self.logger.info(f"Combined data successfully saved to JSON: {filename}")
+            return filename
+        except Exception as e:
+            self.logger.error(f"Error saving to JSON: {str(e)}")
+            return None
+
+    def save_combined_data(
+        self, 
+        bybit_data: Dict[str, Union[bool, List[Dict], str]], 
+        binance_data: Dict[str, Union[bool, List[Dict], str]],
+        excel_prefix: str = "combined_p2p_data",
+        json_prefix: str = "combined_p2p_raw_data"
+    ) -> Dict[str, Optional[Path]]:
+        """
+        Combine and save data from both Bybit and Binance.
+        
+        Args:
+            bybit_data (Dict): Data from Bybit P2P scraper
+            binance_data (Dict): Data from Binance P2P API
+            excel_prefix (str): Prefix for Excel filename
+            json_prefix (str): Prefix for JSON filename
+            
+        Returns:
+            Dict[str, Optional[Path]]: Paths to saved files
+        """
+        results = {
+            'excel_path': None,
+            'json_path': None
+        }
+        
+        # Combine data from both sources
+        combined_data = self.combine_p2p_data(bybit_data, binance_data)
+        
+        if combined_data.get("success") and combined_data.get("data"):
+            results['excel_path'] = self.save_to_excel(
+                combined_data["data"],
+                filename_prefix=excel_prefix
+            )
+            results['json_path'] = self.save_to_json(
+                combined_data,
+                filename_prefix=json_prefix
+            )
+        
+        return results
+
+def main():
+    # Example usage demonstrating how to use the CombinedDataSaver
+    from bybit_scraper import BybitScraper  # Import from your previous script
+    from binance_p2p_api import BinanceP2PAPI  # Import from your previous script
+    
+    bybit_scraper = BybitScraper(headless=True)
+    binance_api = BinanceP2PAPI()
+    data_saver = CombinedDataSaver()
+
+    try:
+        # Fetch Bybit data
+        bybit_result = bybit_scraper.get_p2p_listings(
+            token="USDT",
+            fiat="NGN",
+            action_type="1"
+        )
+
+        # Fetch Binance data
+        binance_result = binance_api.search_advertisements(
+            asset="USDT",
+            fiat="NGN",
+            trade_type="BUY",
+            rows=20
+        )
+
+        # Save combined data
+        saved_files = data_saver.save_combined_data(bybit_result, binance_result)
+
+        # Print summary
+        if saved_files['excel_path']:
+            print(f"\nData saved to Excel: {saved_files['excel_path']}")
+        if saved_files['json_path']:
+            print(f"Data saved to JSON: {saved_files['json_path']}")
+
+    except Exception as e:
+        print(f"Error in main execution: {str(e)}")
+    finally:
+        bybit_scraper.close()
+
+if __name__ == "__main__":
+    main()
 
 
