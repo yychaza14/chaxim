@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "data": [
+    {
+      "price": 1742.0,
+      "timestamp": "2024-11-20T22:35:42.700234",
+      "available_amount": "10.0000 USDT\n4,500.00 ~ 17,420.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1742.0,
+      "timestamp": "2024-11-20T22:35:42.746051",
+      "available_amount": "149.9418 USDT\n4,500.00 ~ 20,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1742.0,
+      "timestamp": "2024-11-20T22:35:42.796934",
+      "available_amount": "12.9080 USDT\n15,000.00 ~ 17,500.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1742.0,
+      "timestamp": "2024-11-20T22:35:42.843602",
+      "available_amount": "314.8412 USDT\n10,000.00 ~ 20,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1748.99,
+      "timestamp": "2024-11-20T22:35:42.645215",
+      "available_amount": "75.3203 USDT\n40,000.00 ~ 100,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "metadata": {
+    "token": "USDT",
+    "fiat": "NGN",
+    "action_type": "buy",
+    "timestamp": "2024-11-20T22:35:42.955722",
+    "total_rows_found": 11,
+    "valid_listings_found": 5
+  }
+}
