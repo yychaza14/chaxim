@@ -1,0 +1,42 @@
+{
+  "success": true,
+  "timestamp": "2024-11-22T21:21:15.731895",
+  "bybit": [
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-22T21:21:15.227979",
+      "available_amount": "20.0000 USDT\n4,500.00 ~ 6,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-22T21:21:15.283289",
+      "available_amount": "51.4377 USDT\n88,500.00 ~ 88,900.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-22T21:21:15.338440",
+      "available_amount": "85.8632 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-22T21:21:15.394139",
+      "available_amount": "7.2918 USDT\n10,000.00 ~ 12,716.89 NGN",
+      "payment_methods": "Opay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1751.0,
+      "timestamp": "2024-11-22T21:21:15.156216",
+      "available_amount": "23.9205 USDT\n30,000.00 ~ 41,884.79 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": []
+}
