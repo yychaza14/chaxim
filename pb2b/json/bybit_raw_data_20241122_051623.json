@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "data": [
+    {
+      "price": 1742.0,
+      "timestamp": "2024-11-22T05:16:22.858522",
+      "available_amount": "10.5414 USDT\n5,000.00 ~ 18,363.11 NGN",
+      "payment_methods": "Chipper CashKudaOpay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1742.5,
+      "timestamp": "2024-11-22T05:16:22.909511",
+      "available_amount": "304.9353 USDT\n5,000.00 ~ 18,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1742.9,
+      "timestamp": "2024-11-22T05:16:22.969538",
+      "available_amount": "17.2957 USDT\n5,000.00 ~ 19,500.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1742.99,
+      "timestamp": "2024-11-22T05:16:23.025471",
+      "available_amount": "79.3458 USDT\n5,000.00 ~ 18,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1750.0,
+      "timestamp": "2024-11-22T05:16:22.803393",
+      "available_amount": "16.4462 USDT\n28,000.00 ~ 28,780.85 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "metadata": {
+    "token": "USDT",
+    "fiat": "NGN",
+    "action_type": "buy",
+    "timestamp": "2024-11-22T05:16:23.143094",
+    "total_rows_found": 11,
+    "valid_listings_found": 5
+  }
+}
