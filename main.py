@@ -166,7 +166,7 @@ class DataSaver:
             )
         
         return results
-
+'''
 class BybitScraper:
     def __init__(self, headless: bool = True, timeout: int = 30):
         """Initialize the Bybit P2P scraper."""
@@ -454,7 +454,7 @@ class BinanceP2PAPI:
 
 
 
-
+'''
 def main():
     scraper = BybitScraper(headless=True)
     binance = BinanceP2PAPI()
