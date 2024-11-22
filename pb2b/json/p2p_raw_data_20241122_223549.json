@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-22T22:35:49.291170",
+  "bybit": [
+    {
+      "price": 1743.5,
+      "timestamp": "2024-11-22T22:35:48.544847",
+      "available_amount": "48.8179 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "PalmPay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1743.99,
+      "timestamp": "2024-11-22T22:35:48.599725",
+      "available_amount": "700.0000 USDT\n10,000.00 ~ 1,220,793.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-22T22:35:48.488090",
+      "available_amount": "696.5694 USDT\n5,000.00 ~ 18,000.00 NGN",
+      "payment_methods": "Palm Pay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-22T22:35:48.658533",
+      "available_amount": "36.8904 USDT\n10,000.00 ~ 64,336.85 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-22T22:35:48.710172",
+      "available_amount": "78.2109 USDT\n17,000.00 ~ 20,000.00 NGN",
+      "payment_methods": "Opay",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.5,
+      "timestamp": "2024-11-22T22:35:49.291115",
+      "available_amount": "199.32",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "Servira"
+    },
+    {
+      "price": 658.8,
+      "timestamp": "2024-11-22T22:35:49.291133",
+      "available_amount": "46.39",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "MOCTARDU7"
+    },
+    {
+      "price": 658.95,
+      "timestamp": "2024-11-22T22:35:49.291137",
+      "available_amount": "578.61",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Simplicity237"
+    },
+    {
+      "price": 658.98,
+      "timestamp": "2024-11-22T22:35:49.291140",
+      "available_amount": "25.50",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": ""
+    }
+  ]
+}
