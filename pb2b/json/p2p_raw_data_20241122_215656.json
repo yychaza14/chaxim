@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-22T21:56:56.734558",
+  "bybit": [
+    {
+      "price": 1743.99,
+      "timestamp": "2024-11-22T21:56:56.182344",
+      "available_amount": "200.3489 USDT\n5,000.00 ~ 20,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1743.99,
+      "timestamp": "2024-11-22T21:56:56.235020",
+      "available_amount": "60.0000 USDT\n5,000.00 ~ 20,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-22T21:56:56.282327",
+      "available_amount": "22.1902 USDT\n17,000.00 ~ 20,000.00 NGN",
+      "payment_methods": "Opay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-22T21:56:56.331642",
+      "available_amount": "51.4377 USDT\n88,500.00 ~ 88,900.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1748.0,
+      "timestamp": "2024-11-22T21:56:56.125824",
+      "available_amount": "757.2976 USDT\n17,000.00 ~ 20,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.5,
+      "timestamp": "2024-11-22T21:56:56.734508",
+      "available_amount": "199.32",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "Servira"
+    },
+    {
+      "price": 658.6,
+      "timestamp": "2024-11-22T21:56:56.734525",
+      "available_amount": "34.00",
+      "payment_methods": "OrangeMoney, MTNMobileMoney",
+      "merchant_name": "bennolimitt"
+    },
+    {
+      "price": 658.8,
+      "timestamp": "2024-11-22T21:56:56.734529",
+      "available_amount": "62.35",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "MOCTARDU7"
+    },
+    {
+      "price": 658.85,
+      "timestamp": "2024-11-22T21:56:56.734533",
+      "available_amount": "451.82",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Simplicity237"
+    }
+  ]
+}
