@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-22T21:36:54.633846",
+  "bybit": [
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-22T21:36:53.891589",
+      "available_amount": "6.2384 USDT\n4,500.00 ~ 6,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-22T21:36:53.938265",
+      "available_amount": "51.4377 USDT\n88,500.00 ~ 88,900.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-22T21:36:53.985020",
+      "available_amount": "80.2439 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-22T21:36:54.030274",
+      "available_amount": "12.7169 USDT\n20,000.00 ~ 22,178.27 NGN",
+      "payment_methods": "Opay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1751.0,
+      "timestamp": "2024-11-22T21:36:53.831522",
+      "available_amount": "24.7571 USDT\n30,000.00 ~ 43,349.68 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.43,
+      "timestamp": "2024-11-22T21:36:54.633805",
+      "available_amount": "50.54",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    },
+    {
+      "price": 658.5,
+      "timestamp": "2024-11-22T21:36:54.633818",
+      "available_amount": "99.32",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "Servira"
+    },
+    {
+      "price": 658.6,
+      "timestamp": "2024-11-22T21:36:54.633822",
+      "available_amount": "34.00",
+      "payment_methods": "OrangeMoney, MTNMobileMoney",
+      "merchant_name": "bennolimitt"
+    },
+    {
+      "price": 658.8,
+      "timestamp": "2024-11-22T21:36:54.633824",
+      "available_amount": "85.15",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "MOCTARDU7"
+    }
+  ]
+}
