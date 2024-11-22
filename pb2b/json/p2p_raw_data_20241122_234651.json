@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-22T23:46:51.443777",
+  "bybit": [
+    {
+      "price": 1743.0,
+      "timestamp": "2024-11-22T23:46:50.675769",
+      "available_amount": "38.5255 USDT\n10,000.00 ~ 20,000.00 NGN",
+      "payment_methods": "Opay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1743.0,
+      "timestamp": "2024-11-22T23:46:50.732463",
+      "available_amount": "25.7100 USDT\n5,000.00 ~ 44,812.53 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1743.5,
+      "timestamp": "2024-11-22T23:46:50.776691",
+      "available_amount": "47.4189 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "PalmPay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1743.99,
+      "timestamp": "2024-11-22T23:46:50.820945",
+      "available_amount": "13.7492 USDT\n5,000.00 ~ 9,800.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-22T23:46:50.615223",
+      "available_amount": "16.1318 USDT\n20,000.00 ~ 28,262.91 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.5,
+      "timestamp": "2024-11-22T23:46:51.443733",
+      "available_amount": "199.32",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "Servira"
+    },
+    {
+      "price": 658.8,
+      "timestamp": "2024-11-22T23:46:51.443748",
+      "available_amount": "26.63",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "MOCTARDU7"
+    },
+    {
+      "price": 658.99,
+      "timestamp": "2024-11-22T23:46:51.443752",
+      "available_amount": "61.77",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "FREE_CHABGE"
+    },
+    {
+      "price": 659.0,
+      "timestamp": "2024-11-22T23:46:51.443755",
+      "available_amount": "12.84",
+      "payment_methods": "MoMoNew, MTNMobileMoney, OrangeMoney",
+      "merchant_name": "Dramo98"
+    }
+  ]
+}
