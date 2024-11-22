@@ -19,7 +19,7 @@ from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
 
 
-
+'''
 class DataSaver:
     """A class responsible for saving data in different formats."""
     
@@ -499,7 +499,118 @@ def main():
         scraper.close()
 
 if __name__ == "__main__":
+    main()'''
+
+class DataSaver:
+    def save_data(
+        self, 
+        bybit_data: Dict[str, Union[bool, List[Dict], str]] = None,
+        binance_data: Dict[str, Union[bool, List[Dict], str]] = None,
+        excel_prefix: str = "p2p_data",
+        json_prefix: str = "p2p_raw_data"
+    ) -> Dict[str, Optional[Path]]:
+        """
+        Save data from Bybit and Binance to both Excel and JSON formats.
+        
+        Args:
+            bybit_data (Dict): Bybit scraper data
+            binance_data (Dict): Binance API data
+            excel_prefix (str): Prefix for Excel filename
+            json_prefix (str): Prefix for JSON filename
+            
+        Returns:
+            Dict[str, Optional[Path]]: Paths to saved files
+        """
+        results = {
+            'excel_path': None,
+            'json_path': None
+        }
+        
+        # Prepare combined data dictionary
+        combined_data = {
+            "success": False,
+            "data": []
+        }
+        
+        # Add Bybit data if available
+        if bybit_data and bybit_data.get("success") and bybit_data.get("BYBIT"):
+            combined_data["success"] = True
+            combined_data["bybit"] = bybit_data["BYBIT"]
+        
+        # Add Binance data if available
+        if binance_data and binance_data.get("success") and binance_data.get("BINANCE"):
+            combined_data["success"] = True
+            combined_data["binance"] = binance_data["BINANCE"]
+        
+        # Save data if any source is successful
+        if combined_data["success"]:
+            results['excel_path'] = self.save_to_excel(
+                combined_data["data"],
+                filename_prefix=excel_prefix
+            )
+            results['json_path'] = self.save_to_json(
+                combined_data,
+                filename_prefix=json_prefix
+            )
+        
+        return results
+
+def main():
+    scraper = BybitScraper(headless=True)
+    binance = BinanceP2PAPI()
+    data_saver = DataSaver()
+
+    try:
+        resultbyb = scraper.get_p2p_listings(
+            token="USDT",
+            fiat="NGN",
+            action_type="1"
+        )
+        
+        resultbnb = binance.get_p2p_listings(
+            token="USDT",
+            fiat="NGN",
+            action_type="1"
+        )
+
+        # Save both Bybit and Binance data
+        saved_files = data_saver.save_data(
+            bybit_data=resultbyb, 
+            binance_data=resultbnb
+        )
+
+        # Print summary
+        print("P2P Listing Scraping Results:")
+        
+        # Bybit results
+        if resultbyb["success"]:
+            print("\nBybit Results:")
+            print(f"Lowest Bybit price: {resultbyb['BYBIT'][0]['price']} NGN")
+            print(f"Highest Bybit price: {resultbyb['BYBIT'][-1]['price']} NGN")
+        
+        # Binance results
+        if resultbnb["success"]:
+            print("\nBinance Results:")
+            print(f"Lowest Binance price: {resultbnb['BINANCE'][0]['price']} NGN")
+            print(f"Highest Binance price: {resultbnb['BINANCE'][-1]['price']} NGN")
+
+        # Saved files
+        if saved_files['excel_path']:
+            print(f"\nData saved to Excel: {saved_files['excel_path']}")
+        if saved_files['json_path']:
+            print(f"Data saved to JSON: {saved_files['json_path']}")
+
+    except Exception as e:
+        print(f"Error in main execution: {str(e)}")
+    finally:
+        scraper.close()
+
+if __name__ == "__main__":
     main()
+
+
+
+
 '''
 import requests
 import json
