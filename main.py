@@ -14,6 +14,11 @@ import re
 import os
 from pathlib import Path
 from typing import Dict, List, Optional, Union
+import requests
+from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.util.retry import Retry
+
+
 
 class DataSaver:
     """A class responsible for saving data in different formats."""
@@ -298,7 +303,7 @@ class BybitScraper:
 
                 return {
                     "success": True,
-                    "data": valid_listings,
+                    "BYBIT": valid_listings,
                     "metadata": {
                         "token": token,
                         "fiat": fiat,
@@ -333,36 +338,160 @@ class BybitScraper:
             self.driver.quit()
             self.logger.info("Browser session closed")
 
+#binance data 
+class BinanceP2PAPI:
+    """Simplified Binance P2P API client that matches BybitScraper's return format."""
+    
+    BASE_URL = "https://p2p.binance.com/bapi/c2c/v2/friendly/c2c/adv/search"
+    
+    def __init__(self):
+        """Initialize the Binance P2P API client with minimal setup."""
+        self._setup_logging()
+        self._setup_session()
+        
+    def _setup_logging(self) -> None:
+        """Configure basic logging."""
+        logging.basicConfig(
+            level=logging.INFO,
+            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+            handlers=[logging.StreamHandler()]
+        )
+        self.logger = logging.getLogger('BinanceP2PAPI')
+        
+    def _setup_session(self) -> None:
+        """Configure requests session with retries and headers."""
+        self.session = requests.Session()
+        
+        retry_strategy = Retry(
+            total=3,
+            backoff_factor=1,
+            status_forcelist=[429, 500, 502, 503, 504]
+        )
+        
+        adapter = HTTPAdapter(max_retries=retry_strategy)
+        self.session.mount("https://", adapter)
+        self.session.mount("http://", adapter)
+        
+        self.session.headers.update({
+            'Accept': '*/*',
+            'Accept-Language': 'en-US,en;q=0.9',
+            'Content-Type': 'application/json',
+            'Origin': 'https://p2p.binance.com',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        })
+
+    def get_p2p_listings(
+        self,
+        token: str = "USDT",
+        fiat: str = "XAF",
+        action_type: str = "1",  # "1" for buy, "0" for sell
+        max_retries: int = 3,
+        rows: int = 4
+    ) -> Dict:
+        """
+        Get P2P listings from Binance API.
+        Matches BybitScraper's return format.
+        """
+        trade_type = "BUY" if action_type == "1" else "SELL"
+        
+        payload = {
+            "asset": token,
+            "fiat": fiat,
+            "merchantCheck": True,
+            "page": 1,
+            "payTypes": [],
+            "publisherType": None,
+            "rows": rows,
+            "tradeType": trade_type
+        }
+        
+        self.logger.info(f"Fetching {trade_type} listings for {token}/{fiat}")
+        
+        try:
+            response = self.session.post(self.BASE_URL, json=payload)
+            response.raise_for_status()
+            
+            data = response.json()
+            if not isinstance(data, dict) or "data" not in data:
+                raise ValueError("Invalid response format from Binance API")
+            
+            listings = []
+            for ad in data["data"]:
+                listing_data = {
+                    'price': float(ad["adv"]["price"]),
+                    'timestamp': datetime.now().isoformat(),
+                    'available_amount': ad["adv"]["surplusAmount"],
+                    'payment_methods': ", ".join(method["identifier"] for method in ad["adv"]["tradeMethods"]),
+                    'merchant_name': ad["advertiser"].get("nickName", "Unknown")
+                }
+                listings.append(listing_data)
+            
+            # Sort listings by price like BybitScraper does
+            listings.sort(key=lambda x: x['price'])
+            
+            return {
+                "success": True,
+                "BINANCE": listings,
+            }
+            
+        except requests.exceptions.RequestException as e:
+            error_msg = f"Request failed: {str(e)}"
+            self.logger.error(error_msg)
+            return {
+                "success": False,
+                "data": None,
+                "message": error_msg
+            }
+        except Exception as e:
+            error_msg = f"Unexpected error: {str(e)}"
+            self.logger.error(error_msg)
+            return {
+                "success": False,
+                "data": None,
+                "message": error_msg
+            }
+
+
+
+
+
 def main():
     scraper = BybitScraper(headless=True)
+    binance = BinanceP2PAPI()
     data_saver = DataSaver()
 
     try:
-        result = scraper.get_p2p_listings(
+        resultbyb = scraper.get_p2p_listings(
+            token="USDT",
+            fiat="NGN",
+            action_type="1"
+        )
+        
+        resultbnb = scraper.get_p2p_listings(
             token="USDT",
             fiat="NGN",
             action_type="1"
         )
 
-        if result["success"]:
-            print(result)
+
+        if resultbyb["success"]:
             # Save data using the DataSaver class
-            saved_files = data_saver.save_data(result)
+            saved_files = data_saver.save_data(resultbyb)
 
             # Print summary
             print(f"Time of scraping: {result['metadata']['timestamp']}")
 
             if result["data"]:
                 print(f"\nPrice Range:")
-                print(f"Lowest price: {result['data'][0]['price']} {result['metadata']['fiat']}")
-                print(f"Highest price: {result['data'][-1]['price']} {result['metadata']['fiat']}")
+                print(f"Lowest price: {resultbyb['BYBIT'][0]['price']} {resultbyb['metadata']['fiat']}")
+                print(f"Highest price: {resultbyb['BYBIT'][-1]['price']} {resultbyb['metadata']['fiat']}")
                 
                 if saved_files['excel_path']:
                     print(f"\nData saved to Excel: {saved_files['excel_path']}")
                 if saved_files['json_path']:
                     print(f"Data saved to JSON: {saved_files['json_path']}")
         else:
-            print("Error:", result["message"])
+            print("Error:", resultbyb["message"])
 
     except Exception as e:
         print(f"Error in main execution: {str(e)}")
@@ -371,7 +500,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+'''
 import requests
 import json
 from datetime import datetime
@@ -625,5 +754,5 @@ def mains():
 
 if __name__ == "__main__":
     mains()
-
+'''
 
