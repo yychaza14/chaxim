@@ -499,7 +499,7 @@ def main():
         scraper.close()
 
 if __name__ == "__main__":
-    main()'''
+    main()
 
 class DataSaver:
     def save_data(
@@ -602,6 +602,261 @@ def main():
 
     except Exception as e:
         print(f"Error in main execution: {str(e)}")
+    finally:
+        scraper.close()
+
+if __name__ == "__main__":
+    main()'''
+
+import pandas as pd
+from pathlib import Path
+from datetime import datetime
+import json
+import logging
+from typing import Dict, List, Optional, Union
+
+class DataSaver:
+    """A class responsible for saving data in different formats."""
+    
+    def __init__(self, base_directory: Union[str, Path] = 'pb2b'):
+        """
+        Initialize the DataSaver with a base directory for storing files.
+        
+        Args:
+            base_directory (Union[str, Path]): Base directory for storing all data files
+        """
+        self.base_dir = Path(base_directory)
+        self._setup_directories()
+        self._setup_logging()
+
+    def _setup_directories(self) -> None:
+        """Create necessary directories for storing different types of data."""
+        # Create base directory if it doesn't exist
+        self.base_dir.mkdir(exist_ok=True)
+        
+        # Create subdirectories for different data types
+        self.logs_dir = self.base_dir / 'logs'
+        self.excel_dir = self.base_dir / 'excel'
+        self.json_dir = self.base_dir / 'json'
+        
+        for directory in [self.logs_dir, self.excel_dir, self.json_dir]:
+            directory.mkdir(exist_ok=True)
+
+    def _setup_logging(self) -> None:
+        """Set up logging configuration."""
+        log_file = self.logs_dir / f'data_saver_{datetime.now().strftime("%Y%m%d")}.log'
+        
+        logging.basicConfig(
+            level=logging.INFO,
+            format='%(asctime)s - %(levelname)s - %(message)s',
+            datefmt='%Y-%m-%d %H:%M:%S',
+            handlers=[
+                logging.FileHandler(log_file),
+                logging.StreamHandler()
+            ]
+        )
+        self.logger = logging.getLogger(__name__)
+        self.logger.info(f"DataSaver logging initialized. Log file: {log_file}")
+
+    def _generate_filename(self, prefix: str, extension: str) -> str:
+        """
+        Generate a filename with timestamp.
+        
+        Args:
+            prefix (str): Prefix for the filename
+            extension (str): File extension
+            
+        Returns:
+            str: Generated filename
+        """
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        return f"{prefix}_{timestamp}.{extension}"
+
+    def save_to_excel(
+        self, 
+        data: Dict[str, List[Dict]],
+        filename_prefix: str = "data",
+        sheet_name: str = "Sheet1"
+    ) -> Optional[Path]:
+        """
+        Save data to Excel file.
+        
+        Args:
+            data (Dict[str, List[Dict]]): Data to save with 'bybit' and 'binance' keys
+            filename_prefix (str): Prefix for the filename
+            sheet_name (str): Name of the Excel sheet
+            
+        Returns:
+            Optional[Path]: Path to saved file if successful, None otherwise
+        """
+        filename = self.excel_dir / self._generate_filename(filename_prefix, "xlsx")
+        
+        try:
+            # Create separate DataFrames for Bybit and Binance data
+            dfs = []
+            
+            if 'bybit' in data:
+                bybit_df = pd.DataFrame(data['bybit'])
+                bybit_df['source'] = 'Bybit'
+                dfs.append(bybit_df)
+            
+            if 'binance' in data:
+                binance_df = pd.DataFrame(data['binance'])
+                binance_df['source'] = 'Binance'
+                dfs.append(binance_df)
+            
+            # Combine the DataFrames
+            if dfs:
+                combined_df = pd.concat(dfs, ignore_index=True)
+                combined_df.to_excel(filename, sheet_name=sheet_name, index=False)
+                self.logger.info(f"Data successfully saved to Excel: {filename}")
+                return filename
+            else:
+                self.logger.warning("No data to save to Excel")
+                return None
+                
+        except Exception as e:
+            self.logger.error(f"Error saving to Excel: {str(e)}")
+            return None
+
+    def save_to_json(
+        self, 
+        data: Dict,
+        filename_prefix: str = "data",
+        indent: int = 2
+    ) -> Optional[Path]:
+        """
+        Save data to JSON file.
+        
+        Args:
+            data (Dict): Data to save
+            filename_prefix (str): Prefix for the filename
+            indent (int): Number of spaces for JSON indentation
+            
+        Returns:
+            Optional[Path]: Path to saved file if successful, None otherwise
+        """
+        filename = self.json_dir / self._generate_filename(filename_prefix, "json")
+        
+        try:
+            with open(filename, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=indent)
+            self.logger.info(f"Data successfully saved to JSON: {filename}")
+            return filename
+        except Exception as e:
+            self.logger.error(f"Error saving to JSON: {str(e)}")
+            return None
+
+    def save_data(
+        self, 
+        bybit_data: Dict[str, Union[bool, List[Dict], str]] = None,
+        binance_data: Dict[str, Union[bool, List[Dict], str]] = None,
+        excel_prefix: str = "p2p_data",
+        json_prefix: str = "p2p_raw_data"
+    ) -> Dict[str, Optional[Path]]:
+        """
+        Save data from Bybit and Binance to both Excel and JSON formats.
+        
+        Args:
+            bybit_data (Dict): Bybit scraper data
+            binance_data (Dict): Binance API data
+            excel_prefix (str): Prefix for Excel filename
+            json_prefix (str): Prefix for JSON filename
+            
+        Returns:
+            Dict[str, Optional[Path]]: Paths to saved files
+        """
+        results = {
+            'excel_path': None,
+            'json_path': None
+        }
+        
+        # Prepare combined data dictionary
+        combined_data = {
+            "success": False,
+            "timestamp": datetime.now().isoformat(),
+            "bybit": [],
+            "binance": []
+        }
+        
+        # Add Bybit data if available
+        if bybit_data and bybit_data.get("success") and bybit_data.get("BYBIT"):
+            combined_data["success"] = True
+            combined_data["bybit"] = bybit_data["BYBIT"]
+        
+        # Add Binance data if available
+        if binance_data and binance_data.get("success") and binance_data.get("BINANCE"):
+            combined_data["success"] = True
+            combined_data["binance"] = binance_data["BINANCE"]
+        
+        # Save data if any source is successful
+        if combined_data["success"]:
+            results['excel_path'] = self.save_to_excel(
+                {"bybit": combined_data["bybit"], "binance": combined_data["binance"]},
+                filename_prefix=excel_prefix
+            )
+            results['json_path'] = self.save_to_json(
+                combined_data,
+                filename_prefix=json_prefix
+            )
+        
+        return results
+
+def main():
+    scraper = BybitScraper(headless=True)
+    binance = BinanceP2PAPI()
+    data_saver = DataSaver()
+
+    try:
+        resultbyb = scraper.get_p2p_listings(
+            token="USDT",
+            fiat="NGN",
+            action_type="1"
+        )
+        
+        resultbnb = binance.get_p2p_listings(
+            token="USDT",
+            fiat="NGN",
+            action_type="1"
+        )
+
+        # Save both Bybit and Binance data
+        saved_files = data_saver.save_data(
+            bybit_data=resultbyb, 
+            binance_data=resultbnb
+        )
+
+        # Print summary
+        print("\nP2P Listing Scraping Results:")
+        print(f"Time of scraping: {datetime.now().isoformat()}")
+        
+        # Bybit results
+        if resultbyb["success"] and resultbyb.get("BYBIT"):
+            print("\nBybit Results:")
+            print(f"Number of listings: {len(resultbyb['BYBIT'])}")
+            print(f"Lowest Bybit price: {resultbyb['BYBIT'][0]['price']} NGN")
+            print(f"Highest Bybit price: {resultbyb['BYBIT'][-1]['price']} NGN")
+        else:
+            print("\nBybit scraping failed or returned no data")
+        
+        # Binance results
+        if resultbnb["success"] and resultbnb.get("BINANCE"):
+            print("\nBinance Results:")
+            print(f"Number of listings: {len(resultbnb['BINANCE'])}")
+            print(f"Lowest Binance price: {resultbnb['BINANCE'][0]['price']} NGN")
+            print(f"Highest Binance price: {resultbnb['BINANCE'][-1]['price']} NGN")
+        else:
+            print("\nBinance API call failed or returned no data")
+
+        # Saved files
+        if saved_files['excel_path']:
+            print(f"\nData saved to Excel: {saved_files['excel_path']}")
+        if saved_files['json_path']:
+            print(f"Data saved to JSON: {saved_files['json_path']}")
+
+    except Exception as e:
+        print(f"Error in main execution: {str(e)}")
+        logging.error(f"Error in main execution: {str(e)}", exc_info=True)
     finally:
         scraper.close()
 
