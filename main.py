@@ -345,6 +345,7 @@ def main():
         )
 
         if result["success"]:
+            print(result)
             # Save data using the DataSaver class
             saved_files = data_saver.save_data(result)
 
