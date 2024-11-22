@@ -481,7 +481,7 @@ def main():
             # Print summary
             print(f"Time of scraping: {result['metadata']['timestamp']}")
 
-            if result["data"]:
+            if resultbyb["data"]:
                 print(f"\nPrice Range:")
                 print(f"Lowest price: {resultbyb['BYBIT'][0]['price']} {resultbyb['metadata']['fiat']}")
                 print(f"Highest price: {resultbyb['BYBIT'][-1]['price']} {resultbyb['metadata']['fiat']}")
