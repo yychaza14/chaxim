@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-22T23:34:14.528753",
+  "bybit": [
+    {
+      "price": 1743.5,
+      "timestamp": "2024-11-22T23:34:13.802166",
+      "available_amount": "11.3966 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "PalmPay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1743.99,
+      "timestamp": "2024-11-22T23:34:13.849648",
+      "available_amount": "120.2581 USDT\n4,500.00 ~ 9,500.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1743.99,
+      "timestamp": "2024-11-22T23:34:13.906205",
+      "available_amount": "13.7492 USDT\n5,000.00 ~ 9,800.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-22T23:34:13.747973",
+      "available_amount": "2,230.2174 USDT\n5,000.00 ~ 18,000.00 NGN",
+      "payment_methods": "Palm Pay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-22T23:34:13.950791",
+      "available_amount": "679.3753 USDT\n4,500.00 ~ 17,440.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.5,
+      "timestamp": "2024-11-22T23:34:14.528687",
+      "available_amount": "161.29",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "Servira"
+    },
+    {
+      "price": 658.8,
+      "timestamp": "2024-11-22T23:34:14.528706",
+      "available_amount": "6.10",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "MOCTARDU7"
+    },
+    {
+      "price": 658.99,
+      "timestamp": "2024-11-22T23:34:14.528712",
+      "available_amount": "61.77",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "FREE_CHABGE"
+    },
+    {
+      "price": 658.99,
+      "timestamp": "2024-11-22T23:34:14.528718",
+      "available_amount": "251.86",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "No-one-is-above-God"
+    }
+  ]
+}
