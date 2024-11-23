@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-23T11:20:16.033327",
+  "bybit": [
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-23T11:20:15.474578",
+      "available_amount": "111.6568 USDT\n5,000.00 ~ 5,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-23T11:20:15.526069",
+      "available_amount": "175.0374 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.89,
+      "timestamp": "2024-11-23T11:20:15.576995",
+      "available_amount": "29.3661 USDT\n50,000.00 ~ 51,240.61 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.9,
+      "timestamp": "2024-11-23T11:20:15.629787",
+      "available_amount": "3.3578 USDT\n4,500.00 ~ 5,859.02 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1755.0,
+      "timestamp": "2024-11-23T11:20:15.412983",
+      "available_amount": "137.2035 USDT\n10,000.00 ~ 200,000.00 NGN",
+      "payment_methods": "PalmPay",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.53,
+      "timestamp": "2024-11-23T11:20:16.033261",
+      "available_amount": "13.20",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": ""
+    },
+    {
+      "price": 658.77,
+      "timestamp": "2024-11-23T11:20:16.033283",
+      "available_amount": "11.37",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "G-Glow"
+    },
+    {
+      "price": 658.79,
+      "timestamp": "2024-11-23T11:20:16.033289",
+      "available_amount": "65.55",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "NMP-Trader"
+    },
+    {
+      "price": 658.8,
+      "timestamp": "2024-11-23T11:20:16.033294",
+      "available_amount": "141.79",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Trader-C01"
+    }
+  ]
+}
