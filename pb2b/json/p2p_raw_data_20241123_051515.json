@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-23T05:15:15.120206",
+  "bybit": [
+    {
+      "price": 1743.5,
+      "timestamp": "2024-11-23T05:15:14.259185",
+      "available_amount": "120.0489 USDT\n4,600.00 ~ 5,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.5,
+      "timestamp": "2024-11-23T05:15:14.317546",
+      "available_amount": "9.3859 USDT\n16,223.00 ~ 16,373.70 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.9,
+      "timestamp": "2024-11-23T05:15:14.386851",
+      "available_amount": "6.7719 USDT\n4,500.00 ~ 11,816.28 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1745.0,
+      "timestamp": "2024-11-23T05:15:14.449735",
+      "available_amount": "115.1000 USDT\n200,000.00 ~ 200,849.50 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1753.0,
+      "timestamp": "2024-11-23T05:15:14.196657",
+      "available_amount": "51.8106 USDT\n30,000.00 ~ 90,823.98 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 659.0,
+      "timestamp": "2024-11-23T05:15:15.120165",
+      "available_amount": "27.25",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Simplicity237"
+    },
+    {
+      "price": 659.29,
+      "timestamp": "2024-11-23T05:15:15.120178",
+      "available_amount": "388.07",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Trader-C01"
+    },
+    {
+      "price": 659.3,
+      "timestamp": "2024-11-23T05:15:15.120182",
+      "available_amount": "129.12",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "MUSA_PATU"
+    },
+    {
+      "price": 659.3,
+      "timestamp": "2024-11-23T05:15:15.120185",
+      "available_amount": "31.61",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "No-one-is-above-God"
+    }
+  ]
+}
