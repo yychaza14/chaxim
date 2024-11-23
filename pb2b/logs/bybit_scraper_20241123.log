@@ -1,0 +1,8 @@
+2024-11-23 01:13:14 - INFO - Logging initialized. Log file: pb2b/logs/bybit_scraper_20241123.log
+2024-11-23 01:13:16 - INFO - DataSaver logging initialized. Log file: pb2b/logs/data_saver_20241123.log
+2024-11-23 01:13:16 - INFO - Attempt 1/10: Loading https://www.bybit.com/fiat/trade/otc?actionType=1&token=USDT&fiat=NGN
+2024-11-23 01:13:25 - INFO - Screenshot saved as 'pb2b/screenshots/bybit_page_20241123_011325.png'
+2024-11-23 01:13:26 - INFO - Fetching BUY listings for USDT/XAF
+2024-11-23 01:13:26 - INFO - Data successfully saved to Excel: pb2b/excel/p2p_data_20241123_011326.xlsx
+2024-11-23 01:13:26 - INFO - Data successfully saved to JSON: pb2b/json/p2p_raw_data_20241123_011326.json
+2024-11-23 01:13:27 - INFO - Browser session closed

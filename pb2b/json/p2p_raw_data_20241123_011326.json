@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-23T01:13:26.820685",
+  "bybit": [
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-23T01:13:26.007011",
+      "available_amount": "28.8895 USDT\n4,600.00 ~ 5,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-23T01:13:26.058023",
+      "available_amount": "606.6571 USDT\n4,500.00 ~ 17,440.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.74,
+      "timestamp": "2024-11-23T01:13:26.110904",
+      "available_amount": "3.3559 USDT\n5,842.00 ~ 5,855.17 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.95,
+      "timestamp": "2024-11-23T01:13:26.165577",
+      "available_amount": "1,022.3466 USDT\n50,000.00 ~ 600,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1758.0,
+      "timestamp": "2024-11-23T01:13:25.944697",
+      "available_amount": "38.4726 USDT\n4,500.00 ~ 67,634.83 NGN",
+      "payment_methods": "Kuda BankBank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.5,
+      "timestamp": "2024-11-23T01:13:26.820639",
+      "available_amount": "199.32",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "Servira"
+    },
+    {
+      "price": 658.99,
+      "timestamp": "2024-11-23T01:13:26.820652",
+      "available_amount": "61.77",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "FREE_CHABGE"
+    },
+    {
+      "price": 659.0,
+      "timestamp": "2024-11-23T01:13:26.820656",
+      "available_amount": "12.84",
+      "payment_methods": "MoMoNew, MTNMobileMoney, OrangeMoney",
+      "merchant_name": "Dramo98"
+    },
+    {
+      "price": 659.0,
+      "timestamp": "2024-11-23T01:13:26.820659",
+      "available_amount": "156.60",
+      "payment_methods": "OrangeMoney, MoMoNew",
+      "merchant_name": "MacInc_Service_Point"
+    }
+  ]
+}
