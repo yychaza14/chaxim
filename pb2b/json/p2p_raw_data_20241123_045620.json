@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-23T04:56:20.614800",
+  "bybit": [
+    {
+      "price": 1745.0,
+      "timestamp": "2024-11-23T04:56:20.071429",
+      "available_amount": "4.4422 USDT\n7,678.00 ~ 7,751.63 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1745.0,
+      "timestamp": "2024-11-23T04:56:20.116676",
+      "available_amount": "179.9426 USDT\n10,000.00 ~ 20,000.00 NGN",
+      "payment_methods": "Kuda BankBank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1745.4,
+      "timestamp": "2024-11-23T04:56:20.164696",
+      "available_amount": "331.7119 USDT\n200,000.00 ~ 578,969.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1745.4,
+      "timestamp": "2024-11-23T04:56:20.208683",
+      "available_amount": "5.9091 USDT\n10,000.00 ~ 10,313.74 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1750.99,
+      "timestamp": "2024-11-23T04:56:20.018892",
+      "available_amount": "32.6745 USDT\n50,000.00 ~ 57,212.72 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 659.0,
+      "timestamp": "2024-11-23T04:56:20.614747",
+      "available_amount": "27.25",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Simplicity237"
+    },
+    {
+      "price": 659.3,
+      "timestamp": "2024-11-23T04:56:20.614764",
+      "available_amount": "129.12",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "MUSA_PATU"
+    },
+    {
+      "price": 659.4,
+      "timestamp": "2024-11-23T04:56:20.614769",
+      "available_amount": "114.70",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Trader-C01"
+    },
+    {
+      "price": 659.44,
+      "timestamp": "2024-11-23T04:56:20.614773",
+      "available_amount": "54.18",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "FREE_CHABGE"
+    }
+  ]
+}
