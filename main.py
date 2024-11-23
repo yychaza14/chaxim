@@ -528,6 +528,7 @@ def main():
             print(f"Number of listings: {len(resultbyb['BYBIT'])}")
             print(f"Lowest Bybit price: {resultbyb['BYBIT'][0]['price']} NGN")
             print(f"Highest Bybit price: {resultbyb['BYBIT'][-1]['price']} NGN")
+            print(f"Highest Bybit price: {resultbyb['RATE']} NGN")
         else:
             print("\nBybit scraping failed or returned no data")
         
