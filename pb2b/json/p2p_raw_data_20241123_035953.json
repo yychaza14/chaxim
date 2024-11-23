@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-23T03:59:53.190949",
+  "bybit": [
+    {
+      "price": 1740.87,
+      "timestamp": "2024-11-23T03:59:52.453929",
+      "available_amount": "3.4534 USDT\n4,500.00 ~ 6,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.4,
+      "timestamp": "2024-11-23T03:59:52.511445",
+      "available_amount": "136.6819 USDT\n15,000.00 ~ 20,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.99,
+      "timestamp": "2024-11-23T03:59:52.560303",
+      "available_amount": "51.2080 USDT\n50,000.00 ~ 89,357.44 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.99,
+      "timestamp": "2024-11-23T03:59:52.607941",
+      "available_amount": "111.9605 USDT\n100,000.00 ~ 195,369.95 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1753.0,
+      "timestamp": "2024-11-23T03:59:52.394759",
+      "available_amount": "143.1694 USDT\n30,000.00 ~ 100,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 659.0,
+      "timestamp": "2024-11-23T03:59:53.190905",
+      "available_amount": "71.32",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Simplicity237"
+    },
+    {
+      "price": 659.44,
+      "timestamp": "2024-11-23T03:59:53.190920",
+      "available_amount": "54.18",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "FREE_CHABGE"
+    },
+    {
+      "price": 659.45,
+      "timestamp": "2024-11-23T03:59:53.190923",
+      "available_amount": "25.87",
+      "payment_methods": "OrangeMoney, MTNMobileMoney, MoMoNew",
+      "merchant_name": "Bkrsolo"
+    },
+    {
+      "price": 659.6,
+      "timestamp": "2024-11-23T03:59:53.190926",
+      "available_amount": "640.01",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Rami_Exchange"
+    }
+  ]
+}
