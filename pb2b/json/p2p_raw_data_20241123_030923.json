@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-23T03:09:23.367315",
+  "bybit": [
+    {
+      "price": 1744.5,
+      "timestamp": "2024-11-23T03:09:22.754774",
+      "available_amount": "423.3341 USDT\n17,000.00 ~ 20,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.5,
+      "timestamp": "2024-11-23T03:09:22.812362",
+      "available_amount": "423.3341 USDT\n17,000.00 ~ 20,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.8,
+      "timestamp": "2024-11-23T03:09:22.861597",
+      "available_amount": "520.8026 USDT\n4,500.00 ~ 17,440.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1745.0,
+      "timestamp": "2024-11-23T03:09:22.910765",
+      "available_amount": "20.6887 USDT\n5,000.00 ~ 20,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1745.0,
+      "timestamp": "2024-11-23T03:09:22.961420",
+      "available_amount": "47.8600 USDT\n83,500.00 ~ 83,515.70 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 659.0,
+      "timestamp": "2024-11-23T03:09:23.367263",
+      "available_amount": "156.60",
+      "payment_methods": "OrangeMoney, MoMoNew",
+      "merchant_name": "MacInc_Service_Point"
+    },
+    {
+      "price": 659.0,
+      "timestamp": "2024-11-23T03:09:23.367280",
+      "available_amount": "71.32",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Simplicity237"
+    },
+    {
+      "price": 659.15,
+      "timestamp": "2024-11-23T03:09:23.367285",
+      "available_amount": "31.61",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "No-one-is-above-God"
+    },
+    {
+      "price": 659.45,
+      "timestamp": "2024-11-23T03:09:23.367288",
+      "available_amount": "25.87",
+      "payment_methods": "OrangeMoney, MTNMobileMoney, MoMoNew",
+      "merchant_name": "Bkrsolo"
+    }
+  ]
+}
