@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-23T09:15:40.124560",
+  "bybit": [
+    {
+      "price": 1743.4,
+      "timestamp": "2024-11-23T09:15:39.632449",
+      "available_amount": "51.3640 USDT\n4,500.00 ~ 10,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1743.5,
+      "timestamp": "2024-11-23T09:15:39.679348",
+      "available_amount": "1,156.2242 USDT\n5,000.00 ~ 7,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1743.5,
+      "timestamp": "2024-11-23T09:15:39.723389",
+      "available_amount": "10.9975 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "PalmPay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1743.5,
+      "timestamp": "2024-11-23T09:15:39.769134",
+      "available_amount": "45.0501 USDT\n4,500.00 ~ 9,500.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1750.0,
+      "timestamp": "2024-11-23T09:15:39.576953",
+      "available_amount": "12.8565 USDT\n20,000.00 ~ 22,498.87 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.58,
+      "timestamp": "2024-11-23T09:15:40.124518",
+      "available_amount": "227.64",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "CushyGodwit503"
+    },
+    {
+      "price": 658.74,
+      "timestamp": "2024-11-23T09:15:40.124530",
+      "available_amount": "373.91",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Trader-C01"
+    },
+    {
+      "price": 658.75,
+      "timestamp": "2024-11-23T09:15:40.124534",
+      "available_amount": "193.77",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Simplicity237"
+    },
+    {
+      "price": 658.87,
+      "timestamp": "2024-11-23T09:15:40.124537",
+      "available_amount": "98.18",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": ""
+    }
+  ]
+}
