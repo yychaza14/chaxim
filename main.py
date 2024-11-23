@@ -496,6 +496,7 @@ def main():
     data_saver = DataSaver()
 
     try:
+        
         resultbyb = scraper.get_p2p_listings(
             token="USDT",
             fiat="NGN",
@@ -507,6 +508,9 @@ def main():
             fiat="XAF",
             action_type="1"
         )
+        rate_xaf = 1000/resultbnb['BINANCE'][0]['price']
+        rate_ngn = rate_xaf * resultbyb['BYBIT'][0]['price']
+        rerultbyb["RATE"] = rate_ngn
 
         # Save both Bybit and Binance data
         saved_files = data_saver.save_data(
