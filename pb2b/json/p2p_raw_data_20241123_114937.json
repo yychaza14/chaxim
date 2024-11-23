@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-23T11:49:37.440041",
+  "bybit": [
+    {
+      "price": 1745.0,
+      "timestamp": "2024-11-23T11:49:37.020560",
+      "available_amount": "37.5750 USDT\n4,500.00 ~ 8,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1745.5,
+      "timestamp": "2024-11-23T11:49:37.068776",
+      "available_amount": "148.5775 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1745.6,
+      "timestamp": "2024-11-23T11:49:37.115060",
+      "available_amount": "47.1356 USDT\n5,000.00 ~ 10,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1746.0,
+      "timestamp": "2024-11-23T11:49:37.161125",
+      "available_amount": "330.7661 USDT\n4,500.00 ~ 17,460.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.0,
+      "timestamp": "2024-11-23T11:49:36.967315",
+      "available_amount": "214.1650 USDT\n30,000.00 ~ 300,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.78,
+      "timestamp": "2024-11-23T11:49:37.440000",
+      "available_amount": "45.98",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Simplicity237"
+    },
+    {
+      "price": 658.8,
+      "timestamp": "2024-11-23T11:49:37.440013",
+      "available_amount": "169.34",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 658.99,
+      "timestamp": "2024-11-23T11:49:37.440016",
+      "available_amount": "72.47",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "NAHJ-SWIFT_EXCHANGE"
+    },
+    {
+      "price": 659.05,
+      "timestamp": "2024-11-23T11:49:37.440019",
+      "available_amount": "28.17",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "BTC_LORD_237"
+    }
+  ]
+}
