@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-23T09:51:00.945583",
+  "bybit": [
+    {
+      "price": 1744.5,
+      "timestamp": "2024-11-23T09:51:00.419209",
+      "available_amount": "148.9532 USDT\n4,500.00 ~ 10,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1746.0,
+      "timestamp": "2024-11-23T09:51:00.473282",
+      "available_amount": "71.3480 USDT\n4,500.00 ~ 10,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1746.0,
+      "timestamp": "2024-11-23T09:51:00.529968",
+      "available_amount": "3.1307 USDT\n4,500.00 ~ 5,466.20 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1746.0,
+      "timestamp": "2024-11-23T09:51:00.587749",
+      "available_amount": "5.5535 USDT\n4,500.00 ~ 9,696.41 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.0,
+      "timestamp": "2024-11-23T09:51:00.360749",
+      "available_amount": "50.0141 USDT\n50,000.00 ~ 87,374.63 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.37,
+      "timestamp": "2024-11-23T09:51:00.945535",
+      "available_amount": "50.13",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    },
+    {
+      "price": 658.38,
+      "timestamp": "2024-11-23T09:51:00.945551",
+      "available_amount": "55.01",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "CushyGodwit503"
+    },
+    {
+      "price": 658.46,
+      "timestamp": "2024-11-23T09:51:00.945555",
+      "available_amount": "7.08",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "NMP-Trader"
+    },
+    {
+      "price": 658.53,
+      "timestamp": "2024-11-23T09:51:00.945559",
+      "available_amount": "117.79",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": ""
+    }
+  ]
+}
