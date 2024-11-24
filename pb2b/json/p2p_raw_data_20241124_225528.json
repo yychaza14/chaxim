@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-24T22:55:28.082549",
+  "bybit": [
+    {
+      "price": 1748.0,
+      "timestamp": "2024-11-24T22:55:27.305093",
+      "available_amount": "161.6092 USDT\n282,000.00 ~ 282,492.88 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1748.6,
+      "timestamp": "2024-11-24T22:55:27.349545",
+      "available_amount": "20.6828 USDT\n4,500.00 ~ 6,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1748.7,
+      "timestamp": "2024-11-24T22:55:27.393299",
+      "available_amount": "151.9538 USDT\n50,000.00 ~ 80,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1748.9,
+      "timestamp": "2024-11-24T22:55:27.437839",
+      "available_amount": "282.8000 USDT\n100,000.00 ~ 494,588.92 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1760.44,
+      "timestamp": "2024-11-24T22:55:27.249016",
+      "available_amount": "119.7732 USDT\n50,000.00 ~ 150,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.99,
+      "timestamp": "2024-11-24T22:55:28.082506",
+      "available_amount": "458.51",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "NAHJ-SWIFT_EXCHANGE"
+    },
+    {
+      "price": 658.99,
+      "timestamp": "2024-11-24T22:55:28.082519",
+      "available_amount": "297.57",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "AlienTech237"
+    },
+    {
+      "price": 659.0,
+      "timestamp": "2024-11-24T22:55:28.082523",
+      "available_amount": "1010.63",
+      "payment_methods": "UBAcameroun, Ecobank",
+      "merchant_name": "LightExchange237"
+    },
+    {
+      "price": 659.13,
+      "timestamp": "2024-11-24T22:55:28.082525",
+      "available_amount": "79.35",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "MUSA_PATU"
+    }
+  ]
+}
