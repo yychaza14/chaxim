@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-24T14:38:43.663217",
+  "bybit": [
+    {
+      "price": 1753.0,
+      "timestamp": "2024-11-24T14:38:43.108419",
+      "available_amount": "43.2012 USDT\n4,500.00 ~ 15,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1753.2,
+      "timestamp": "2024-11-24T14:38:43.158700",
+      "available_amount": "300.0000 USDT\n300,000.00 ~ 500,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1753.2,
+      "timestamp": "2024-11-24T14:38:43.205944",
+      "available_amount": "94.3184 USDT\n4,500.00 ~ 20,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1753.5,
+      "timestamp": "2024-11-24T14:38:43.256607",
+      "available_amount": "238.2519 USDT\n50,000.00 ~ 300,000.00 NGN",
+      "payment_methods": "Kuda Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1763.0,
+      "timestamp": "2024-11-24T14:38:43.051424",
+      "available_amount": "500.0000 USDT\n100,000.00 ~ 881,500.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.9,
+      "timestamp": "2024-11-24T14:38:43.663170",
+      "available_amount": "160.33",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "CryptoLebiz"
+    },
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-24T14:38:43.663185",
+      "available_amount": "147.56",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "Terry-exchange"
+    },
+    {
+      "price": 658.38,
+      "timestamp": "2024-11-24T14:38:43.663188",
+      "available_amount": "198.08",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Trader-C01"
+    },
+    {
+      "price": 658.39,
+      "timestamp": "2024-11-24T14:38:43.663191",
+      "available_amount": "1712.40",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Duplextrading"
+    }
+  ]
+}
