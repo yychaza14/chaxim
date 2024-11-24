@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-24T18:59:54.728668",
+  "bybit": [
+    {
+      "price": 1751.5,
+      "timestamp": "2024-11-24T18:59:54.169149",
+      "available_amount": "34.1624 USDT\n9,999.00 ~ 10,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-24T18:59:54.218222",
+      "available_amount": "129.1585 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "PalmPayKuda Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-24T18:59:54.267450",
+      "available_amount": "1,058.4079 USDT\n4,500.00 ~ 4,800.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-24T18:59:54.316279",
+      "available_amount": "100.0000 USDT\n4,500.00 ~ 4,500.00 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1754.5,
+      "timestamp": "2024-11-24T18:59:54.110424",
+      "available_amount": "83.9602 USDT\n30,000.00 ~ 147,308.17 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.62,
+      "timestamp": "2024-11-24T18:59:54.728616",
+      "available_amount": "161.98",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "bull-trade2"
+    },
+    {
+      "price": 658.64,
+      "timestamp": "2024-11-24T18:59:54.728631",
+      "available_amount": "129.87",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    },
+    {
+      "price": 658.7,
+      "timestamp": "2024-11-24T18:59:54.728637",
+      "available_amount": "408.87",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "G-Glow"
+    },
+    {
+      "price": 658.72,
+      "timestamp": "2024-11-24T18:59:54.728640",
+      "available_amount": "102.14",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": ""
+    }
+  ]
+}
