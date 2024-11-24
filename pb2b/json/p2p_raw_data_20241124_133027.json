@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-24T13:30:27.137735",
+  "bybit": [
+    {
+      "price": 1754.0,
+      "timestamp": "2024-11-24T13:30:26.614270",
+      "available_amount": "35.1781 USDT\n61,500.00 ~ 61,702.38 NGN",
+      "payment_methods": "GTB Bank (Guarantee Trust Bank)PalmPay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1754.0,
+      "timestamp": "2024-11-24T13:30:26.662670",
+      "available_amount": "81.5066 USDT\n4,500.00 ~ 15,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1754.5,
+      "timestamp": "2024-11-24T13:30:26.712761",
+      "available_amount": "184.8293 USDT\n20,000.00 ~ 30,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1754.5,
+      "timestamp": "2024-11-24T13:30:26.761679",
+      "available_amount": "1,201.1158 USDT\n4,500.00 ~ 19,500.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1756.5,
+      "timestamp": "2024-11-24T13:30:26.554919",
+      "available_amount": "59.5789 USDT\n100,000.00 ~ 104,650.33 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.9,
+      "timestamp": "2024-11-24T13:30:27.137692",
+      "available_amount": "160.33",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "CryptoLebiz"
+    },
+    {
+      "price": 658.5,
+      "timestamp": "2024-11-24T13:30:27.137703",
+      "available_amount": "13.33",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    },
+    {
+      "price": 658.51,
+      "timestamp": "2024-11-24T13:30:27.137707",
+      "available_amount": "1945.84",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Duplextrading"
+    },
+    {
+      "price": 658.53,
+      "timestamp": "2024-11-24T13:30:27.137710",
+      "available_amount": "11.92",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "NMP-Trader"
+    }
+  ]
+}
