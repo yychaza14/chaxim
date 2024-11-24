@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-24T19:18:23.280440",
+  "bybit": [
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-24T19:18:22.712557",
+      "available_amount": "51.3270 USDT\n50,000.00 ~ 89,924.90 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-24T19:18:22.774225",
+      "available_amount": "96.1072 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "PalmPayKuda Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-24T19:18:22.838346",
+      "available_amount": "100.3598 USDT\n4,500.00 ~ 4,800.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-24T19:18:22.893093",
+      "available_amount": "100.0000 USDT\n4,500.00 ~ 4,500.00 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1762.0,
+      "timestamp": "2024-11-24T19:18:22.638453",
+      "available_amount": "29.9481 USDT\n30,000.00 ~ 52,768.55 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.61,
+      "timestamp": "2024-11-24T19:18:23.280383",
+      "available_amount": "64.91",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    },
+    {
+      "price": 658.62,
+      "timestamp": "2024-11-24T19:18:23.280400",
+      "available_amount": "40.28",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "bull-trade2"
+    },
+    {
+      "price": 658.7,
+      "timestamp": "2024-11-24T19:18:23.280404",
+      "available_amount": "320.65",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "G-Glow"
+    },
+    {
+      "price": 658.72,
+      "timestamp": "2024-11-24T19:18:23.280407",
+      "available_amount": "735.87",
+      "payment_methods": "MTNMobileMoney, MoMoNew, MTNMobileMoney",
+      "merchant_name": "Blacky-Crypto"
+    }
+  ]
+}
