@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-24T21:14:07.376515",
+  "bybit": [
+    {
+      "price": 1747.0,
+      "timestamp": "2024-11-24T21:14:06.768146",
+      "available_amount": "267.2553 USDT\n100,000.00 ~ 466,895.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.0,
+      "timestamp": "2024-11-24T21:14:06.821433",
+      "available_amount": "50.0000 USDT\n83,999.00 ~ 84,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.17,
+      "timestamp": "2024-11-24T21:14:06.874572",
+      "available_amount": "139.7570 USDT\n200,000.00 ~ 244,179.23 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.18,
+      "timestamp": "2024-11-24T21:14:06.927211",
+      "available_amount": "239.3673 USDT\n200,000.00 ~ 418,217.75 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1762.0,
+      "timestamp": "2024-11-24T21:14:06.682943",
+      "available_amount": "50.3911 USDT\n30,000.00 ~ 88,789.11 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.7,
+      "timestamp": "2024-11-24T21:14:07.376474",
+      "available_amount": "2.72",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "MUSA_PATU"
+    },
+    {
+      "price": 658.98,
+      "timestamp": "2024-11-24T21:14:07.376484",
+      "available_amount": "214.73",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "bull-trade2"
+    },
+    {
+      "price": 658.99,
+      "timestamp": "2024-11-24T21:14:07.376487",
+      "available_amount": "19.55",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "G-Glow"
+    },
+    {
+      "price": 659.0,
+      "timestamp": "2024-11-24T21:14:07.376490",
+      "available_amount": "1010.63",
+      "payment_methods": "UBAcameroun, Ecobank",
+      "merchant_name": "LightExchange237"
+    }
+  ]
+}
