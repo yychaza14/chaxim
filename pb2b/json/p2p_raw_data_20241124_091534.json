@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-24T09:15:34.206939",
+  "bybit": [
+    {
+      "price": 1754.75,
+      "timestamp": "2024-11-24T09:15:33.387598",
+      "available_amount": "200.0000 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1754.8,
+      "timestamp": "2024-11-24T09:15:33.443450",
+      "available_amount": "134.1226 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1754.95,
+      "timestamp": "2024-11-24T09:15:33.322668",
+      "available_amount": "5.6982 USDT\n5,000.00 ~ 10,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1754.95,
+      "timestamp": "2024-11-24T09:15:33.510126",
+      "available_amount": "5.6982 USDT\n5,000.00 ~ 10,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1755.0,
+      "timestamp": "2024-11-24T09:15:33.593683",
+      "available_amount": "173.7013 USDT\n5,500.00 ~ 20,000.00 NGN",
+      "payment_methods": "Opay",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.9,
+      "timestamp": "2024-11-24T09:15:34.206885",
+      "available_amount": "160.33",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "CryptoLebiz"
+    },
+    {
+      "price": 658.55,
+      "timestamp": "2024-11-24T09:15:34.206902",
+      "available_amount": "20.02",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "New-Generation-97"
+    },
+    {
+      "price": 658.6,
+      "timestamp": "2024-11-24T09:15:34.206906",
+      "available_amount": "27.19",
+      "payment_methods": "OrangeMoney, MTNMobileMoney",
+      "merchant_name": "MOCTARDU7"
+    },
+    {
+      "price": 658.8,
+      "timestamp": "2024-11-24T09:15:34.206909",
+      "available_amount": "9.73",
+      "payment_methods": "OrangeMoney, MTNMobileMoney",
+      "merchant_name": "bennolimitt"
+    }
+  ]
+}
