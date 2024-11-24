@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-24T09:41:24.856470",
+  "bybit": [
+    {
+      "price": 1754.75,
+      "timestamp": "2024-11-24T09:41:24.246593",
+      "available_amount": "171.5050 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1754.8,
+      "timestamp": "2024-11-24T09:41:24.298299",
+      "available_amount": "73.5448 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1755.0,
+      "timestamp": "2024-11-24T09:41:24.348615",
+      "available_amount": "131.3129 USDT\n5,500.00 ~ 20,000.00 NGN",
+      "payment_methods": "Opay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1755.0,
+      "timestamp": "2024-11-24T09:41:24.402097",
+      "available_amount": "16.8194 USDT\n5,000.00 ~ 20,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1764.99,
+      "timestamp": "2024-11-24T09:41:24.188252",
+      "available_amount": "11.3316 USDT\n20,000.00 ~ 20,000.16 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.58,
+      "timestamp": "2024-11-24T09:41:24.856424",
+      "available_amount": "10.90",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "New-Generation-97"
+    },
+    {
+      "price": 658.6,
+      "timestamp": "2024-11-24T09:41:24.856437",
+      "available_amount": "10.49",
+      "payment_methods": "OrangeMoney, MTNMobileMoney",
+      "merchant_name": "MOCTARDU7"
+    },
+    {
+      "price": 658.73,
+      "timestamp": "2024-11-24T09:41:24.856440",
+      "available_amount": "676.43",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Xchangesmart"
+    },
+    {
+      "price": 658.74,
+      "timestamp": "2024-11-24T09:41:24.856443",
+      "available_amount": "1409.19",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "KingsExchange91"
+    }
+  ]
+}
