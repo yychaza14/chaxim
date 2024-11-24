@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-24T15:45:39.024456",
+  "bybit": [
+    {
+      "price": 1650.0,
+      "timestamp": "2024-11-24T15:45:38.349730",
+      "available_amount": "7.5797 USDT\n4,500.00 ~ 12,506.50 NGN",
+      "payment_methods": "DSK Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1748.76,
+      "timestamp": "2024-11-24T15:45:38.395827",
+      "available_amount": "1,329.2602 USDT\n10,000.00 ~ 2,000,000.00 NGN",
+      "payment_methods": "ArmEconomBank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-24T15:45:38.450081",
+      "available_amount": "22.0319 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-24T15:45:38.495152",
+      "available_amount": "1,179.8159 USDT\n4,500.00 ~ 4,800.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1763.0,
+      "timestamp": "2024-11-24T15:45:38.296187",
+      "available_amount": "234.3732 USDT\n100,000.00 ~ 413,199.95 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.48,
+      "timestamp": "2024-11-24T15:45:39.024376",
+      "available_amount": "64.46",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "FREE_CHABGE"
+    },
+    {
+      "price": 658.85,
+      "timestamp": "2024-11-24T15:45:39.024400",
+      "available_amount": "566.95",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 658.98,
+      "timestamp": "2024-11-24T15:45:39.024408",
+      "available_amount": "402.85",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "AlienTech237"
+    },
+    {
+      "price": 659.0,
+      "timestamp": "2024-11-24T15:45:39.024414",
+      "available_amount": "3.50",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "SEM_Ets"
+    }
+  ]
+}
