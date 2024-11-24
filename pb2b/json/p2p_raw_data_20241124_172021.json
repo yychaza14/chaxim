@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-24T17:20:21.742253",
+  "bybit": [
+    {
+      "price": 1744.0,
+      "timestamp": "2024-11-24T17:20:21.256968",
+      "available_amount": "57.6857 USDT\n100,000.00 ~ 100,603.86 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1748.76,
+      "timestamp": "2024-11-24T17:20:21.308724",
+      "available_amount": "1,329.2602 USDT\n10,000.00 ~ 2,000,000.00 NGN",
+      "payment_methods": "ArmEconomBank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1751.0,
+      "timestamp": "2024-11-24T17:20:21.358218",
+      "available_amount": "4.5743 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-24T17:20:21.412261",
+      "available_amount": "1,098.9908 USDT\n4,500.00 ~ 4,800.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1754.0,
+      "timestamp": "2024-11-24T17:20:21.192203",
+      "available_amount": "198.5341 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "PalmPayKuda Bank",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.76,
+      "timestamp": "2024-11-24T17:20:21.742196",
+      "available_amount": "411.88",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "AlienTech237"
+    },
+    {
+      "price": 658.76,
+      "timestamp": "2024-11-24T17:20:21.742213",
+      "available_amount": "297.97",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 658.77,
+      "timestamp": "2024-11-24T17:20:21.742217",
+      "available_amount": "169.69",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    },
+    {
+      "price": 658.78,
+      "timestamp": "2024-11-24T17:20:21.742221",
+      "available_amount": "419.21",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "NAHJ-SWIFT_EXCHANGE"
+    }
+  ]
+}
