@@ -510,7 +510,7 @@ def main():
         )
         rate_xaf = 1000/resultbnb['BINANCE'][0]['price']
         rate_ngn = rate_xaf * resultbyb['BYBIT'][0]['price']
-        rerultbyb["RATE"] = rate_ngn
+        resultbyb["RATE"] = rate_ngn
 
         # Save both Bybit and Binance data
         saved_files = data_saver.save_data(
