@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-24T13:51:15.627352",
+  "bybit": [
+    {
+      "price": 1753.5,
+      "timestamp": "2024-11-24T13:51:15.066548",
+      "available_amount": "27.1915 USDT\n5,000.00 ~ 10,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1753.85,
+      "timestamp": "2024-11-24T13:51:15.117697",
+      "available_amount": "15.9041 USDT\n4,500.00 ~ 20,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1753.99,
+      "timestamp": "2024-11-24T13:51:15.171398",
+      "available_amount": "229.6094 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1754.5,
+      "timestamp": "2024-11-24T13:51:15.221197",
+      "available_amount": "1,520.5233 USDT\n4,500.00 ~ 29,500.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1763.9,
+      "timestamp": "2024-11-24T13:51:15.004535",
+      "available_amount": "99.8748 USDT\n30,000.00 ~ 150,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.9,
+      "timestamp": "2024-11-24T13:51:15.627297",
+      "available_amount": "160.33",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "CryptoLebiz"
+    },
+    {
+      "price": 658.5,
+      "timestamp": "2024-11-24T13:51:15.627314",
+      "available_amount": "442.35",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Trader-C01"
+    },
+    {
+      "price": 658.5,
+      "timestamp": "2024-11-24T13:51:15.627317",
+      "available_amount": "246.27",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "FREE_CHABGE"
+    },
+    {
+      "price": 658.5,
+      "timestamp": "2024-11-24T13:51:15.627320",
+      "available_amount": "402.60",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Kiva-Exchange"
+    }
+  ]
+}
