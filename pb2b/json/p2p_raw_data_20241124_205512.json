@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-24T20:55:12.053855",
+  "bybit": [
+    {
+      "price": 1746.9,
+      "timestamp": "2024-11-24T20:55:11.472126",
+      "available_amount": "659.5264 USDT\n400,000.00 ~ 1,152,126.66 NGN",
+      "payment_methods": "PalmPayBank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.0,
+      "timestamp": "2024-11-24T20:55:11.528530",
+      "available_amount": "745.5779 USDT\n500,000.00 ~ 1,302,524.59 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.0,
+      "timestamp": "2024-11-24T20:55:11.590352",
+      "available_amount": "20.0000 USDT\n4,500.00 ~ 7,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.0,
+      "timestamp": "2024-11-24T20:55:11.655760",
+      "available_amount": "93.0000 USDT\n158,000.00 ~ 162,471.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1757.9,
+      "timestamp": "2024-11-24T20:55:11.408339",
+      "available_amount": "12.4347 USDT\n20,000.00 ~ 21,858.95 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.7,
+      "timestamp": "2024-11-24T20:55:12.053759",
+      "available_amount": "2.72",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "MUSA_PATU"
+    },
+    {
+      "price": 658.99,
+      "timestamp": "2024-11-24T20:55:12.053799",
+      "available_amount": "19.55",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "G-Glow"
+    },
+    {
+      "price": 659.0,
+      "timestamp": "2024-11-24T20:55:12.053806",
+      "available_amount": "2797.74",
+      "payment_methods": "UBAcameroun, Ecobank",
+      "merchant_name": "LightExchange237"
+    },
+    {
+      "price": 659.0,
+      "timestamp": "2024-11-24T20:55:12.053813",
+      "available_amount": "9.64",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "I-GCrypto"
+    }
+  ]
+}
