@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-24T23:55:39.343807",
+  "bybit": [
+    {
+      "price": 1750.4,
+      "timestamp": "2024-11-24T23:55:38.716077",
+      "available_amount": "32.7504 USDT\n4,500.00 ~ 6,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1750.7,
+      "timestamp": "2024-11-24T23:55:38.765042",
+      "available_amount": "36.4703 USDT\n50,000.00 ~ 63,848.55 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1751.0,
+      "timestamp": "2024-11-24T23:55:38.819271",
+      "available_amount": "19.9180 USDT\n34,600.00 ~ 34,876.41 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1751.0,
+      "timestamp": "2024-11-24T23:55:38.868673",
+      "available_amount": "15.2509 USDT\n5,000.00 ~ 5,500.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1770.0,
+      "timestamp": "2024-11-24T23:55:38.661752",
+      "available_amount": "17.2890 USDT\n20,000.00 ~ 30,601.53 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 659.0,
+      "timestamp": "2024-11-24T23:55:39.343761",
+      "available_amount": "1003.04",
+      "payment_methods": "UBAcameroun, Ecobank",
+      "merchant_name": "LightExchange237"
+    },
+    {
+      "price": 659.0,
+      "timestamp": "2024-11-24T23:55:39.343774",
+      "available_amount": "1464.95",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "KingsExchange91"
+    },
+    {
+      "price": 659.43,
+      "timestamp": "2024-11-24T23:55:39.343778",
+      "available_amount": "1628.85",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Rami_Exchange"
+    },
+    {
+      "price": 659.55,
+      "timestamp": "2024-11-24T23:55:39.343780",
+      "available_amount": "1091.52",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    }
+  ]
+}
