@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-25T02:41:44.362398",
+  "bybit": [
+    {
+      "price": 1750.0,
+      "timestamp": "2024-11-25T02:41:43.653944",
+      "available_amount": "7.1426 USDT\n4,500.00 ~ 6,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1751.0,
+      "timestamp": "2024-11-25T02:41:43.705541",
+      "available_amount": "30.0000 USDT\n4,500.00 ~ 15,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1751.98,
+      "timestamp": "2024-11-25T02:41:43.754453",
+      "available_amount": "34.2884 USDT\n50,000.00 ~ 60,072.59 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-25T02:41:43.807532",
+      "available_amount": "601.5680 USDT\n500,000.00 ~ 1,053,947.13 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1770.0,
+      "timestamp": "2024-11-25T02:41:43.593313",
+      "available_amount": "293.6284 USDT\n18,000.00 ~ 70,000.00 NGN",
+      "payment_methods": "PalmPay",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.99,
+      "timestamp": "2024-11-25T02:41:44.362337",
+      "available_amount": "1091.52",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 659.6,
+      "timestamp": "2024-11-25T02:41:44.362355",
+      "available_amount": "1964.56",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Rami_Exchange"
+    },
+    {
+      "price": 659.6,
+      "timestamp": "2024-11-25T02:41:44.362360",
+      "available_amount": "190.01",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Ezeclaire"
+    },
+    {
+      "price": 659.65,
+      "timestamp": "2024-11-25T02:41:44.362365",
+      "available_amount": "2728.57",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "zena_337"
+    }
+  ]
+}
