@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-25T19:37:02.942977",
+  "bybit": [
+    {
+      "price": 1749.0,
+      "timestamp": "2024-11-25T19:37:02.358755",
+      "available_amount": "100.0000 USDT\n10,000.00 ~ 40,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1750.99,
+      "timestamp": "2024-11-25T19:37:02.410265",
+      "available_amount": "22.3798 USDT\n30,000.00 ~ 39,186.80 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1750.99,
+      "timestamp": "2024-11-25T19:37:02.467301",
+      "available_amount": "7.1229 USDT\n10,000.00 ~ 12,472.12 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1751.0,
+      "timestamp": "2024-11-25T19:37:02.520877",
+      "available_amount": "139.7829 USDT\n50,000.00 ~ 244,759.85 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1768.5,
+      "timestamp": "2024-11-25T19:37:02.297818",
+      "available_amount": "3,178.1284 USDT\n10,000.00 ~ 900,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 660.4,
+      "timestamp": "2024-11-25T19:37:02.942915",
+      "available_amount": "102.83",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 660.41,
+      "timestamp": "2024-11-25T19:37:02.942933",
+      "available_amount": "480.52",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Xchangesmart"
+    },
+    {
+      "price": 660.41,
+      "timestamp": "2024-11-25T19:37:02.942938",
+      "available_amount": "153.76",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "kiby-exchange"
+    },
+    {
+      "price": 660.43,
+      "timestamp": "2024-11-25T19:37:02.942943",
+      "available_amount": "132.38",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "AlphaOfCameroon"
+    }
+  ]
+}
