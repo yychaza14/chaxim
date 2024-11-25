@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-25T15:46:39.719374",
+  "bybit": [
+    {
+      "price": 1751.9,
+      "timestamp": "2024-11-25T15:46:39.155867",
+      "available_amount": "16.4166 USDT\n4,500.00 ~ 6,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1751.9,
+      "timestamp": "2024-11-25T15:46:39.211042",
+      "available_amount": "74.0463 USDT\n4,500.00 ~ 6,500.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1751.9,
+      "timestamp": "2024-11-25T15:46:39.258939",
+      "available_amount": "3.7424 USDT\n4,500.00 ~ 6,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-25T15:46:39.303361",
+      "available_amount": "283.0951 USDT\n4,500.00 ~ 6,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1768.61,
+      "timestamp": "2024-11-25T15:46:39.092184",
+      "available_amount": "25.9303 USDT\n20,000.00 ~ 25,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.5,
+      "timestamp": "2024-11-25T15:46:39.719321",
+      "available_amount": "202.71",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "CryptoLebiz"
+    },
+    {
+      "price": 660.58,
+      "timestamp": "2024-11-25T15:46:39.719336",
+      "available_amount": "226.98",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Trader-C01"
+    },
+    {
+      "price": 660.59,
+      "timestamp": "2024-11-25T15:46:39.719340",
+      "available_amount": "166.86",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    },
+    {
+      "price": 660.6,
+      "timestamp": "2024-11-25T15:46:39.719343",
+      "available_amount": "130.33",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "BlessBexchange"
+    }
+  ]
+}
