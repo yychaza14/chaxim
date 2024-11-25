@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-25T15:17:50.789215",
+  "bybit": [
+    {
+      "price": 1750.0,
+      "timestamp": "2024-11-25T15:17:50.211299",
+      "available_amount": "220.0197 USDT\n4,500.00 ~ 10,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1751.99,
+      "timestamp": "2024-11-25T15:17:50.264673",
+      "available_amount": "19.7492 USDT\n30,000.00 ~ 34,600.40 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-25T15:17:50.332481",
+      "available_amount": "97.4315 USDT\n4,500.00 ~ 4,500.00 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-25T15:17:50.386556",
+      "available_amount": "20.0124 USDT\n5,000.00 ~ 35,061.72 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1762.0,
+      "timestamp": "2024-11-25T15:17:50.148793",
+      "available_amount": "30.6468 USDT\n30,000.00 ~ 53,999.66 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.5,
+      "timestamp": "2024-11-25T15:17:50.789165",
+      "available_amount": "202.71",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "CryptoLebiz"
+    },
+    {
+      "price": 660.7,
+      "timestamp": "2024-11-25T15:17:50.789178",
+      "available_amount": "321.38",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Trader-C01"
+    },
+    {
+      "price": 660.79,
+      "timestamp": "2024-11-25T15:17:50.789182",
+      "available_amount": "50.99",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    },
+    {
+      "price": 660.8,
+      "timestamp": "2024-11-25T15:17:50.789187",
+      "available_amount": "397.74",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Xchangesmart"
+    }
+  ]
+}
