@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-25T10:41:39.743120",
+  "bybit": [
+    {
+      "price": 1750.0,
+      "timestamp": "2024-11-25T10:41:39.096388",
+      "available_amount": "11.0286 USDT\n18,000.00 ~ 19,300.05 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-25T10:41:39.177074",
+      "available_amount": "176.1283 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-25T10:41:39.255857",
+      "available_amount": "586.0420 USDT\n4,500.00 ~ 4,800.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-25T10:41:39.305898",
+      "available_amount": "97.4315 USDT\n4,500.00 ~ 4,500.00 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1760.0,
+      "timestamp": "2024-11-25T10:41:39.038413",
+      "available_amount": "16.3239 USDT\n20,000.00 ~ 28,730.06 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.9,
+      "timestamp": "2024-11-25T10:41:39.743072",
+      "available_amount": "355.00",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "CryptoLebiz"
+    },
+    {
+      "price": 659.0,
+      "timestamp": "2024-11-25T10:41:39.743087",
+      "available_amount": "100.00",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "Rise_Digital"
+    },
+    {
+      "price": 659.48,
+      "timestamp": "2024-11-25T10:41:39.743090",
+      "available_amount": "72.38",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "AlienTech237"
+    },
+    {
+      "price": 659.49,
+      "timestamp": "2024-11-25T10:41:39.743093",
+      "available_amount": "63.18",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "ladeesse"
+    }
+  ]
+}
