@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-25T15:35:14.132683",
+  "bybit": [
+    {
+      "price": 1751.9,
+      "timestamp": "2024-11-25T15:35:13.354525",
+      "available_amount": "77.7566 USDT\n4,500.00 ~ 6,500.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1751.9,
+      "timestamp": "2024-11-25T15:35:13.408629",
+      "available_amount": "16.8712 USDT\n4,500.00 ~ 6,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-25T15:35:13.464060",
+      "available_amount": "97.4315 USDT\n4,500.00 ~ 4,500.00 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-25T15:35:13.514020",
+      "available_amount": "196.2150 USDT\n20,000.00 ~ 30,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1768.61,
+      "timestamp": "2024-11-25T15:35:13.280469",
+      "available_amount": "12.3603 USDT\n20,000.00 ~ 21,860.55 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 660.65,
+      "timestamp": "2024-11-25T15:35:14.132622",
+      "available_amount": "261.31",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Xchangesmart"
+    },
+    {
+      "price": 660.66,
+      "timestamp": "2024-11-25T15:35:14.132641",
+      "available_amount": "39.05",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "BlessBexchange"
+    },
+    {
+      "price": 660.66,
+      "timestamp": "2024-11-25T15:35:14.132646",
+      "available_amount": "130.51",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "AlphaOfCameroon"
+    },
+    {
+      "price": 660.67,
+      "timestamp": "2024-11-25T15:35:14.132650",
+      "available_amount": "14.75",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    }
+  ]
+}
