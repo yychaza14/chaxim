@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-25T11:39:34.422538",
+  "bybit": [
+    {
+      "price": 1751.8,
+      "timestamp": "2024-11-25T11:39:33.792951",
+      "available_amount": "15.7489 USDT\n5,000.00 ~ 10,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1751.99,
+      "timestamp": "2024-11-25T11:39:33.837918",
+      "available_amount": "23.1506 USDT\n4,500.00 ~ 7,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-25T11:39:33.885048",
+      "available_amount": "142.6432 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1752.0,
+      "timestamp": "2024-11-25T11:39:33.947315",
+      "available_amount": "575.4254 USDT\n4,500.00 ~ 4,800.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1757.86,
+      "timestamp": "2024-11-25T11:39:33.739667",
+      "available_amount": "462.9786 USDT\n50,000.00 ~ 813,851.56 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.9,
+      "timestamp": "2024-11-25T11:39:34.422492",
+      "available_amount": "202.71",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "CryptoLebiz"
+    },
+    {
+      "price": 659.49,
+      "timestamp": "2024-11-25T11:39:34.422506",
+      "available_amount": "78.47",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "ladeesse"
+    },
+    {
+      "price": 659.53,
+      "timestamp": "2024-11-25T11:39:34.422509",
+      "available_amount": "29.57",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    },
+    {
+      "price": 659.55,
+      "timestamp": "2024-11-25T11:39:34.422512",
+      "available_amount": "26.30",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Ezeclaire"
+    }
+  ]
+}
