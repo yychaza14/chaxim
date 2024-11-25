@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-25T19:26:46.820150",
+  "bybit": [
+    {
+      "price": 1750.8,
+      "timestamp": "2024-11-25T19:26:46.241894",
+      "available_amount": "9.7900 USDT\n10,000.00 ~ 17,140.33 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1751.0,
+      "timestamp": "2024-11-25T19:26:46.298080",
+      "available_amount": "4.5745 USDT\n4,500.00 ~ 5,500.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1751.0,
+      "timestamp": "2024-11-25T19:26:46.352948",
+      "available_amount": "5.7871 USDT\n4,500.00 ~ 10,133.21 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1751.0,
+      "timestamp": "2024-11-25T19:26:46.408391",
+      "available_amount": "239.9140 USDT\n5,500.00 ~ 20,000.00 NGN",
+      "payment_methods": "Opay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1760.0,
+      "timestamp": "2024-11-25T19:26:46.175788",
+      "available_amount": "113.1803 USDT\n20,000.00 ~ 100,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 660.4,
+      "timestamp": "2024-11-25T19:26:46.820096",
+      "available_amount": "102.83",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 660.41,
+      "timestamp": "2024-11-25T19:26:46.820112",
+      "available_amount": "540.70",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Xchangesmart"
+    },
+    {
+      "price": 660.43,
+      "timestamp": "2024-11-25T19:26:46.820116",
+      "available_amount": "120.29",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "AlphaOfCameroon"
+    },
+    {
+      "price": 660.45,
+      "timestamp": "2024-11-25T19:26:46.820119",
+      "available_amount": "12.82",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "New-Generation-97"
+    }
+  ]
+}
