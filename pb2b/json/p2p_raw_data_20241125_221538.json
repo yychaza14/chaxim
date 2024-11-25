@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-25T22:15:38.709354",
+  "bybit": [
+    {
+      "price": 1749.0,
+      "timestamp": "2024-11-25T22:15:37.814232",
+      "available_amount": "40.0000 USDT\n50,000.00 ~ 69,960.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1749.7,
+      "timestamp": "2024-11-25T22:15:37.881748",
+      "available_amount": "74.5768 USDT\n50,000.00 ~ 80,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1749.8,
+      "timestamp": "2024-11-25T22:15:37.935348",
+      "available_amount": "59.8066 USDT\n100,000.00 ~ 104,649.58 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1749.99,
+      "timestamp": "2024-11-25T22:15:37.987932",
+      "available_amount": "38.2279 USDT\n50,000.00 ~ 66,898.44 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1764.44,
+      "timestamp": "2024-11-25T22:15:37.746312",
+      "available_amount": "39.7540 USDT\n50,000.00 ~ 70,143.54 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.9,
+      "timestamp": "2024-11-25T22:15:38.709304",
+      "available_amount": "202.71",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "CryptoLebiz"
+    },
+    {
+      "price": 659.7,
+      "timestamp": "2024-11-25T22:15:38.709318",
+      "available_amount": "666.37",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "NAHJ-SWIFT_EXCHANGE"
+    },
+    {
+      "price": 659.7,
+      "timestamp": "2024-11-25T22:15:38.709324",
+      "available_amount": "547.13",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "AlienTech237"
+    },
+    {
+      "price": 659.73,
+      "timestamp": "2024-11-25T22:15:38.709327",
+      "available_amount": "313.28",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "KingsExchange91"
+    }
+  ]
+}
