@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-25T17:34:40.941630",
+  "bybit": [
+    {
+      "price": 1749.77,
+      "timestamp": "2024-11-25T17:34:40.377781",
+      "available_amount": "8.6916 USDT\n10,000.00 ~ 15,208.30 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1749.87,
+      "timestamp": "2024-11-25T17:34:40.444966",
+      "available_amount": "17.4283 USDT\n4,500.00 ~ 30,497.25 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1749.9,
+      "timestamp": "2024-11-25T17:34:40.495760",
+      "available_amount": "10.9732 USDT\n10,000.00 ~ 19,202.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1749.99,
+      "timestamp": "2024-11-25T17:34:40.547756",
+      "available_amount": "5.7420 USDT\n9,000.00 ~ 10,048.44 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1760.0,
+      "timestamp": "2024-11-25T17:34:40.313629",
+      "available_amount": "130.7790 USDT\n50,000.00 ~ 230,171.04 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.5,
+      "timestamp": "2024-11-25T17:34:40.941585",
+      "available_amount": "202.71",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "CryptoLebiz"
+    },
+    {
+      "price": 660.49,
+      "timestamp": "2024-11-25T17:34:40.941599",
+      "available_amount": "116.35",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Xchangesmart"
+    },
+    {
+      "price": 660.5,
+      "timestamp": "2024-11-25T17:34:40.941602",
+      "available_amount": "14.20",
+      "payment_methods": "OrangeMoney, MTNMobileMoney",
+      "merchant_name": "MOCTARDU7"
+    },
+    {
+      "price": 660.5,
+      "timestamp": "2024-11-25T17:34:40.941605",
+      "available_amount": "53.12",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "G-Glow"
+    }
+  ]
+}
