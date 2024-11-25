@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-25T16:22:27.445134",
+  "bybit": [
+    {
+      "price": 1749.5,
+      "timestamp": "2024-11-25T16:22:26.677511",
+      "available_amount": "742.4781 USDT\n1,000,000.00 ~ 1,298,965.43 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1749.5,
+      "timestamp": "2024-11-25T16:22:26.738962",
+      "available_amount": "2,598.7169 USDT\n800,000.00 ~ 4,546,455.21 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1749.9,
+      "timestamp": "2024-11-25T16:22:26.795059",
+      "available_amount": "5,800.0000 USDT\n1,000,000.00 ~ 10,000,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1749.95,
+      "timestamp": "2024-11-25T16:22:26.852547",
+      "available_amount": "1,500.0000 USDT\n500,000.00 ~ 2,624,925.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1754.0,
+      "timestamp": "2024-11-25T16:22:26.611690",
+      "available_amount": "3.8823 USDT\n4,500.00 ~ 6,809.55 NGN",
+      "payment_methods": "PalmPay",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.5,
+      "timestamp": "2024-11-25T16:22:27.445083",
+      "available_amount": "202.71",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "CryptoLebiz"
+    },
+    {
+      "price": 660.55,
+      "timestamp": "2024-11-25T16:22:27.445098",
+      "available_amount": "7.34",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "BlessBexchange"
+    },
+    {
+      "price": 660.57,
+      "timestamp": "2024-11-25T16:22:27.445102",
+      "available_amount": "103.92",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Kiva-Exchange"
+    },
+    {
+      "price": 660.58,
+      "timestamp": "2024-11-25T16:22:27.445105",
+      "available_amount": "21.01",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    }
+  ]
+}
