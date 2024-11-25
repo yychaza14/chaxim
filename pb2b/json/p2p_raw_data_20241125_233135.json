@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-25T23:31:35.777464",
+  "bybit": [
+    {
+      "price": 1747.0,
+      "timestamp": "2024-11-25T23:31:34.936097",
+      "available_amount": "39.3376 USDT\n20,000.00 ~ 20,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.95,
+      "timestamp": "2024-11-25T23:31:34.989459",
+      "available_amount": "14.6992 USDT\n4,500.00 ~ 6,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1748.0,
+      "timestamp": "2024-11-25T23:31:35.039373",
+      "available_amount": "20.2745 USDT\n4,500.00 ~ 6,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1748.4,
+      "timestamp": "2024-11-25T23:31:35.095612",
+      "available_amount": "533.7646 USDT\n100,000.00 ~ 400,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1757.0,
+      "timestamp": "2024-11-25T23:31:34.874538",
+      "available_amount": "46.0360 USDT\n50,000.00 ~ 80,885.25 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.9,
+      "timestamp": "2024-11-25T23:31:35.777400",
+      "available_amount": "202.71",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "CryptoLebiz"
+    },
+    {
+      "price": 659.47,
+      "timestamp": "2024-11-25T23:31:35.777419",
+      "available_amount": "321.22",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Xchangesmart"
+    },
+    {
+      "price": 659.61,
+      "timestamp": "2024-11-25T23:31:35.777424",
+      "available_amount": "144.72",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "kiby-exchange"
+    },
+    {
+      "price": 659.9,
+      "timestamp": "2024-11-25T23:31:35.777428",
+      "available_amount": "251.04",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "JB-XCHANGE"
+    }
+  ]
+}
