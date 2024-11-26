@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-26T13:08:38.207137",
+  "bybit": [
+    {
+      "price": 1747.3,
+      "timestamp": "2024-11-26T13:08:37.281627",
+      "available_amount": "37.8754 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.5,
+      "timestamp": "2024-11-26T13:08:37.344514",
+      "available_amount": "85.7267 USDT\n4,500 ~ 6,500 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1748.0,
+      "timestamp": "2024-11-26T13:08:37.393132",
+      "available_amount": "65.5971 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1748.82,
+      "timestamp": "2024-11-26T13:08:37.443750",
+      "available_amount": "14.2988 USDT\n4,500 ~ 25,006.02 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1749.0,
+      "timestamp": "2024-11-26T13:08:37.493826",
+      "available_amount": "2.8588 USDT\n4,500 ~ 5,000.04 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-26T13:08:37.874399",
+      "available_amount": "12.74",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "AlphaOfCameroon"
+    },
+    {
+      "price": 658.08,
+      "timestamp": "2024-11-26T13:08:37.874420",
+      "available_amount": "156.29",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    },
+    {
+      "price": 658.09,
+      "timestamp": "2024-11-26T13:08:37.874426",
+      "available_amount": "76.13",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "NMP-Trader"
+    },
+    {
+      "price": 658.1,
+      "timestamp": "2024-11-26T13:08:37.874431",
+      "available_amount": "188.95",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "kiby-exchange"
+    }
+  ]
+}
