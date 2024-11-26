@@ -492,6 +492,7 @@ class DataSaver:
 '''
 
 
+
 class DataSaver:
     """A class responsible for saving data in different formats with continuous JSON storage."""
     
@@ -636,6 +637,34 @@ class DataSaver:
             self.logger.error(f"Error saving to continuous JSON: {str(e)}")
             return None
 
+    def save_to_json(
+        self, 
+        data: Dict,
+        filename_prefix: str = "data",
+        indent: int = 2
+    ) -> Optional[Path]:
+        """
+        Backward compatibility method for saving to a new JSON file.
+        
+        Args:
+            data (Dict): Data to save
+            filename_prefix (str): Prefix for the filename
+            indent (int): Number of spaces for JSON indentation
+            
+        Returns:
+            Optional[Path]: Path to saved file if successful, None otherwise
+        """
+        filename = self.json_dir / self._generate_filename(filename_prefix, "json")
+        
+        try:
+            with open(filename, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=indent)
+            self.logger.info(f"Data successfully saved to JSON: {filename}")
+            return filename
+        except Exception as e:
+            self.logger.error(f"Error saving to JSON: {str(e)}")
+            return None
+
     def save_data(
         self, 
         bybit_data: Dict[str, Union[bool, List[Dict], str]] = None,
@@ -657,7 +686,9 @@ class DataSaver:
         """
         results = {
             'excel_path': None,
-            'continuous_json_path': None
+            'continuous_json_path': None,
+            # Backward compatibility 
+            'json_path': None
         }
         
         # Prepare combined data dictionary
@@ -685,6 +716,12 @@ class DataSaver:
                 filename_prefix=excel_prefix
             )
             results['continuous_json_path'] = self.save_to_continuous_json(combined_data)
+            
+            # Backward compatibility: also save to a separate JSON file
+            results['json_path'] = self.save_to_json(
+                combined_data,
+                filename_prefix=json_prefix
+            )
         
         return results
 def main():
