@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-26T11:40:01.476554",
+  "bybit": [
+    {
+      "price": 1745.99,
+      "timestamp": "2024-11-26T11:40:00.520969",
+      "available_amount": "35.2517 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Kuda Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1746.0,
+      "timestamp": "2024-11-26T11:40:00.579832",
+      "available_amount": "10 USDT\n4,500 ~ 17,460 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1746.4,
+      "timestamp": "2024-11-26T11:40:00.776602",
+      "available_amount": "103.2804 USDT\n4,500 ~ 6,500 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.0,
+      "timestamp": "2024-11-26T11:40:00.826269",
+      "available_amount": "64.3394 USDT\n78,000 ~ 78,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1748.3,
+      "timestamp": "2024-11-26T11:40:00.875241",
+      "available_amount": "100 USDT\n171,000 ~ 174,830 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.1,
+      "timestamp": "2024-11-26T11:40:01.202654",
+      "available_amount": "171.34",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Duplextrading"
+    },
+    {
+      "price": 658.18,
+      "timestamp": "2024-11-26T11:40:01.202673",
+      "available_amount": "159.19",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "NMP-Trader"
+    },
+    {
+      "price": 658.19,
+      "timestamp": "2024-11-26T11:40:01.202677",
+      "available_amount": "115.92",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Trader-C01"
+    },
+    {
+      "price": 658.28,
+      "timestamp": "2024-11-26T11:40:01.202680",
+      "available_amount": "211.60",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "kiby-exchange"
+    }
+  ]
+}
