@@ -788,6 +788,53 @@ class DataSaver:
         """
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         return f"{prefix}_{timestamp}.{extension}"
+    
+    def save_to_excel(
+        self, 
+        data: Dict[str, List[Dict]],
+        filename_prefix: str = "data",
+        sheet_name: str = "Sheet1"
+    ) -> Optional[Path]:
+        """
+        Save data to Excel file.
+        
+        Args:
+            data (Dict[str, List[Dict]]): Data to save with 'bybit' and 'binance' keys
+            filename_prefix (str): Prefix for the filename
+            sheet_name (str): Name of the Excel sheet
+            
+        Returns:
+            Optional[Path]: Path to saved file if successful, None otherwise
+        """
+        filename = self.excel_dir / self._generate_filename(filename_prefix, "xlsx")
+        
+        try:
+            # Create separate DataFrames for Bybit and Binance data
+            dfs = []
+            
+            if 'bybit' in data:
+                bybit_df = pd.DataFrame(data['bybit'])
+                bybit_df['source'] = 'Bybit'
+                dfs.append(bybit_df)
+            
+            if 'binance' in data:
+                binance_df = pd.DataFrame(data['binance'])
+                binance_df['source'] = 'Binance'
+                dfs.append(binance_df)
+            
+            # Combine the DataFrames
+            if dfs:
+                combined_df = pd.concat(dfs, ignore_index=True)
+                combined_df.to_excel(filename, sheet_name=sheet_name, index=False)
+                self.logger.info(f"Data successfully saved to Excel: {filename}")
+                return filename
+            else:
+                self.logger.warning("No data to save to Excel")
+                return None
+                
+        except Exception as e:
+            self.logger.error(f"Error saving to Excel: {str(e)}")
+            return None
 
     def save_to_continuous_json(
         self, 
