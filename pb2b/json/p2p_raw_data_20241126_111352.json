@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-26T11:13:52.785423",
+  "bybit": [
+    {
+      "price": 1746.4,
+      "timestamp": "2024-11-26T11:13:51.974453",
+      "available_amount": "136.2058 USDT\n4,500 ~ 6,500 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.0,
+      "timestamp": "2024-11-26T11:13:52.039320",
+      "available_amount": "1,250.2337 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.0,
+      "timestamp": "2024-11-26T11:13:52.097457",
+      "available_amount": "242.9314 USDT\n78,000 ~ 78,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.0,
+      "timestamp": "2024-11-26T11:13:52.153882",
+      "available_amount": "9.5376 USDT\n7,000 ~ 16,662.18 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.8,
+      "timestamp": "2024-11-26T11:13:52.213557",
+      "available_amount": "11.0022 USDT\n15,000 ~ 19,229.64 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.29,
+      "timestamp": "2024-11-26T11:13:52.678534",
+      "available_amount": "146.52",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    },
+    {
+      "price": 658.34,
+      "timestamp": "2024-11-26T11:13:52.678550",
+      "available_amount": "171.33",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "NMP-Trader"
+    },
+    {
+      "price": 658.35,
+      "timestamp": "2024-11-26T11:13:52.678554",
+      "available_amount": "78.38",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Trader-C01"
+    },
+    {
+      "price": 658.45,
+      "timestamp": "2024-11-26T11:13:52.678556",
+      "available_amount": "38.95",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Vs_Enterprise_CMR"
+    }
+  ]
+}
