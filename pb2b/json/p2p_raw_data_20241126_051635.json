@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-26T05:16:35.769177",
+  "bybit": [
+    {
+      "price": 1746.0,
+      "timestamp": "2024-11-26T05:16:35.190782",
+      "available_amount": "14.6390 USDT\n4,500.00 ~ 7,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1746.8,
+      "timestamp": "2024-11-26T05:16:35.247593",
+      "available_amount": "417.5199 USDT\n4,500.00 ~ 5,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.0,
+      "timestamp": "2024-11-26T05:16:35.302907",
+      "available_amount": "201.1379 USDT\n4,700.00 ~ 6,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.3,
+      "timestamp": "2024-11-26T05:16:35.357654",
+      "available_amount": "21.3865 USDT\n4,500.00 ~ 6,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1761.2,
+      "timestamp": "2024-11-26T05:16:35.127338",
+      "available_amount": "13.0933 USDT\n20,000.00 ~ 23,059.91 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.0,
+      "timestamp": "2024-11-26T05:16:35.769125",
+      "available_amount": "191.48",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "Rise_Digital"
+    },
+    {
+      "price": 660.23,
+      "timestamp": "2024-11-26T05:16:35.769142",
+      "available_amount": "218.12",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Xchangesmart"
+    },
+    {
+      "price": 660.24,
+      "timestamp": "2024-11-26T05:16:35.769146",
+      "available_amount": "615.49",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "AlienTech237"
+    },
+    {
+      "price": 660.25,
+      "timestamp": "2024-11-26T05:16:35.769149",
+      "available_amount": "180.00",
+      "payment_methods": "MTNMobileMoney, OrangeMoney",
+      "merchant_name": "daloox_services"
+    }
+  ]
+}
