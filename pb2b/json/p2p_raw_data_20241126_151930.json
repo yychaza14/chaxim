@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-26T15:19:30.629283",
+  "bybit": [
+    {
+      "price": 1746.9,
+      "timestamp": "2024-11-26T15:19:29.717274",
+      "available_amount": "100.0869 USDT\n20,000 ~ 20,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.0,
+      "timestamp": "2024-11-26T15:19:29.772657",
+      "available_amount": "3.4572 USDT\n4,600 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.4,
+      "timestamp": "2024-11-26T15:19:29.958610",
+      "available_amount": "176.2257 USDT\n4,500 ~ 30,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.44,
+      "timestamp": "2024-11-26T15:19:30.008597",
+      "available_amount": "37.1715 USDT\n50,000 ~ 64,954.96 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1747.5,
+      "timestamp": "2024-11-26T15:19:30.063521",
+      "available_amount": "16 USDT\n27,500 ~ 27,960 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 656.0,
+      "timestamp": "2024-11-26T15:19:30.451376",
+      "available_amount": "1661.38",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "Mboamoney"
+    },
+    {
+      "price": 657.83,
+      "timestamp": "2024-11-26T15:19:30.451397",
+      "available_amount": "10.30",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Xchangesmart"
+    },
+    {
+      "price": 657.83,
+      "timestamp": "2024-11-26T15:19:30.451403",
+      "available_amount": "178.89",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    },
+    {
+      "price": 657.95,
+      "timestamp": "2024-11-26T15:19:30.451409",
+      "available_amount": "106.46",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "AlphaOfCameroon"
+    }
+  ]
+}
