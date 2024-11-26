@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-26T02:39:58.894068",
+  "bybit": [
+    {
+      "price": 1744.8,
+      "timestamp": "2024-11-26T02:39:58.302230",
+      "available_amount": "9.7828 USDT\n10,000.00 ~ 17,069.02 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.87,
+      "timestamp": "2024-11-26T02:39:58.352470",
+      "available_amount": "880.1200 USDT\n100,000.00 ~ 300,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.89,
+      "timestamp": "2024-11-26T02:39:58.404980",
+      "available_amount": "188.3916 USDT\n50,000.00 ~ 328,722.61 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1744.9,
+      "timestamp": "2024-11-26T02:39:58.454917",
+      "available_amount": "713.4506 USDT\n100,000.00 ~ 500,000.00 NGN",
+      "payment_methods": "Kuda Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1764.42,
+      "timestamp": "2024-11-26T02:39:58.240833",
+      "available_amount": "98.0619 USDT\n20,000.00 ~ 150,000.00 NGN",
+      "payment_methods": "Kuda BankBank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.0,
+      "timestamp": "2024-11-26T02:39:58.894013",
+      "available_amount": "382.10",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "Rise_Digital"
+    },
+    {
+      "price": 657.9,
+      "timestamp": "2024-11-26T02:39:58.894028",
+      "available_amount": "202.71",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "CryptoLebiz"
+    },
+    {
+      "price": 660.28,
+      "timestamp": "2024-11-26T02:39:58.894032",
+      "available_amount": "102.83",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 660.49,
+      "timestamp": "2024-11-26T02:39:58.894036",
+      "available_amount": "1895.38",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Rami_Exchange"
+    }
+  ]
+}
