@@ -897,6 +897,7 @@ def main():
     scraper = BybitScraper(headless=True)
     binance = BinanceP2PAPI()
     data_saver = DataSaver()
+    data_saver_json = DataSaver(base_directory='pb2b', json_filename='continuous_data.json')
 
     try:
         
@@ -917,6 +918,10 @@ def main():
 
         # Save both Bybit and Binance data
         saved_files = data_saver.save_data(
+            bybit_data=resultbyb, 
+            binance_data=resultbnb
+        )
+        saved_files_json = data_saver_json.save_data(
             bybit_data=resultbyb, 
             binance_data=resultbnb
         )
