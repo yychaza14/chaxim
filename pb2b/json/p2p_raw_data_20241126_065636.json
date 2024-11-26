@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-26T06:56:36.503019",
+  "bybit": [
+    {
+      "price": 1742.0,
+      "timestamp": "2024-11-26T06:56:35.632019",
+      "available_amount": "39.9398 USDT\n5,000.00 ~ 9,700.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1742.0,
+      "timestamp": "2024-11-26T06:56:35.679724",
+      "available_amount": "20.0000 USDT\n5,000.00 ~ 20,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1742.0,
+      "timestamp": "2024-11-26T06:56:35.726001",
+      "available_amount": "7.4366 USDT\n4,500.00 ~ 12,954.55 NGN",
+      "payment_methods": "PalmPayOpayPalm Pay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1742.0,
+      "timestamp": "2024-11-26T06:56:35.771267",
+      "available_amount": "100.0000 USDT\n4,500.00 ~ 7,000.00 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1745.0,
+      "timestamp": "2024-11-26T06:56:35.576161",
+      "available_amount": "480.3362 USDT\n100,000.00 ~ 838,186.66 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 659.0,
+      "timestamp": "2024-11-26T06:56:36.502951",
+      "available_amount": "191.48",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "Rise_Digital"
+    },
+    {
+      "price": 659.91,
+      "timestamp": "2024-11-26T06:56:36.502966",
+      "available_amount": "615.49",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "AlienTech237"
+    },
+    {
+      "price": 659.92,
+      "timestamp": "2024-11-26T06:56:36.502969",
+      "available_amount": "605.09",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Xchangesmart"
+    },
+    {
+      "price": 659.93,
+      "timestamp": "2024-11-26T06:56:36.502991",
+      "available_amount": "453.64",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    }
+  ]
+}
