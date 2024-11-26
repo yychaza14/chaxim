@@ -728,6 +728,15 @@ class DataSaver:
 
 
 
+import json
+import logging
+import os
+from datetime import datetime
+from pathlib import Path
+from typing import Dict, List, Union, Optional
+
+import pandas as pd
+
 class DataSaver:
     """A class responsible for saving data in different formats with continuous JSON storage."""
     
@@ -788,7 +797,7 @@ class DataSaver:
         """
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         return f"{prefix}_{timestamp}.{extension}"
-    
+
     def save_to_excel(
         self, 
         data: Dict[str, List[Dict]],
@@ -836,6 +845,34 @@ class DataSaver:
             self.logger.error(f"Error saving to Excel: {str(e)}")
             return None
 
+    def save_to_json(
+        self, 
+        data: Dict,
+        filename_prefix: str = "data",
+        indent: int = 2
+    ) -> Optional[Path]:
+        """
+        Save data to a new JSON file.
+        
+        Args:
+            data (Dict): Data to save
+            filename_prefix (str): Prefix for the filename
+            indent (int): Number of spaces for JSON indentation
+            
+        Returns:
+            Optional[Path]: Path to saved file if successful, None otherwise
+        """
+        filename = self.json_dir / self._generate_filename(filename_prefix, "json")
+        
+        try:
+            with open(filename, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=indent, ensure_ascii=False)
+            self.logger.info(f"Data successfully saved to JSON: {filename}")
+            return filename
+        except Exception as e:
+            self.logger.error(f"Error saving to JSON: {str(e)}")
+            return None
+
     def save_to_continuous_json(
         self, 
         data: Dict,
@@ -878,8 +915,6 @@ class DataSaver:
         except Exception as e:
             self.logger.error(f"Error saving to continuous JSON: {str(e)}")
             return None
-
-    # ... [rest of the previous implementation remains the same]
 
     def save_data(
         self, 
