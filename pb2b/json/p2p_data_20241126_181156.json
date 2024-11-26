@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-26T18:11:56.878806",
+  "bybit": [
+    {
+      "price": 1745.0,
+      "timestamp": "2024-11-26T18:11:56.159206",
+      "available_amount": "41.4039 USDT\n5,000 ~ 10,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1746.8,
+      "timestamp": "2024-11-26T18:11:56.227644",
+      "available_amount": "13.9225 USDT\n10,000 ~ 24,319.82 NGN",
+      "payment_methods": "Opay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1746.8,
+      "timestamp": "2024-11-26T18:11:56.286685",
+      "available_amount": "35.2717 USDT\n10,000 ~ 61,612.6 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1746.89,
+      "timestamp": "2024-11-26T18:11:56.339024",
+      "available_amount": "46.5076 USDT\n50,000 ~ 81,243.66 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1746.99,
+      "timestamp": "2024-11-26T18:11:56.397670",
+      "available_amount": "41.7952 USDT\n57,825 ~ 73,015.79 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.98,
+      "timestamp": "2024-11-26T18:11:56.878761",
+      "available_amount": "163.48",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "Saffana"
+    },
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-26T18:11:56.878774",
+      "available_amount": "29.02",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "successinp2p"
+    },
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-26T18:11:56.878778",
+      "available_amount": "101.45",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "MOCTARDU7"
+    },
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-26T18:11:56.878780",
+      "available_amount": "130.00",
+      "payment_methods": "OrangeMoney, MTNMobileMoney",
+      "merchant_name": "bennolimitt"
+    }
+  ]
+}
