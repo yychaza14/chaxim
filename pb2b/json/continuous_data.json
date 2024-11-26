@@ -1,0 +1,73 @@
+[
+  {
+    "success": true,
+    "timestamp": "2024-11-26T07:16:20.320911",
+    "bybit": [
+      {
+        "price": 1741.5,
+        "timestamp": "2024-11-26T07:16:19.775049",
+        "available_amount": "214.7207 USDT\n5,000.00 ~ 10,000.00 NGN",
+        "payment_methods": "Bank Transfer",
+        "merchant_name": "Buy USDT"
+      },
+      {
+        "price": 1741.99,
+        "timestamp": "2024-11-26T07:16:19.835101",
+        "available_amount": "37.6253 USDT\n5,000.00 ~ 9,700.00 NGN",
+        "payment_methods": "Bank Transfer",
+        "merchant_name": "Buy USDT"
+      },
+      {
+        "price": 1741.99,
+        "timestamp": "2024-11-26T07:16:19.891107",
+        "available_amount": "13.6425 USDT\n5,000.00 ~ 15,000.00 NGN",
+        "payment_methods": "Bank Transfer",
+        "merchant_name": "Buy USDT"
+      },
+      {
+        "price": 1742.0,
+        "timestamp": "2024-11-26T07:16:19.951987",
+        "available_amount": "97.4000 USDT\n4,500.00 ~ 10,000.00 NGN",
+        "payment_methods": "Bank Transfer",
+        "merchant_name": "Buy USDT"
+      },
+      {
+        "price": 1742.4,
+        "timestamp": "2024-11-26T07:16:20.009416",
+        "available_amount": "30.8132 USDT\n10,000.00 ~ 53,688.91 NGN",
+        "payment_methods": "Bank Transfer",
+        "merchant_name": "Buy USDT"
+      }
+    ],
+    "binance": [
+      {
+        "price": 659.0,
+        "timestamp": "2024-11-26T07:16:20.320862",
+        "available_amount": "191.48",
+        "payment_methods": "MoMoNew, MTNMobileMoney",
+        "merchant_name": "Rise_Digital"
+      },
+      {
+        "price": 659.78,
+        "timestamp": "2024-11-26T07:16:20.320879",
+        "available_amount": "183.38",
+        "payment_methods": "MTNMobileMoney, MoMoNew",
+        "merchant_name": "MechaneVisionTrading"
+      },
+      {
+        "price": 659.79,
+        "timestamp": "2024-11-26T07:16:20.320882",
+        "available_amount": "303.22",
+        "payment_methods": "MTNMobileMoney, MoMoNew",
+        "merchant_name": "NAHJ-SWIFT_EXCHANGE"
+      },
+      {
+        "price": 659.85,
+        "timestamp": "2024-11-26T07:16:20.320885",
+        "available_amount": "687.44",
+        "payment_methods": "MTNMobileMoney",
+        "merchant_name": "Xchangesmart"
+      }
+    ]
+  }
+]
