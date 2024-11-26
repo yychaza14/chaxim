@@ -492,7 +492,7 @@ class DataSaver:
 '''
 
 
-
+'''
 class DataSaver:
     """A class responsible for saving data in different formats with continuous JSON storage."""
     
@@ -724,6 +724,175 @@ class DataSaver:
             )
         
         return results
+        '''
+
+
+
+class DataSaver:
+    """A class responsible for saving data in different formats with continuous JSON storage."""
+    
+    def __init__(self, base_directory: Union[str, Path] = 'pb2b', json_filename: str = 'continuous_data.json'):
+        """
+        Initialize the DataSaver with a base directory and a continuous JSON file.
+        
+        Args:
+            base_directory (Union[str, Path]): Base directory for storing all data files
+            json_filename (str): Name of the continuous JSON file
+        """
+        self.base_dir = Path(base_directory)
+        self._setup_directories()
+        self._setup_logging()
+        
+        # Set up the continuous JSON file path
+        self.continuous_json_path = self.json_dir / json_filename
+
+    def _setup_directories(self) -> None:
+        """Create necessary directories for storing different types of data."""
+        # Create base directory if it doesn't exist
+        self.base_dir.mkdir(exist_ok=True)
+        
+        # Create subdirectories for different data types
+        self.logs_dir = self.base_dir / 'logs'
+        self.excel_dir = self.base_dir / 'excel'
+        self.json_dir = self.base_dir / 'json'
+        
+        for directory in [self.logs_dir, self.excel_dir, self.json_dir]:
+            directory.mkdir(exist_ok=True)
+
+    def _setup_logging(self) -> None:
+        """Set up logging configuration."""
+        log_file = self.logs_dir / f'data_saver_{datetime.now().strftime("%Y%m%d")}.log'
+        
+        logging.basicConfig(
+            level=logging.INFO,
+            format='%(asctime)s - %(levelname)s - %(message)s',
+            datefmt='%Y-%m-%d %H:%M:%S',
+            handlers=[
+                logging.FileHandler(log_file),
+                logging.StreamHandler()
+            ]
+        )
+        self.logger = logging.getLogger(__name__)
+        self.logger.info(f"DataSaver logging initialized. Log file: {log_file}")
+
+    def _generate_filename(self, prefix: str, extension: str) -> str:
+        """
+        Generate a filename with timestamp.
+        
+        Args:
+            prefix (str): Prefix for the filename
+            extension (str): File extension
+            
+        Returns:
+            str: Generated filename
+        """
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        return f"{prefix}_{timestamp}.{extension}"
+
+    def save_to_continuous_json(
+        self, 
+        data: Dict,
+        indent: int = 2
+    ) -> Optional[Path]:
+        """
+        Safely append data to a continuous JSON file, creating it if it doesn't exist.
+        
+        Args:
+            data (Dict): Data to save
+            indent (int): Number of spaces for JSON indentation
+            
+        Returns:
+            Optional[Path]: Path to saved file if successful, None otherwise
+        """
+        try:
+            # Ensure the directory exists
+            self.continuous_json_path.parent.mkdir(parents=True, exist_ok=True)
+            
+            # Read existing data or initialize an empty list
+            if self.continuous_json_path.exists() and os.path.getsize(self.continuous_json_path) > 0:
+                try:
+                    with open(self.continuous_json_path, 'r', encoding='utf-8') as f:
+                        existing_data = json.load(f)
+                except json.JSONDecodeError:
+                    # If file is corrupted or empty, start with an empty list
+                    existing_data = []
+            else:
+                existing_data = []
+            
+            # Add new data to the list
+            existing_data.append(data)
+            
+            # Write back to the file
+            with open(self.continuous_json_path, 'w', encoding='utf-8') as f:
+                json.dump(existing_data, f, indent=indent, ensure_ascii=False)
+            
+            self.logger.info(f"Data successfully {'appended to' if existing_data else 'created in'} continuous JSON: {self.continuous_json_path}")
+            return self.continuous_json_path
+        except Exception as e:
+            self.logger.error(f"Error saving to continuous JSON: {str(e)}")
+            return None
+
+    # ... [rest of the previous implementation remains the same]
+
+    def save_data(
+        self, 
+        bybit_data: Dict[str, Union[bool, List[Dict], str]] = None,
+        binance_data: Dict[str, Union[bool, List[Dict], str]] = None,
+        excel_prefix: str = "p2p_data",
+        json_prefix: str = "p2p_raw_data"
+    ) -> Dict[str, Optional[Path]]:
+        """
+        Save data from Bybit and Binance to both Excel and continuous JSON formats.
+        
+        Args:
+            bybit_data (Dict): Bybit scraper data
+            binance_data (Dict): Binance API data
+            excel_prefix (str): Prefix for Excel filename
+            json_prefix (str): Prefix for JSON filename
+            
+        Returns:
+            Dict[str, Optional[Path]]: Paths to saved files
+        """
+        results = {
+            'excel_path': None,
+            'continuous_json_path': None,
+            'json_path': None
+        }
+        
+        # Prepare combined data dictionary
+        combined_data = {
+            "success": False,
+            "timestamp": datetime.now().isoformat(),
+            "bybit": [],
+            "binance": []
+        }
+        
+        # Add Bybit data if available
+        if bybit_data and bybit_data.get("success") and bybit_data.get("BYBIT"):
+            combined_data["success"] = True
+            combined_data["bybit"] = bybit_data["BYBIT"]
+        
+        # Add Binance data if available
+        if binance_data and binance_data.get("success") and binance_data.get("BINANCE"):
+            combined_data["success"] = True
+            combined_data["binance"] = binance_data["BINANCE"]
+        
+        # Save data if any source is successful
+        if combined_data["success"]:
+            results['excel_path'] = self.save_to_excel(
+                {"bybit": combined_data["bybit"], "binance": combined_data["binance"]},
+                filename_prefix=excel_prefix
+            )
+            results['continuous_json_path'] = self.save_to_continuous_json(combined_data)
+            
+            # Backward compatibility: also save to a separate JSON file
+            results['json_path'] = self.save_to_json(
+                combined_data,
+                filename_prefix=json_prefix
+            )
+        
+        return results
+
 def main():
     scraper = BybitScraper(headless=True)
     binance = BinanceP2PAPI()
