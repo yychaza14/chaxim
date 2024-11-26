@@ -921,7 +921,7 @@ class DataSaver:
         bybit_data: Dict[str, Union[bool, List[Dict], str]] = None,
         binance_data: Dict[str, Union[bool, List[Dict], str]] = None,
         excel_prefix: str = "p2p_data",
-        json_prefix: str = "p2p_raw_data"
+        json_prefix: str = "p2p_data"
     ) -> Dict[str, Optional[Path]]:
         """
         Save data from Bybit and Binance to both Excel and continuous JSON formats.
@@ -979,7 +979,7 @@ def main():
     scraper = BybitScraper(headless=True)
     binance = BinanceP2PAPI()
     data_saver = DataSaver()
-    data_saver_json = DataSaver(base_directory='pb2b', json_filename='continuous_data.json')
+    #data_saver_json = DataSaver(base_directory='pb2b', json_filename='continuous_data.json')
 
     try:
         
@@ -1003,7 +1003,7 @@ def main():
             bybit_data=resultbyb, 
             binance_data=resultbnb
         )
-        saved_files_json = data_saver_json.save_data(
+        # saved_files_json = data_saver_json.save_data(
             bybit_data=resultbyb, 
             binance_data=resultbnb
         )
