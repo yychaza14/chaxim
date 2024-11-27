@@ -1,0 +1,73 @@
+[
+  {
+    "success": true,
+    "timestamp": "2024-11-27T20:59:30.207079",
+    "bybit": [
+      {
+        "price": 1738.0,
+        "timestamp": "2024-11-27T20:59:29.089651",
+        "available_amount": "284.7009 USDT\n4,500 ~ 5,000 NGN",
+        "payment_methods": "Bank Transfer",
+        "merchant_name": "Buy USDT"
+      },
+      {
+        "price": 1738.99,
+        "timestamp": "2024-11-27T20:59:29.145163",
+        "available_amount": "6.353 USDT\n11,047 ~ 11,047.8 NGN",
+        "payment_methods": "Bank Transfer",
+        "merchant_name": "Buy USDT"
+      },
+      {
+        "price": 1739.0,
+        "timestamp": "2024-11-27T20:59:29.457529",
+        "available_amount": "65.7011 USDT\n100,000 ~ 114,254.21 NGN",
+        "payment_methods": "Bank Transfer",
+        "merchant_name": "Buy USDT"
+      },
+      {
+        "price": 1739.0,
+        "timestamp": "2024-11-27T20:59:29.508132",
+        "available_amount": "10 USDT\n5,000 ~ 17,390 NGN",
+        "payment_methods": "Bank Transfer",
+        "merchant_name": "Buy USDT"
+      },
+      {
+        "price": 1739.0,
+        "timestamp": "2024-11-27T20:59:29.556599",
+        "available_amount": "974.7543 USDT\n200,000 ~ 1,000,000 NGN",
+        "payment_methods": "Bank Transfer",
+        "merchant_name": "Buy USDT"
+      }
+    ],
+    "binance": [
+      {
+        "price": 658.99,
+        "timestamp": "2024-11-27T20:59:30.207031",
+        "available_amount": "863.28",
+        "payment_methods": "MoMoNew",
+        "merchant_name": "BLUEPIPS FX"
+      },
+      {
+        "price": 659.0,
+        "timestamp": "2024-11-27T20:59:30.207046",
+        "available_amount": "1484.58",
+        "payment_methods": "MTNMobileMoney",
+        "merchant_name": "zena_337"
+      },
+      {
+        "price": 659.04,
+        "timestamp": "2024-11-27T20:59:30.207050",
+        "available_amount": "65.71",
+        "payment_methods": "MTNMobileMoney",
+        "merchant_name": "Alinho_237"
+      },
+      {
+        "price": 659.05,
+        "timestamp": "2024-11-27T20:59:30.207052",
+        "available_amount": "24.44",
+        "payment_methods": "OrangeMoney",
+        "merchant_name": "bennolimitt"
+      }
+    ]
+  }
+]
