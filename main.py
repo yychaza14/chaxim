@@ -922,11 +922,11 @@ def main():
             bybit_data=resultbyb, 
             binance_data=resultbnb
         )
-        '''
+        
         saved_files_json = data_saver_json.save_data(
             bybit_data=resultbyb, 
             binance_data=resultbnb
-        )'''
+        )
 
         # Print summary
         print("\nP2P Listing Scraping Results:")
