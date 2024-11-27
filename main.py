@@ -893,6 +893,9 @@ def main():
         print(f"Error in main execution: {str(e)}")
     finally:
         scraper.close()
+
+if __name__ == "__main__":
+    main()
 '''
 def main():
     scraper = BybitScraper(headless=True)
