@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T17:49:33.818931",
+  "bybit": [
+    {
+      "price": 1727.99,
+      "timestamp": "2024-11-28T17:49:33.230907",
+      "available_amount": "153.4276 USDT\n10,000 ~ 50,000 NGN",
+      "payment_methods": "PalmPayBank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1728.0,
+      "timestamp": "2024-11-28T17:49:33.286059",
+      "available_amount": "100 USDT\n20,000 ~ 70,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1728.0,
+      "timestamp": "2024-11-28T17:49:33.330835",
+      "available_amount": "59.6421 USDT\n100,000 ~ 103,061.54 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1728.0,
+      "timestamp": "2024-11-28T17:49:33.376428",
+      "available_amount": "54.3845 USDT\n35,000 ~ 93,976.41 NGN",
+      "payment_methods": "PalmPayBank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1728.4,
+      "timestamp": "2024-11-28T17:49:33.422981",
+      "available_amount": "23.5573 USDT\n10,000 ~ 40,716.43 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.1,
+      "timestamp": "2024-11-28T17:49:33.818873",
+      "available_amount": "56.82",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Alinho_237"
+    },
+    {
+      "price": 658.11,
+      "timestamp": "2024-11-28T17:49:33.818891",
+      "available_amount": "9.25",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "G-Glow"
+    },
+    {
+      "price": 658.12,
+      "timestamp": "2024-11-28T17:49:33.818895",
+      "available_amount": "29.50",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "fastserviceexchange"
+    },
+    {
+      "price": 658.2,
+      "timestamp": "2024-11-28T17:49:33.818899",
+      "available_amount": "17.30",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "AlphaOfCameroon"
+    }
+  ]
+}
