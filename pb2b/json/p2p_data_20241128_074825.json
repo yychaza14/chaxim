@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T07:48:25.027770",
+  "bybit": [
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-28T07:48:24.480346",
+      "available_amount": "2,584 USDT\n4,500 ~ 4,500 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1735.3,
+      "timestamp": "2024-11-28T07:48:24.536117",
+      "available_amount": "70.1729 USDT\n100,000 ~ 121,771.03 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1735.69,
+      "timestamp": "2024-11-28T07:48:24.582121",
+      "available_amount": "18.3392 USDT\n30,000 ~ 31,831.16 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1735.7,
+      "timestamp": "2024-11-28T07:48:24.627542",
+      "available_amount": "113.5795 USDT\n100,000 ~ 150,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1735.9,
+      "timestamp": "2024-11-28T07:48:24.673730",
+      "available_amount": "467.0787 USDT\n810,000 ~ 810,801.91 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-28T07:48:25.027720",
+      "available_amount": "595.82",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 658.08,
+      "timestamp": "2024-11-28T07:48:25.027737",
+      "available_amount": "41.27",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Alinho_237"
+    },
+    {
+      "price": 658.1,
+      "timestamp": "2024-11-28T07:48:25.027740",
+      "available_amount": "52.79",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "NMP-Trader"
+    },
+    {
+      "price": 658.14,
+      "timestamp": "2024-11-28T07:48:25.027744",
+      "available_amount": "570.89",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "AlienTech237"
+    }
+  ]
+}
