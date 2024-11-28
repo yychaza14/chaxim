@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T21:44:31.290037",
+  "bybit": [
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-28T21:44:30.692952",
+      "available_amount": "19.5381 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Kuda Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-28T21:44:30.749309",
+      "available_amount": "343.0156 USDT\n5,000 ~ 25,000 NGN",
+      "payment_methods": "OpayBank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.85,
+      "timestamp": "2024-11-28T21:44:30.796528",
+      "available_amount": "23.2579 USDT\n5,000 ~ 40,000.09 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1720.0,
+      "timestamp": "2024-11-28T21:44:30.841301",
+      "available_amount": "190.0299 USDT\n4,500 ~ 9,000 NGN",
+      "payment_methods": "Kuda Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1720.0,
+      "timestamp": "2024-11-28T21:44:30.887166",
+      "available_amount": "39 USDT\n5,000 ~ 67,080 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.89,
+      "timestamp": "2024-11-28T21:44:31.289981",
+      "available_amount": "112.55",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "fastserviceexchange"
+    },
+    {
+      "price": 657.97,
+      "timestamp": "2024-11-28T21:44:31.290000",
+      "available_amount": "779.62",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 657.99,
+      "timestamp": "2024-11-28T21:44:31.290004",
+      "available_amount": "1168.50",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "CRYTOEXCHANGES"
+    },
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-28T21:44:31.290008",
+      "available_amount": "2196.17",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "C-TOWN-TRADE"
+    }
+  ]
+}
