@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T21:36:22.765245",
+  "bybit": [
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-28T21:36:22.165847",
+      "available_amount": "125.2158 USDT\n4,500 ~ 6,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-28T21:36:22.224495",
+      "available_amount": "19.5381 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Kuda Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-28T21:36:22.275268",
+      "available_amount": "494.3245 USDT\n5,000 ~ 25,000 NGN",
+      "payment_methods": "OpayBank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-28T21:36:22.327444",
+      "available_amount": "8.1693 USDT\n5,000 ~ 9,900 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.85,
+      "timestamp": "2024-11-28T21:36:22.378872",
+      "available_amount": "3.7 USDT\n5,000 ~ 6,363.44 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.89,
+      "timestamp": "2024-11-28T21:36:22.765186",
+      "available_amount": "150.05",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "fastserviceexchange"
+    },
+    {
+      "price": 657.97,
+      "timestamp": "2024-11-28T21:36:22.765202",
+      "available_amount": "931.84",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 657.98,
+      "timestamp": "2024-11-28T21:36:22.765207",
+      "available_amount": "143.28",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "AlphaOfCameroon"
+    },
+    {
+      "price": 657.99,
+      "timestamp": "2024-11-28T21:36:22.765212",
+      "available_amount": "1168.50",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "CRYTOEXCHANGES"
+    }
+  ]
+}
