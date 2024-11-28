@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T10:51:45.499603",
+  "bybit": [
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-28T10:51:44.795881",
+      "available_amount": "557.0956 USDT\n4,500 ~ 4,500 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1734.0,
+      "timestamp": "2024-11-28T10:51:44.858284",
+      "available_amount": "27.5666 USDT\n4,500 ~ 6,200 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1735.0,
+      "timestamp": "2024-11-28T10:51:44.911330",
+      "available_amount": "4.6393 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Kuda Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1736.5,
+      "timestamp": "2024-11-28T10:51:44.969744",
+      "available_amount": "18.8754 USDT\n4,500 ~ 7,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1736.8,
+      "timestamp": "2024-11-28T10:51:45.027986",
+      "available_amount": "177 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.81,
+      "timestamp": "2024-11-28T10:51:45.499555",
+      "available_amount": "118.06",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    },
+    {
+      "price": 657.82,
+      "timestamp": "2024-11-28T10:51:45.499571",
+      "available_amount": "51.48",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Simplicity237"
+    },
+    {
+      "price": 657.82,
+      "timestamp": "2024-11-28T10:51:45.499575",
+      "available_amount": "54.74",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "NMP-Trader"
+    },
+    {
+      "price": 657.83,
+      "timestamp": "2024-11-28T10:51:45.499578",
+      "available_amount": "3.74",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Xchangesmart"
+    }
+  ]
+}
