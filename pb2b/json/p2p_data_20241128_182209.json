@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T18:22:09.021481",
+  "bybit": [
+    {
+      "price": 1729.0,
+      "timestamp": "2024-11-28T18:22:08.436949",
+      "available_amount": "371.1604 USDT\n20,000 ~ 30,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-28T18:22:08.493649",
+      "available_amount": "1,990.6171 USDT\n4,500 ~ 4,500 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-28T18:22:08.537926",
+      "available_amount": "43.656 USDT\n30,000 ~ 75,524.88 NGN",
+      "payment_methods": "PalmPayBank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-28T18:22:08.584654",
+      "available_amount": "31.526 USDT\n50,000 ~ 54,539.98 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-28T18:22:08.630540",
+      "available_amount": "29.8013 USDT\n4,500 ~ 7,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.2,
+      "timestamp": "2024-11-28T18:22:09.021395",
+      "available_amount": "147.59",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "noutci-trade"
+    },
+    {
+      "price": 658.2,
+      "timestamp": "2024-11-28T18:22:09.021424",
+      "available_amount": "347.88",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 658.22,
+      "timestamp": "2024-11-28T18:22:09.021433",
+      "available_amount": "56.47",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Xchangesmart"
+    },
+    {
+      "price": 658.72,
+      "timestamp": "2024-11-28T18:22:09.021441",
+      "available_amount": "178.69",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "NAHJ-SWIFT_EXCHANGE"
+    }
+  ]
+}
