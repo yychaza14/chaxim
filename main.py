@@ -585,7 +585,6 @@ def get_exchange_rate(from_currency='EUR', to_currency='XAF'):
         print(f"Error: {e}")
         return None
 
-    main()
 def main():
     scraper = BybitScraper(headless=True)
     binance = BinanceP2PAPI()
