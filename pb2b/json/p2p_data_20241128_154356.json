@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T15:43:56.851935",
+  "bybit": [
+    {
+      "price": 1725.89,
+      "timestamp": "2024-11-28T15:43:56.151964",
+      "available_amount": "319.3927 USDT\n50,000 ~ 551,236.66 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1725.95,
+      "timestamp": "2024-11-28T15:43:56.209696",
+      "available_amount": "34.3661 USDT\n10,000 ~ 59,314.17 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1725.99,
+      "timestamp": "2024-11-28T15:43:56.258547",
+      "available_amount": "30 USDT\n51,750 ~ 51,779.7 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1726.0,
+      "timestamp": "2024-11-28T15:43:56.308396",
+      "available_amount": "247.1796 USDT\n20,000 ~ 100,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1726.0,
+      "timestamp": "2024-11-28T15:43:56.355873",
+      "available_amount": "24.4036 USDT\n20,000 ~ 42,120.61 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.99,
+      "timestamp": "2024-11-28T15:43:56.851889",
+      "available_amount": "37.97",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    },
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-28T15:43:56.851904",
+      "available_amount": "27.69",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "AlphaOfCameroon"
+    },
+    {
+      "price": 658.05,
+      "timestamp": "2024-11-28T15:43:56.851907",
+      "available_amount": "13.56",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "MUSA_PATU"
+    },
+    {
+      "price": 658.11,
+      "timestamp": "2024-11-28T15:43:56.851910",
+      "available_amount": "19.90",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "G-Glow"
+    }
+  ]
+}
