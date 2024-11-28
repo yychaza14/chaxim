@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T05:30:00.645367",
+  "bybit": [
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-28T05:30:00.103533",
+      "available_amount": "2,584 USDT\n4,500 ~ 4,500 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1737.8,
+      "timestamp": "2024-11-28T05:30:00.157452",
+      "available_amount": "947.1228 USDT\n5,000 ~ 15,000 NGN",
+      "payment_methods": "PalmPayOpayBank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1737.8,
+      "timestamp": "2024-11-28T05:30:00.202255",
+      "available_amount": "182.3594 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1739.0,
+      "timestamp": "2024-11-28T05:30:00.249553",
+      "available_amount": "200.2787 USDT\n4,500 ~ 10,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1739.0,
+      "timestamp": "2024-11-28T05:30:00.294657",
+      "available_amount": "80.0903 USDT\n20,000 ~ 70,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.38,
+      "timestamp": "2024-11-28T05:30:00.645318",
+      "available_amount": "80.00",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Alinho_237"
+    },
+    {
+      "price": 658.39,
+      "timestamp": "2024-11-28T05:30:00.645333",
+      "available_amount": "72.52",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    },
+    {
+      "price": 658.4,
+      "timestamp": "2024-11-28T05:30:00.645337",
+      "available_amount": "390.54",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Trader-C01"
+    },
+    {
+      "price": 658.5,
+      "timestamp": "2024-11-28T05:30:00.645340",
+      "available_amount": "43.86",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Servira"
+    }
+  ]
+}
