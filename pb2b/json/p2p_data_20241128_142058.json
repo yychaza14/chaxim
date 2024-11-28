@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T14:20:58.251619",
+  "bybit": [
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-28T14:20:57.527951",
+      "available_amount": "2,339.1188 USDT\n4,500 ~ 4,500 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1733.0,
+      "timestamp": "2024-11-28T14:20:57.600301",
+      "available_amount": "6.73 USDT\n11,600 ~ 11,663.09 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1734.0,
+      "timestamp": "2024-11-28T14:20:57.711820",
+      "available_amount": "13.7643 USDT\n5,000 ~ 23,867.29 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1734.0,
+      "timestamp": "2024-11-28T14:20:57.790998",
+      "available_amount": "15.3798 USDT\n5,000 ~ 10,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1734.5,
+      "timestamp": "2024-11-28T14:20:57.855024",
+      "available_amount": "10.6312 USDT\n4,500 ~ 7,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-28T14:20:58.251566",
+      "available_amount": "28.15",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "AlphaOfCameroon"
+    },
+    {
+      "price": 658.03,
+      "timestamp": "2024-11-28T14:20:58.251584",
+      "available_amount": "93.37",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    },
+    {
+      "price": 658.04,
+      "timestamp": "2024-11-28T14:20:58.251588",
+      "available_amount": "16.09",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Trader-C01"
+    },
+    {
+      "price": 658.05,
+      "timestamp": "2024-11-28T14:20:58.251591",
+      "available_amount": "7.97",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "MUSA_PATU"
+    }
+  ]
+}
