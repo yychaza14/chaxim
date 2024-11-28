@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T20:45:56.322555",
+  "bybit": [
+    {
+      "price": 1716.0,
+      "timestamp": "2024-11-28T20:45:55.734152",
+      "available_amount": "8.3448 USDT\n4,600 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1718.5,
+      "timestamp": "2024-11-28T20:45:55.796492",
+      "available_amount": "3 USDT\n5,000 ~ 5,155.5 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1718.99,
+      "timestamp": "2024-11-28T20:45:55.846661",
+      "available_amount": "35.7728 USDT\n50,000 ~ 61,493.08 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-28T20:45:55.899875",
+      "available_amount": "31.472 USDT\n25,000 ~ 54,100.36 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-28T20:45:55.958476",
+      "available_amount": "12 USDT\n20,000 ~ 20,628 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.9,
+      "timestamp": "2024-11-28T20:45:56.322506",
+      "available_amount": "11.50",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "AlphaOfCameroon"
+    },
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-28T20:45:56.322522",
+      "available_amount": "53.94",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Duplextrading"
+    },
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-28T20:45:56.322526",
+      "available_amount": "332.38",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "No_one_is_above_God_"
+    },
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-28T20:45:56.322529",
+      "available_amount": "1177.07",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "I-GCrypto"
+    }
+  ]
+}
