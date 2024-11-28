@@ -301,7 +301,7 @@ class BinanceP2PAPI:
                 "data": None,
                 "message": error_msg
             }
-'''
+
 import json
 import logging
 import os
@@ -553,7 +553,6 @@ def main():
     scraper = BybitScraper(headless=True)
     binance = BinanceP2PAPI()
     data_saver = DataSaver()
-    #data_saver_json = DataSaver(base_directory='pb2b', json_filename='continuous_data.json')
 
     try:
         
@@ -614,8 +613,8 @@ def main():
         scraper.close()
 
 if __name__ == "__main__":
-    main()'''
-
+    main()
+'''
 class DataSaver:
     """A class responsible for saving data in different formats with continuous file appending."""
     
@@ -895,80 +894,4 @@ def main():
         scraper.close()
 
 if __name__ == "__main__":
-    main()
-'''
-def main():
-    scraper = BybitScraper(headless=True)
-    binance = BinanceP2PAPI()
-    data_saver = DataSaver()
-    #data_saver_json = DataSaver(base_directory='pb2b', json_filename='continuous_data.json')
-
-    try:
-        
-        resultbyb = scraper.get_p2p_listings(
-            token="USDT",
-            fiat="NGN",
-            action_type="1"
-        )
-        
-        resultbnb = binance.get_p2p_listings(
-            token="USDT",
-            fiat="XAF",
-            action_type="1"
-        )
-        rate_xaf = 1000/resultbnb['BINANCE'][0]['price']
-        rate_ngn = rate_xaf * resultbyb['BYBIT'][0]['price']
-        resultbyb["RATE"] = rate_ngn
-
-        # Save both Bybit and Binance data
-        saved_files = data_saver.save_data(
-            bybit_data=resultbyb, 
-            binance_data=resultbnb
-        )
-        
-        saved_files_json = data_saver_json.save_data(
-            bybit_data=resultbyb, 
-            binance_data=resultbnb
-        )
-
-        # Print summary
-        print("\nP2P Listing Scraping Results:")
-        print(f"Time of scraping: {datetime.now().isoformat()}")
-        
-        # Bybit results
-        if resultbyb["success"] and resultbyb.get("BYBIT"):
-            print("\nBybit Results:")
-            print(f"Number of listings: {len(resultbyb['BYBIT'])}")
-            print(f"Lowest Bybit price: {resultbyb['BYBIT'][0]['price']} NGN")
-            print(f"Highest Bybit price: {resultbyb['BYBIT'][-1]['price']} NGN")
-            print(f"Highest Bybit price: {resultbyb['RATE']} NGN")
-        else:
-            print("\nBybit scraping failed or returned no data")
-        
-        # Binance results
-        if resultbnb["success"] and resultbnb.get("BINANCE"):
-            print("\nBinance Results:")
-            print(f"Number of listings: {len(resultbnb['BINANCE'])}")
-            print(f"Lowest Binance price: {resultbnb['BINANCE'][0]['price']} XAF")
-            print(f"Highest Binance price: {resultbnb['BINANCE'][-1]['price']} XAF")
-        else:
-            print("\nBinance API call failed or returned no data")
-
-        # Saved files
-        if saved_files['excel_path']:
-            print(f"\nData saved to Excel: {saved_files['excel_path']}")
-        if saved_files['json_path']:
-            print(f"Data saved to JSON: {saved_files['json_path']}")
-
-    except Exception as e:
-        print(f"Error in main execution: {str(e)}")
-        logging.error(f"Error in main execution: {str(e)}", exc_info=True)
-    finally:
-        scraper.close()
-
-if __name__ == "__main__":
-    main()
-'''
-
-
-
+    main()'''
