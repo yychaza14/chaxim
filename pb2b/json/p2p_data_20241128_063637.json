@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T06:36:37.437907",
+  "bybit": [
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-28T06:36:36.657770",
+      "available_amount": "2,430.502 USDT\n4,500 ~ 4,500 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1738.95,
+      "timestamp": "2024-11-28T06:36:36.752544",
+      "available_amount": "12.4334 USDT\n4,500 ~ 7,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1738.96,
+      "timestamp": "2024-11-28T06:36:36.815780",
+      "available_amount": "64.0604 USDT\n100,000 ~ 111,398.47 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1739.0,
+      "timestamp": "2024-11-28T06:36:36.882037",
+      "available_amount": "67.1349 USDT\n5,000 ~ 9,700 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1739.0,
+      "timestamp": "2024-11-28T06:36:36.970126",
+      "available_amount": "65.2441 USDT\n10,000 ~ 20,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-28T06:36:37.437829",
+      "available_amount": "29.05",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "Terry-exchange"
+    },
+    {
+      "price": 658.21,
+      "timestamp": "2024-11-28T06:36:37.437853",
+      "available_amount": "186.53",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    },
+    {
+      "price": 658.22,
+      "timestamp": "2024-11-28T06:36:37.437858",
+      "available_amount": "84.04",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Alinho_237"
+    },
+    {
+      "price": 658.22,
+      "timestamp": "2024-11-28T06:36:37.437863",
+      "available_amount": "136.23",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Xchangesmart"
+    }
+  ]
+}
