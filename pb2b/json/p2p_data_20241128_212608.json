@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T21:26:08.528408",
+  "bybit": [
+    {
+      "price": 1718.0,
+      "timestamp": "2024-11-28T21:26:07.690271",
+      "available_amount": "165.075 USDT\n4,500 ~ 6,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-28T21:26:07.747717",
+      "available_amount": "38.4872 USDT\n4,500 ~ 18,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-28T21:26:07.798966",
+      "available_amount": "575.3686 USDT\n5,000 ~ 25,000 NGN",
+      "payment_methods": "PalmPayOpayBank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-28T21:26:07.850150",
+      "available_amount": "19.5381 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Kuda Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-28T21:26:07.899877",
+      "available_amount": "27.7779 USDT\n5,000 ~ 9,900 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-28T21:26:08.528345",
+      "available_amount": "1033.06",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 658.07,
+      "timestamp": "2024-11-28T21:26:08.528364",
+      "available_amount": "82.85",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Alinho_237"
+    },
+    {
+      "price": 658.07,
+      "timestamp": "2024-11-28T21:26:08.528369",
+      "available_amount": "13.96",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "fastserviceexchange"
+    },
+    {
+      "price": 658.08,
+      "timestamp": "2024-11-28T21:26:08.528374",
+      "available_amount": "150.88",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "AlphaOfCameroon"
+    }
+  ]
+}
