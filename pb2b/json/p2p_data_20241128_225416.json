@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T22:54:15.997168",
+  "bybit": [
+    {
+      "price": 1723.0,
+      "timestamp": "2024-11-28T22:54:15.336402",
+      "available_amount": "135.9868 USDT\n5,000 ~ 234,305.25 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.99,
+      "timestamp": "2024-11-28T22:54:15.398046",
+      "available_amount": "15.2103 USDT\n5,000 ~ 9,900 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1724.0,
+      "timestamp": "2024-11-28T22:54:15.458704",
+      "available_amount": "131.4367 USDT\n4,500 ~ 6,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1724.0,
+      "timestamp": "2024-11-28T22:54:15.514621",
+      "available_amount": "7.1127 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Kuda Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1724.0,
+      "timestamp": "2024-11-28T22:54:15.566333",
+      "available_amount": "239.3856 USDT\n10,000 ~ 30,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.52,
+      "timestamp": "2024-11-28T22:54:15.997127",
+      "available_amount": "1118.79",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 657.53,
+      "timestamp": "2024-11-28T22:54:15.997139",
+      "available_amount": "215.00",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Rami_Exchange"
+    },
+    {
+      "price": 657.55,
+      "timestamp": "2024-11-28T22:54:15.997142",
+      "available_amount": "210.94",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "AlphaOfCameroon"
+    },
+    {
+      "price": 657.65,
+      "timestamp": "2024-11-28T22:54:15.997145",
+      "available_amount": "249.43",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "fastserviceexchange"
+    }
+  ]
+}
