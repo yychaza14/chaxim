@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T08:19:57.238704",
+  "bybit": [
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-28T08:19:56.593329",
+      "available_amount": "212.7676 USDT\n4,500 ~ 4,500 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1733.0,
+      "timestamp": "2024-11-28T08:19:56.665594",
+      "available_amount": "17.1148 USDT\n4,600 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1736.0,
+      "timestamp": "2024-11-28T08:19:56.728235",
+      "available_amount": "246.8873 USDT\n142,000 ~ 428,596.35 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1736.8,
+      "timestamp": "2024-11-28T08:19:56.791647",
+      "available_amount": "22.2774 USDT\n30,000 ~ 38,691.38 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1736.99,
+      "timestamp": "2024-11-28T08:19:56.851252",
+      "available_amount": "106.1355 USDT\n30,000 ~ 184,356.3 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-28T08:19:57.238639",
+      "available_amount": "352.29",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-28T08:19:57.238659",
+      "available_amount": "105.98",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "AlphaOfCameroon"
+    },
+    {
+      "price": 658.13,
+      "timestamp": "2024-11-28T08:19:57.238665",
+      "available_amount": "284.14",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Xchangesmart"
+    },
+    {
+      "price": 658.14,
+      "timestamp": "2024-11-28T08:19:57.238670",
+      "available_amount": "202.69",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "MUSA_PATU"
+    }
+  ]
+}
