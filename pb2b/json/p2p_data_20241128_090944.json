@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T09:09:43.984317",
+  "bybit": [
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-28T09:09:43.364386",
+      "available_amount": "509.8956 USDT\n4,500 ~ 4,500 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1737.0,
+      "timestamp": "2024-11-28T09:09:43.422115",
+      "available_amount": "14.6518 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1737.0,
+      "timestamp": "2024-11-28T09:09:43.469060",
+      "available_amount": "4.0095 USDT\n4,500 ~ 6,964.5 NGN",
+      "payment_methods": "PalmPay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1737.0,
+      "timestamp": "2024-11-28T09:09:43.514198",
+      "available_amount": "30 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Kuda Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1737.0,
+      "timestamp": "2024-11-28T09:09:43.564452",
+      "available_amount": "90 USDT\n150,000 ~ 156,330 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.98,
+      "timestamp": "2024-11-28T09:09:43.984268",
+      "available_amount": "76.13",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    },
+    {
+      "price": 657.99,
+      "timestamp": "2024-11-28T09:09:43.984285",
+      "available_amount": "68.65",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Trader-C01"
+    },
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-28T09:09:43.984288",
+      "available_amount": "101.14",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-28T09:09:43.984291",
+      "available_amount": "152.97",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "AlphaOfCameroon"
+    }
+  ]
+}
