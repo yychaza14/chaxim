@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T19:26:45.891529",
+  "bybit": [
+    {
+      "price": 1723.8,
+      "timestamp": "2024-11-28T19:26:45.262621",
+      "available_amount": "80.6151 USDT\n4,500 ~ 20,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1724.0,
+      "timestamp": "2024-11-28T19:26:45.343867",
+      "available_amount": "239.8009 USDT\n100,000 ~ 413,416.75 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1724.0,
+      "timestamp": "2024-11-28T19:26:45.419294",
+      "available_amount": "286.9682 USDT\n100,000 ~ 494,733.17 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1724.0,
+      "timestamp": "2024-11-28T19:26:45.474140",
+      "available_amount": "131.3999 USDT\n20,000 ~ 226,533.42 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1724.0,
+      "timestamp": "2024-11-28T19:26:45.528817",
+      "available_amount": "96.5484 USDT\n4,500 ~ 35,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-28T19:26:45.891483",
+      "available_amount": "8.23",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Duplextrading"
+    },
+    {
+      "price": 658.1,
+      "timestamp": "2024-11-28T19:26:45.891495",
+      "available_amount": "7.29",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "AlphaOfCameroon"
+    },
+    {
+      "price": 658.13,
+      "timestamp": "2024-11-28T19:26:45.891499",
+      "available_amount": "127.73",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "fastserviceexchange"
+    },
+    {
+      "price": 658.15,
+      "timestamp": "2024-11-28T19:26:45.891501",
+      "available_amount": "29.27",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Alinho_237"
+    }
+  ]
+}
