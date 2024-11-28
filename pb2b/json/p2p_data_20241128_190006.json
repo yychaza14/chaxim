@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T19:00:06.498094",
+  "bybit": [
+    {
+      "price": 1726.0,
+      "timestamp": "2024-11-28T19:00:05.904978",
+      "available_amount": "7 USDT\n10,000 ~ 12,082 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1727.9,
+      "timestamp": "2024-11-28T19:00:05.961444",
+      "available_amount": "144.8555 USDT\n100,000 ~ 250,295.81 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1728.0,
+      "timestamp": "2024-11-28T19:00:06.008774",
+      "available_amount": "3,735.3668 USDT\n1,000,000 ~ 6,454,713.83 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1728.0,
+      "timestamp": "2024-11-28T19:00:06.053151",
+      "available_amount": "7.2265 USDT\n10,000 ~ 12,487.39 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1728.5,
+      "timestamp": "2024-11-28T19:00:06.097253",
+      "available_amount": "764.8793 USDT\n500,000 ~ 1,322,093.87 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.2,
+      "timestamp": "2024-11-28T19:00:06.498038",
+      "available_amount": "48.93",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "AlphaOfCameroon"
+    },
+    {
+      "price": 658.2,
+      "timestamp": "2024-11-28T19:00:06.498053",
+      "available_amount": "140.82",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "kiby-exchange"
+    },
+    {
+      "price": 658.45,
+      "timestamp": "2024-11-28T19:00:06.498058",
+      "available_amount": "280.14",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "bennolimitt"
+    },
+    {
+      "price": 658.65,
+      "timestamp": "2024-11-28T19:00:06.498062",
+      "available_amount": "302.45",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Saffana"
+    }
+  ]
+}
