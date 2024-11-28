@@ -589,6 +589,8 @@ def mains():
     rate = get_exchange_rate()
     if rate:
         print(f"Exchange Rate: {rate}")
+    else:
+        print("no rate from XE")
 
 if __name__ == "__main__":
     mains()
@@ -600,6 +602,8 @@ def main():
     rate = get_exchange_rate()
     if rate:
         print(f"Exchange Rate: {rate}")
+    else:
+        print("no rate from XE")
 
     try:
         
