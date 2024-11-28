@@ -876,11 +876,11 @@ def main():
         if saved_files['json_path']:
             print(f"Data saved to JSON: {saved_files['json_path']}")
 
-        '''# Save both Bybit and Binance data
+        # Save both Bybit and Binance data
         saved_files = data_saver.save_data(
             bybit_data=resultbyb, 
             binance_data=resultbnb
-        )'''
+        )
 
         # Print saved file paths
         if saved_files['continuous_excel_path']:
