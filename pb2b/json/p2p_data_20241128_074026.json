@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T07:40:26.212797",
+  "bybit": [
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-28T07:40:25.573624",
+      "available_amount": "2,584 USDT\n4,500 ~ 4,500 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1735.0,
+      "timestamp": "2024-11-28T07:40:25.639232",
+      "available_amount": "16.8749 USDT\n4,600 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1735.0,
+      "timestamp": "2024-11-28T07:40:25.690186",
+      "available_amount": "43.7232 USDT\n5,000 ~ 75,859.75 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1735.69,
+      "timestamp": "2024-11-28T07:40:25.749982",
+      "available_amount": "94.2572 USDT\n30,000 ~ 163,601.27 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1735.8,
+      "timestamp": "2024-11-28T07:40:25.807126",
+      "available_amount": "143.5205 USDT\n100,000 ~ 249,122.88 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-28T07:40:26.212745",
+      "available_amount": "633.87",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 658.08,
+      "timestamp": "2024-11-28T07:40:26.212760",
+      "available_amount": "56.49",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Alinho_237"
+    },
+    {
+      "price": 658.09,
+      "timestamp": "2024-11-28T07:40:26.212764",
+      "available_amount": "160.05",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Xchangesmart"
+    },
+    {
+      "price": 658.1,
+      "timestamp": "2024-11-28T07:40:26.212767",
+      "available_amount": "60.39",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "NMP-Trader"
+    }
+  ]
+}
