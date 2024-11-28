@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T20:53:54.355158",
+  "bybit": [
+    {
+      "price": 1718.0,
+      "timestamp": "2024-11-28T20:53:53.753346",
+      "available_amount": "40.9778 USDT\n4,500 ~ 8,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1718.96,
+      "timestamp": "2024-11-28T20:53:53.809107",
+      "available_amount": "60 USDT\n50,000 ~ 103,137.6 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-28T20:53:53.853654",
+      "available_amount": "914.1354 USDT\n5,000 ~ 25,000 NGN",
+      "payment_methods": "PalmPayOpayBank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-28T20:53:53.898483",
+      "available_amount": "19.5381 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Kuda Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-28T20:53:53.946046",
+      "available_amount": "26.1659 USDT\n5,000 ~ 9,900 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.98,
+      "timestamp": "2024-11-28T20:53:54.355109",
+      "available_amount": "95.13",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "AlphaOfCameroon"
+    },
+    {
+      "price": 658.0,
+      "timestamp": "2024-11-28T20:53:54.355123",
+      "available_amount": "1177.07",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "I-GCrypto"
+    },
+    {
+      "price": 658.09,
+      "timestamp": "2024-11-28T20:53:54.355127",
+      "available_amount": "16.95",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Alinho_237"
+    },
+    {
+      "price": 658.1,
+      "timestamp": "2024-11-28T20:53:54.355131",
+      "available_amount": "17.15",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "NMP-Trader"
+    }
+  ]
+}
