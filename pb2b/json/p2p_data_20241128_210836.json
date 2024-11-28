@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T21:08:36.686492",
+  "bybit": [
+    {
+      "price": 1718.0,
+      "timestamp": "2024-11-28T21:08:36.043524",
+      "available_amount": "6.2546 USDT\n4,500 ~ 8,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-28T21:08:36.098126",
+      "available_amount": "179.781 USDT\n4,500 ~ 18,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-28T21:08:36.143021",
+      "available_amount": "733.2682 USDT\n5,000 ~ 25,000 NGN",
+      "payment_methods": "PalmPayOpayBank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-28T21:08:36.194799",
+      "available_amount": "19.5381 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Kuda Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-28T21:08:36.239920",
+      "available_amount": "9.5733 USDT\n5,000 ~ 16,456.5 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.1,
+      "timestamp": "2024-11-28T21:08:36.686434",
+      "available_amount": "1093.93",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 658.12,
+      "timestamp": "2024-11-28T21:08:36.686453",
+      "available_amount": "203.05",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "MUSA_PATU"
+    },
+    {
+      "price": 658.13,
+      "timestamp": "2024-11-28T21:08:36.686458",
+      "available_amount": "13.96",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "fastserviceexchange"
+    },
+    {
+      "price": 658.15,
+      "timestamp": "2024-11-28T21:08:36.686462",
+      "available_amount": "126.75",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "No_one_is_above_God_"
+    }
+  ]
+}
