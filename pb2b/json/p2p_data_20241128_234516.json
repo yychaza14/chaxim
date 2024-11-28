@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T23:45:16.803014",
+  "bybit": [
+    {
+      "price": 1725.5,
+      "timestamp": "2024-11-28T23:45:16.198580",
+      "available_amount": "426.5864 USDT\n20,000 ~ 20,200 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1725.99,
+      "timestamp": "2024-11-28T23:45:16.254428",
+      "available_amount": "5.1909 USDT\n5,000 ~ 8,959.44 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1727.0,
+      "timestamp": "2024-11-28T23:45:16.303296",
+      "available_amount": "45.2606 USDT\n50,000 ~ 78,165.05 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1727.99,
+      "timestamp": "2024-11-28T23:45:16.351317",
+      "available_amount": "286.786 USDT\n100,000 ~ 495,563.34 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1728.0,
+      "timestamp": "2024-11-28T23:45:16.397511",
+      "available_amount": "131.727 USDT\n4,500 ~ 18,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.6,
+      "timestamp": "2024-11-28T23:45:16.802965",
+      "available_amount": "300.00",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Rami_Exchange"
+    },
+    {
+      "price": 657.65,
+      "timestamp": "2024-11-28T23:45:16.802982",
+      "available_amount": "244.87",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "fastserviceexchange"
+    },
+    {
+      "price": 657.99,
+      "timestamp": "2024-11-28T23:45:16.802985",
+      "available_amount": "1141.10",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "CRYTOEXCHANGES"
+    },
+    {
+      "price": 658.1,
+      "timestamp": "2024-11-28T23:45:16.802988",
+      "available_amount": "21.70",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "NMP-Trader"
+    }
+  ]
+}
