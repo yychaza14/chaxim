@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T18:52:20.280419",
+  "bybit": [
+    {
+      "price": 1726.0,
+      "timestamp": "2024-11-28T18:52:19.725612",
+      "available_amount": "38.4124 USDT\n5,000 ~ 10,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1729.0,
+      "timestamp": "2024-11-28T18:52:19.779886",
+      "available_amount": "7 USDT\n10,000 ~ 12,103 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1729.0,
+      "timestamp": "2024-11-28T18:52:19.825040",
+      "available_amount": "20.4056 USDT\n4,500 ~ 6,200 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1729.0,
+      "timestamp": "2024-11-28T18:52:19.872191",
+      "available_amount": "342.2419 USDT\n20,000 ~ 30,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1729.0,
+      "timestamp": "2024-11-28T18:52:19.919753",
+      "available_amount": "21 USDT\n34,000 ~ 36,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.18,
+      "timestamp": "2024-11-28T18:52:20.280375",
+      "available_amount": "78.03",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "fastserviceexchange"
+    },
+    {
+      "price": 658.2,
+      "timestamp": "2024-11-28T18:52:20.280389",
+      "available_amount": "55.71",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "kiby-exchange"
+    },
+    {
+      "price": 658.2,
+      "timestamp": "2024-11-28T18:52:20.280392",
+      "available_amount": "52.54",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "AlphaOfCameroon"
+    },
+    {
+      "price": 658.2,
+      "timestamp": "2024-11-28T18:52:20.280395",
+      "available_amount": "169.85",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    }
+  ]
+}
