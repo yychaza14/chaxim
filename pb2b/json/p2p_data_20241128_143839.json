@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T14:38:39.816117",
+  "bybit": [
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-28T14:38:35.545073",
+      "available_amount": "2,339.1188 USDT\n4,500 ~ 4,500 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1734.7,
+      "timestamp": "2024-11-28T14:38:35.618811",
+      "available_amount": "36.4801 USDT\n50,000 ~ 63,282.02 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1734.8,
+      "timestamp": "2024-11-28T14:38:35.675061",
+      "available_amount": "34.3564 USDT\n50,000 ~ 59,601.48 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1734.89,
+      "timestamp": "2024-11-28T14:38:35.734943",
+      "available_amount": "343.7891 USDT\n100,000 ~ 200,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1734.9,
+      "timestamp": "2024-11-28T14:38:35.806838",
+      "available_amount": "29.236 USDT\n4,500 ~ 7,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 658.05,
+      "timestamp": "2024-11-28T14:38:39.816055",
+      "available_amount": "26.40",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "MUSA_PATU"
+    },
+    {
+      "price": 658.05,
+      "timestamp": "2024-11-28T14:38:39.816075",
+      "available_amount": "24.39",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "LANDONG_Crypto_Exch"
+    },
+    {
+      "price": 658.07,
+      "timestamp": "2024-11-28T14:38:39.816080",
+      "available_amount": "17.25",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "NMP-Trader"
+    },
+    {
+      "price": 658.08,
+      "timestamp": "2024-11-28T14:38:39.816085",
+      "available_amount": "102.04",
+      "payment_methods": "OrangeMoney",
+      "merchant_name": "Arseno"
+    }
+  ]
+}
