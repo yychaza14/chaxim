@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-28T11:38:32.460700",
+  "bybit": [
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-28T11:38:31.847518",
+      "available_amount": "557.0956 USDT\n4,500 ~ 4,500 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1733.0,
+      "timestamp": "2024-11-28T11:38:31.903205",
+      "available_amount": "8.4592 USDT\n4,600 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1735.0,
+      "timestamp": "2024-11-28T11:38:31.956044",
+      "available_amount": "25.4214 USDT\n44,000 ~ 44,106.12 NGN",
+      "payment_methods": "Opay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1735.0,
+      "timestamp": "2024-11-28T11:38:32.002010",
+      "available_amount": "10 USDT\n17,350 ~ 17,350 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1736.0,
+      "timestamp": "2024-11-28T11:38:32.046803",
+      "available_amount": "81.4575 USDT\n4,500 ~ 6,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.78,
+      "timestamp": "2024-11-28T11:38:32.460656",
+      "available_amount": "114.78",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "noutci-trade"
+    },
+    {
+      "price": 657.79,
+      "timestamp": "2024-11-28T11:38:32.460669",
+      "available_amount": "164.17",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "kiby-exchange"
+    },
+    {
+      "price": 657.8,
+      "timestamp": "2024-11-28T11:38:32.460672",
+      "available_amount": "39.52",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "G-Glow"
+    },
+    {
+      "price": 657.8,
+      "timestamp": "2024-11-28T11:38:32.460675",
+      "available_amount": "77.63",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Xchangesmart"
+    }
+  ]
+}
