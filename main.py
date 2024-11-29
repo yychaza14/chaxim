@@ -239,7 +239,7 @@ class BinanceP2PAPI:
         fiat: str = "XAF",
         action_type: str = "1",  # "1" for buy, "0" for sell
         max_retries: int = 3,
-        rows: int = 4
+        rows: int = 6
     ) -> Dict:
         """
         Get P2P listings from Binance API.
@@ -304,14 +304,6 @@ class BinanceP2PAPI:
                 "message": error_msg
             }
 
-import json
-import logging
-import os
-from datetime import datetime
-from pathlib import Path
-from typing import Dict, List, Union, Optional
-
-import pandas as pd
 
 class DataSaver:
     """A class responsible for saving data in different formats with continuous JSON storage."""
@@ -585,25 +577,13 @@ def get_exchange_rate(from_currency='EUR', to_currency='XAF'):
         print(f"Error: {e}")
         return None
 
-def mains():
-    rate = get_exchange_rate()
-    if rate:
-        print(f"Exchange Rate: {rate}")
-    else:
-        print("no rate from XE")
 
-if __name__ == "__main__":
-    mains()
 
 def main():
     scraper = BybitScraper(headless=True)
     binance = BinanceP2PAPI()
     data_saver = DataSaver()
     rate = get_exchange_rate()
-    if rate:
-        print(f"Exchange Rate: {rate}")
-    else:
-        print("no rate from XE")
 
     try:
         
@@ -615,7 +595,7 @@ def main():
         
         resultbnb = binance.get_p2p_listings(
             token="USDT",
-            fiat="XAF",
+            fiat="EUR",
             action_type="1"
         )
         rate_xaf = 1000/resultbnb['BINANCE'][0]['price']
@@ -656,6 +636,10 @@ def main():
             print(f"\nData saved to Excel: {saved_files['excel_path']}")
         if saved_files['json_path']:
             print(f"Data saved to JSON: {saved_files['json_path']}")
+        if rate:
+            print(f"Exchange Rate: {rate}")
+        else:
+            print("no rate from XE")
 
     except Exception as e:
         print(f"Error in main execution: {str(e)}")
