@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-11-29T20:40:49.100485",
+  "bybit": [
+    {
+      "price": 1704.0,
+      "timestamp": "2024-11-29T20:40:48.500947",
+      "available_amount": "560.9743 USDT\n800,000 ~ 955,900.2 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1704.9,
+      "timestamp": "2024-11-29T20:40:48.557316",
+      "available_amount": "35.5171 USDT\n10,000 ~ 60,553.1 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1704.98,
+      "timestamp": "2024-11-29T20:40:48.603111",
+      "available_amount": "66.5119 USDT\n100,000 ~ 113,401.45 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1705.0,
+      "timestamp": "2024-11-29T20:40:48.660040",
+      "available_amount": "36.9898 USDT\n10,000 ~ 63,067.6 NGN",
+      "payment_methods": "Access BankKuda BankOpay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1705.0,
+      "timestamp": "2024-11-29T20:40:48.714224",
+      "available_amount": "19.8888 USDT\n20,000 ~ 33,910.4 NGN",
+      "payment_methods": "Paycom or Opay",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.944,
+      "timestamp": "2024-11-29T20:40:49.100412",
+      "available_amount": "100.00",
+      "payment_methods": "SEPAinstant, N26",
+      "merchant_name": "mr_Per_Fect"
+    },
+    {
+      "price": 0.949,
+      "timestamp": "2024-11-29T20:40:49.100428",
+      "available_amount": "1100.00",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "Father_Of_Future"
+    },
+    {
+      "price": 0.949,
+      "timestamp": "2024-11-29T20:40:49.100433",
+      "available_amount": "200.00",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "exchang-smart"
+    },
+    {
+      "price": 0.95,
+      "timestamp": "2024-11-29T20:40:49.100436",
+      "available_amount": "89379.23",
+      "payment_methods": "SEPAinstant, SEPA, BANK",
+      "merchant_name": "SmartOTC"
+    },
+    {
+      "price": 0.95,
+      "timestamp": "2024-11-29T20:40:49.100440",
+      "available_amount": "40882.95",
+      "payment_methods": "SEPAinstant, Bunq, N26, BANK",
+      "merchant_name": "Crypto-Eli"
+    },
+    {
+      "price": 0.95,
+      "timestamp": "2024-11-29T20:40:49.100443",
+      "available_amount": "2000.00",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "bendj00"
+    }
+  ]
+}
