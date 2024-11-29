@@ -598,8 +598,18 @@ def main():
             fiat="EUR",
             action_type="1"
         )
-        rate_xaf = 1000/resultbnb['BINANCE'][0]['price']
-        rate_ngn = rate_xaf * resultbyb['BYBIT'][0]['price']
+        rateE  = rate/100
+        rateE1 = ((rateE*3) + rate) * resultbnb['BINANCE'][-1]['price']
+        rateE2 = ((rateE*3.5) + rate) * resultbnb['BINANCE'][-1]['price']
+        rateE3 = ((rateE*3.7) + rate) * resultbnb['BINANCE'][-1]['price']
+        rateE4 = ((rateE*3.8) + rate) * resultbnb['BINANCE'][-1]['price']
+        rateE5 = ((rateE*4) + rate) * resultbnb['BINANCE'][-1]['price']
+        rateE6 = ((rateE*4.5) + rate) * resultbnb['BINANCE'][-1]['price']
+        rateE7 = ((rateE*4.6) + rate) * resultbnb['BINANCE'][-1]['price']
+        rateE8 = ((rateE*4.7) + rate) * resultbnb['BINANCE'][-1]['price']
+        rateE9 = ((rateE*4.8) + rate ) * resultbnb['BINANCE'][-1]['price']
+
+        rate_ngn = [rateE1, rateE2, rateE3, rateE4, rateE5, rateE6, rateE7, rateE8, rateE9]
         resultbyb["RATE"] = rate_ngn
 
         # Save both Bybit and Binance data
@@ -618,7 +628,7 @@ def main():
             print(f"Number of listings: {len(resultbyb['BYBIT'])}")
             print(f"Lowest Bybit price: {resultbyb['BYBIT'][0]['price']} NGN")
             print(f"Highest Bybit price: {resultbyb['BYBIT'][-1]['price']} NGN")
-            print(f"Highest Bybit price: {resultbyb['RATE']} NGN")
+            print(f"Bybit price CFA: {resultbyb['RATE']} NGN")
         else:
             print("\nBybit scraping failed or returned no data")
         
