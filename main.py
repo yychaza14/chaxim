@@ -584,7 +584,7 @@ def main():
     binance = BinanceP2PAPI()
     data_saver = DataSaver()
     rate = get_exchange_rate()
-    rate = int(rate)
+    rate = float(rate)
 
     try:
         
