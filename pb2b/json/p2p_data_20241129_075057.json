@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-29T07:50:57.087009",
+  "bybit": [
+    {
+      "price": 1726.0,
+      "timestamp": "2024-11-29T07:50:56.550964",
+      "available_amount": "5,897.7002 USDT\n4,500 ~ 6,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1726.3,
+      "timestamp": "2024-11-29T07:50:56.607085",
+      "available_amount": "33.4906 USDT\n4,500 ~ 8,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1726.5,
+      "timestamp": "2024-11-29T07:50:56.656722",
+      "available_amount": "11.351 USDT\n4,500 ~ 10,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1726.9,
+      "timestamp": "2024-11-29T07:50:56.707510",
+      "available_amount": "129.6606 USDT\n4,500 ~ 20,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1727.0,
+      "timestamp": "2024-11-29T07:50:56.755971",
+      "available_amount": "83.4976 USDT\n4,600 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 656.77,
+      "timestamp": "2024-11-29T07:50:57.086942",
+      "available_amount": "185.97",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Trader-C01"
+    },
+    {
+      "price": 656.78,
+      "timestamp": "2024-11-29T07:50:57.086965",
+      "available_amount": "70.05",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Alinho_237"
+    },
+    {
+      "price": 656.79,
+      "timestamp": "2024-11-29T07:50:57.086972",
+      "available_amount": "666.26",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Xchangesmart"
+    },
+    {
+      "price": 656.8,
+      "timestamp": "2024-11-29T07:50:57.086978",
+      "available_amount": "103.04",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "EricoExchange"
+    }
+  ]
+}
