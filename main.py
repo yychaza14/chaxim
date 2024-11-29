@@ -642,9 +642,11 @@ def main():
             print(f"Lowest Bybit price: {resultbyb['BYBIT'][0]['price']} NGN")
             print(f"Highest Bybit price: {resultbyb['BYBIT'][-1]['price']} NGN")
             
-            prices_list = f"Bybit price USD/XAF && NGN/XAF: {resultbyb['RATE_NGN']} NGN"
-            for item in prices_list:
-                print(item)
+              # Add this block to print RATE_NGN with each value on a new line
+            print("\nRate NGN Breakdown:")
+            for rate_dict in resultbyb['RATE_NGN']:
+                for key, value in rate_dict.items():
+                    print(f"{key}: EUR rate = {value[0]}, NGN rate = {value[1]}")
 
         else:
             print("\nBybit scraping failed or returned no data")
