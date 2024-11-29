@@ -611,8 +611,6 @@ def main():
         rateE8 = ((rateE*4.7) + rate) * resultbnb['BINANCE'][-1]['price']
         rateE9 = ((rateE*4.8) + rate ) * resultbnb['BINANCE'][-1]['price']
         
-        rate_xaf = [rateE1, rateE2, rateE3, rateE4, rateE5, rateE6, rateE7, rateE8, rateE9]
-
         # NAIRA
         rateN1 = (1000/rateE1) * resultbyb['BYBIT'][0]['price']
         rateN2 = (1000/rateE2) * resultbyb['BYBIT'][0]['price']
@@ -623,9 +621,8 @@ def main():
         rateN7 = (1000/rateE7) * resultbyb['BYBIT'][0]['price']
         rateN8 = (1000/rateE8) * resultbyb['BYBIT'][0]['price']
         rateN9 = (1000/rateE9) * resultbyb['BYBIT'][0]['price']
-        rate_ngn = [{"by3":rateN1}, {"by3.5":rateN2}, {"by3.7":rateN3}, {"by3.8":rateN4}, {"by4":rateN5}, {"by4.5":rateN6}, {"by4.6":rateN7}, {"by4.7":rateN8}, {"by4.8":rateN9}]
+        rate_ngn = [{"by3":[rateE1, rateN1]}, {"by3.5":[rateE2, rateN2]}, {"by3.7":[rateE3, rateN3]}, {"by3.8":[rateE4, rateN4]}, {"by4":[rateE5, rateN5]}, {"by4.5":[rateE6, rateN6]}, {"by4.6":[rateE7, rateN7]}, {"by4.7":[rateE8, rateN8]}, {"by4.8":[rateE9,rateN9]}]
         
-        resultbyb["RATE_CFA"] = rate_xaf
         resultbyb["RATE_NGN"] = rate_ngn
 
         # Save both Bybit and Binance data
