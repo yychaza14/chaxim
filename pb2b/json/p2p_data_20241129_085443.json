@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-29T08:54:43.822546",
+  "bybit": [
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-29T08:54:43.119769",
+      "available_amount": "1,876.7694 USDT\n4,500 ~ 4,500 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-29T08:54:43.178217",
+      "available_amount": "53.1098 USDT\n5,000 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-29T08:54:43.228646",
+      "available_amount": "19.1964 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Kuda Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-29T08:54:43.275928",
+      "available_amount": "19.942 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-29T08:54:43.323286",
+      "available_amount": "109.5372 USDT\n5,000 ~ 10,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 656.19,
+      "timestamp": "2024-11-29T08:54:43.822500",
+      "available_amount": "78.50",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "MechaneVisionTrading"
+    },
+    {
+      "price": 656.2,
+      "timestamp": "2024-11-29T08:54:43.822515",
+      "available_amount": "71.93",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "EricoExchange"
+    },
+    {
+      "price": 656.32,
+      "timestamp": "2024-11-29T08:54:43.822518",
+      "available_amount": "39.55",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "noutci-trade"
+    },
+    {
+      "price": 656.34,
+      "timestamp": "2024-11-29T08:54:43.822521",
+      "available_amount": "568.37",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "AlienTech237"
+    }
+  ]
+}
