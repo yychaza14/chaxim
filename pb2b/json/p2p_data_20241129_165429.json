@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-11-29T16:54:28.974087",
+  "bybit": [
+    {
+      "price": 1723.99,
+      "timestamp": "2024-11-29T16:54:28.433101",
+      "available_amount": "49.6805 USDT\n4,500 ~ 10,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1724.0,
+      "timestamp": "2024-11-29T16:54:28.486416",
+      "available_amount": "4.4906 USDT\n5,000 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1724.0,
+      "timestamp": "2024-11-29T16:54:28.532132",
+      "available_amount": "74.3151 USDT\n4,500 ~ 9,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1724.5,
+      "timestamp": "2024-11-29T16:54:28.576451",
+      "available_amount": "43.5487 USDT\n4,600 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1724.9,
+      "timestamp": "2024-11-29T16:54:28.620834",
+      "available_amount": "22.6743 USDT\n10,000 ~ 39,110.9 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.94,
+      "timestamp": "2024-11-29T16:54:28.974008",
+      "available_amount": "100.00",
+      "payment_methods": "SEPAinstant, N26, BANK",
+      "merchant_name": "aparatpresidenta"
+    },
+    {
+      "price": 0.951,
+      "timestamp": "2024-11-29T16:54:28.974029",
+      "available_amount": "3011.58",
+      "payment_methods": "BANK, SEPAinstant, SEPA",
+      "merchant_name": "HanarsOTC"
+    },
+    {
+      "price": 0.951,
+      "timestamp": "2024-11-29T16:54:28.974034",
+      "available_amount": "421.06",
+      "payment_methods": "BANK",
+      "merchant_name": "kayonsi"
+    },
+    {
+      "price": 0.951,
+      "timestamp": "2024-11-29T16:54:28.974037",
+      "available_amount": "62086.10",
+      "payment_methods": "SEPAinstant, SEPA, BANK",
+      "merchant_name": "SmartOTC"
+    },
+    {
+      "price": 0.951,
+      "timestamp": "2024-11-29T16:54:28.974041",
+      "available_amount": "1687.10",
+      "payment_methods": "SEPAinstant, BANK, SEPA",
+      "merchant_name": "Sashok"
+    },
+    {
+      "price": 0.951,
+      "timestamp": "2024-11-29T16:54:28.974045",
+      "available_amount": "550.00",
+      "payment_methods": "SEPAinstant, BANK, SEPA",
+      "merchant_name": "Sashok"
+    }
+  ]
+}
