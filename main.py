@@ -623,7 +623,7 @@ def main():
         rateN7 = (1000/rateE7) * resultbyb['BYBIT'][0]['price']
         rateN8 = (1000/rateE8) * resultbyb['BYBIT'][0]['price']
         rateN9 = (1000/rateE9) * resultbyb['BYBIT'][0]['price']
-        rate_ngn = [rateN1, rateN2, rateN3, rateN4, rateN5, rateN6, rateN7, rateN8, rateN9]
+        rate_ngn = [{"by3":rateN1}, {"by3.5":rateN2}, {"by3.7":rateN3}, {"by3.8":rateN4}, {"by4":rateN5}, {"by4.5":rateN6}, {"by4.6":rateN7}, {"by4.7":rateN8}, {"by4.8":rateN9}]
         
         resultbyb["RATE_CFA"] = rate_xaf
         resultbyb["RATE_NGN"] = rate_ngn
@@ -644,6 +644,7 @@ def main():
             print(f"Number of listings: {len(resultbyb['BYBIT'])}")
             print(f"Lowest Bybit price: {resultbyb['BYBIT'][0]['price']} NGN")
             print(f"Highest Bybit price: {resultbyb['BYBIT'][-1]['price']} NGN")
+            
             print(f"Bybit price CFA/USD: {resultbyb['RATE_CFA']} XAF")
             print(f"Bybit price NGN/XAF: {resultbyb['RATE_NGN']} NGN")
 
