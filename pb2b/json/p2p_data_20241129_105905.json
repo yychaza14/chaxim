@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-29T10:59:05.035895",
+  "bybit": [
+    {
+      "price": 1725.0,
+      "timestamp": "2024-11-29T10:59:04.392440",
+      "available_amount": "8.6375 USDT\n4,600 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1726.88,
+      "timestamp": "2024-11-29T10:59:04.445231",
+      "available_amount": "98.6099 USDT\n20,000 ~ 100,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1726.9,
+      "timestamp": "2024-11-29T10:59:04.490598",
+      "available_amount": "279.1405 USDT\n4,500 ~ 10,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1726.98,
+      "timestamp": "2024-11-29T10:59:04.535762",
+      "available_amount": "163.3529 USDT\n281,000 ~ 282,107.19 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1727.0,
+      "timestamp": "2024-11-29T10:59:04.580568",
+      "available_amount": "219.9474 USDT\n10,000 ~ 20,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 656.5,
+      "timestamp": "2024-11-29T10:59:05.035847",
+      "available_amount": "333.18",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "NEXSUSPoinTRADE"
+    },
+    {
+      "price": 656.87,
+      "timestamp": "2024-11-29T10:59:05.035860",
+      "available_amount": "58.21",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Xchangesmart"
+    },
+    {
+      "price": 656.89,
+      "timestamp": "2024-11-29T10:59:05.035863",
+      "available_amount": "253.14",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 657.0,
+      "timestamp": "2024-11-29T10:59:05.035866",
+      "available_amount": "38.24",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Servira"
+    }
+  ]
+}
