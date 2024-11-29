@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-29T08:44:06.195449",
+  "bybit": [
+    {
+      "price": 1729.99,
+      "timestamp": "2024-11-29T08:44:05.556458",
+      "available_amount": "44.6526 USDT\n20,000 ~ 77,248.55 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-29T08:44:05.627012",
+      "available_amount": "1,870.2801 USDT\n4,500 ~ 4,500 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-29T08:44:05.683738",
+      "available_amount": "56 USDT\n5,000 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-29T08:44:05.738948",
+      "available_amount": "857.1592 USDT\n10,000 ~ 20,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-29T08:44:05.790056",
+      "available_amount": "126.8784 USDT\n5,000 ~ 10,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 656.2,
+      "timestamp": "2024-11-29T08:44:06.195386",
+      "available_amount": "71.93",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "EricoExchange"
+    },
+    {
+      "price": 656.35,
+      "timestamp": "2024-11-29T08:44:06.195407",
+      "available_amount": "172.36",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "noutci-trade"
+    },
+    {
+      "price": 656.37,
+      "timestamp": "2024-11-29T08:44:06.195412",
+      "available_amount": "265.80",
+      "payment_methods": "MTNMobileMoney, MoMoNew, MTNMobileMoney",
+      "merchant_name": "Blacky-Crypto"
+    },
+    {
+      "price": 656.39,
+      "timestamp": "2024-11-29T08:44:06.195417",
+      "available_amount": "90.08",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Alinho_237"
+    }
+  ]
+}
