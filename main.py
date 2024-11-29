@@ -642,7 +642,9 @@ def main():
             print(f"Lowest Bybit price: {resultbyb['BYBIT'][0]['price']} NGN")
             print(f"Highest Bybit price: {resultbyb['BYBIT'][-1]['price']} NGN")
             
-            print(f"Bybit price USD/XAF && NGN/XAF: {resultbyb['RATE_NGN']} NGN")
+            prices_list = f"Bybit price USD/XAF && NGN/XAF: {resultbyb['RATE_NGN']} NGN"
+            for item in prices_list:
+                print(item)
 
         else:
             print("\nBybit scraping failed or returned no data")
