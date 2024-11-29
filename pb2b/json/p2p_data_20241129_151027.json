@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-11-29T15:10:27.247919",
+  "bybit": [
+    {
+      "price": 1724.0,
+      "timestamp": "2024-11-29T15:10:26.569712",
+      "available_amount": "3.3995 USDT\n5,000 ~ 5,860.73 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1724.0,
+      "timestamp": "2024-11-29T15:10:26.633276",
+      "available_amount": "512.696 USDT\n600,000 ~ 883,887.9 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1724.0,
+      "timestamp": "2024-11-29T15:10:26.743721",
+      "available_amount": "526.6583 USDT\n100,000 ~ 400,000 NGN",
+      "payment_methods": "Kuda Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1724.41,
+      "timestamp": "2024-11-29T15:10:26.801858",
+      "available_amount": "51.0297 USDT\n50,000 ~ 87,996.12 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1724.8,
+      "timestamp": "2024-11-29T15:10:26.847209",
+      "available_amount": "30.1996 USDT\n5,000 ~ 20,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.949,
+      "timestamp": "2024-11-29T15:10:27.247857",
+      "available_amount": "452.38",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "exchang-smart"
+    },
+    {
+      "price": 0.949,
+      "timestamp": "2024-11-29T15:10:27.247872",
+      "available_amount": "1300.00",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "FutureProPlus2"
+    },
+    {
+      "price": 0.95,
+      "timestamp": "2024-11-29T15:10:27.247876",
+      "available_amount": "500.00",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "WiseRevolutExpress"
+    },
+    {
+      "price": 0.95,
+      "timestamp": "2024-11-29T15:10:27.247879",
+      "available_amount": "813.52",
+      "payment_methods": "SkrillMoneybookers",
+      "merchant_name": "lines"
+    },
+    {
+      "price": 0.951,
+      "timestamp": "2024-11-29T15:10:27.247881",
+      "available_amount": "14588.58",
+      "payment_methods": "SEPA, SEPAinstant, BANK",
+      "merchant_name": "OneTwoCrypto"
+    },
+    {
+      "price": 0.951,
+      "timestamp": "2024-11-29T15:10:27.247885",
+      "available_amount": "29909.67",
+      "payment_methods": "BANK, SEPAinstant",
+      "merchant_name": "ChaosOTC"
+    }
+  ]
+}
