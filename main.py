@@ -646,7 +646,7 @@ def main():
             print("\nRate NGN Breakdown:")
             for rate_dict in resultbyb['RATE_NGN']:
                 for key, value in rate_dict.items():
-                    print(f"{key}: EUR rate = {value[0]}, NGN rate = {value[1]}")
+                    print(f"{key}: EUR rate = {round(value[0]}), NGN rate = round({value[1]})")
 
         else:
             print("\nBybit scraping failed or returned no data")
