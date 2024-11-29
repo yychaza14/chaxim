@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-29T06:58:06.038657",
+  "bybit": [
+    {
+      "price": 1727.0,
+      "timestamp": "2024-11-29T06:58:05.375793",
+      "available_amount": "6.5 USDT\n4,500 ~ 11,225.5 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1727.0,
+      "timestamp": "2024-11-29T06:58:05.439083",
+      "available_amount": "98.2542 USDT\n4,500 ~ 20,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1727.3,
+      "timestamp": "2024-11-29T06:58:05.489896",
+      "available_amount": "150 USDT\n50,000 ~ 80,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1727.5,
+      "timestamp": "2024-11-29T06:58:05.540656",
+      "available_amount": "239.3856 USDT\n10,000 ~ 30,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1727.5,
+      "timestamp": "2024-11-29T06:58:05.592732",
+      "available_amount": "101.9545 USDT\n4,500 ~ 10,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.0,
+      "timestamp": "2024-11-29T06:58:06.038612",
+      "available_amount": "38.24",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Servira"
+    },
+    {
+      "price": 657.27,
+      "timestamp": "2024-11-29T06:58:06.038625",
+      "available_amount": "150.41",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 657.28,
+      "timestamp": "2024-11-29T06:58:06.038629",
+      "available_amount": "293.17",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Trader-C01"
+    },
+    {
+      "price": 657.5,
+      "timestamp": "2024-11-29T06:58:06.038632",
+      "available_amount": "565.01",
+      "payment_methods": "MTNMobileMoney, MoMoNew, MTNMobileMoney",
+      "merchant_name": "Blacky-Crypto"
+    }
+  ]
+}
