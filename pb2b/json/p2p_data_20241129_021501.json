@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-29T02:15:01.216573",
+  "bybit": [
+    {
+      "price": 1727.0,
+      "timestamp": "2024-11-29T02:15:00.387564",
+      "available_amount": "26.2581 USDT\n15,000 ~ 15,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1729.0,
+      "timestamp": "2024-11-29T02:15:00.447470",
+      "available_amount": "160.2637 USDT\n100,000 ~ 277,095.93 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1729.49,
+      "timestamp": "2024-11-29T02:15:00.496395",
+      "available_amount": "112.989 USDT\n50,000 ~ 195,413.34 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1729.5,
+      "timestamp": "2024-11-29T02:15:00.558596",
+      "available_amount": "20,000 USDT\n5,000,000 ~ 23,000,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1729.77,
+      "timestamp": "2024-11-29T02:15:00.605527",
+      "available_amount": "661.5712 USDT\n1,000,000 ~ 1,144,366.01 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.65,
+      "timestamp": "2024-11-29T02:15:01.216522",
+      "available_amount": "18.46",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Rami_Exchange"
+    },
+    {
+      "price": 657.69,
+      "timestamp": "2024-11-29T02:15:01.216539",
+      "available_amount": "92.91",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "AlphaOfCameroon"
+    },
+    {
+      "price": 657.7,
+      "timestamp": "2024-11-29T02:15:01.216543",
+      "available_amount": "226.99",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "fastserviceexchange"
+    },
+    {
+      "price": 657.99,
+      "timestamp": "2024-11-29T02:15:01.216546",
+      "available_amount": "1141.10",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "CRYTOEXCHANGES"
+    }
+  ]
+}
