@@ -599,6 +599,7 @@ def main():
             fiat="EUR",
             action_type="1"
         )
+        # CFA
         rateE  = rate/100
         rateE1 = ((rateE*3) + rate) * resultbnb['BINANCE'][-1]['price']
         rateE2 = ((rateE*3.5) + rate) * resultbnb['BINANCE'][-1]['price']
@@ -609,9 +610,23 @@ def main():
         rateE7 = ((rateE*4.6) + rate) * resultbnb['BINANCE'][-1]['price']
         rateE8 = ((rateE*4.7) + rate) * resultbnb['BINANCE'][-1]['price']
         rateE9 = ((rateE*4.8) + rate ) * resultbnb['BINANCE'][-1]['price']
+        
+        rate_xaf = [rateE1, rateE2, rateE3, rateE4, rateE5, rateE6, rateE7, rateE8, rateE9]
 
-        rate_ngn = [rateE1, rateE2, rateE3, rateE4, rateE5, rateE6, rateE7, rateE8, rateE9]
-        resultbyb["RATE"] = rate_ngn
+        # NAIRA
+        rateN1 = (1000/rateE1) * resultbyb['BYBIT'][0]['price']
+        rateN2 = (1000/rateE2) * resultbyb['BYBIT'][0]['price']
+        rateN3 = (1000/rateE3) * resultbyb['BYBIT'][0]['price']
+        rateN4 = (1000/rateE4) * resultbyb['BYBIT'][0]['price']
+        rateN5 = (1000/rateE5) * resultbyb['BYBIT'][0]['price']
+        rateN6 = (1000/rateE6) * resultbyb['BYBIT'][0]['price']
+        rateN7 = (1000/rateE7) * resultbyb['BYBIT'][0]['price']
+        rateN8 = (1000/rateE8) * resultbyb['BYBIT'][0]['price']
+        rateN9 = (1000/rateE9) * resultbyb['BYBIT'][0]['price']
+        rate_ngn = [rateN1, rateN2, rateN3, rateN4, rateN5, rateN6, rateN7, rateN8, rateN9]
+        
+        resultbyb["RATE_CFA"] = rate_xaf
+        resultbyb["RATE_NGN"] = rate_ngn
 
         # Save both Bybit and Binance data
         saved_files = data_saver.save_data(
@@ -629,7 +644,9 @@ def main():
             print(f"Number of listings: {len(resultbyb['BYBIT'])}")
             print(f"Lowest Bybit price: {resultbyb['BYBIT'][0]['price']} NGN")
             print(f"Highest Bybit price: {resultbyb['BYBIT'][-1]['price']} NGN")
-            print(f"Bybit price CFA: {resultbyb['RATE']} NGN")
+            print(f"Bybit price CFA/USD: {resultbyb['RATE_CFA']} XAF")
+            print(f"Bybit price NGN/XAF: {resultbyb['RATE_NGN']} NGN")
+
         else:
             print("\nBybit scraping failed or returned no data")
         
