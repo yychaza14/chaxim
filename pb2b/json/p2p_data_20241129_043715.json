@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-29T04:37:15.845705",
+  "bybit": [
+    {
+      "price": 1729.0,
+      "timestamp": "2024-11-29T04:37:15.178560",
+      "available_amount": "27.969 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Kuda Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1729.0,
+      "timestamp": "2024-11-29T04:37:15.240289",
+      "available_amount": "7.0644 USDT\n4,500 ~ 8,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-29T04:37:15.295299",
+      "available_amount": "1,998.0251 USDT\n4,500 ~ 4,500 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-29T04:37:15.347437",
+      "available_amount": "68.1344 USDT\n4,500 ~ 8,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-29T04:37:15.403214",
+      "available_amount": "227.3098 USDT\n300,000 ~ 393,245.95 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.69,
+      "timestamp": "2024-11-29T04:37:15.845642",
+      "available_amount": "1018.58",
+      "payment_methods": "MoMoNew",
+      "merchant_name": "BLUEPIPS FX"
+    },
+    {
+      "price": 657.7,
+      "timestamp": "2024-11-29T04:37:15.845663",
+      "available_amount": "219.38",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "fastserviceexchange"
+    },
+    {
+      "price": 657.98,
+      "timestamp": "2024-11-29T04:37:15.845668",
+      "available_amount": "98.77",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "Alinho_237"
+    },
+    {
+      "price": 657.99,
+      "timestamp": "2024-11-29T04:37:15.845673",
+      "available_amount": "375.86",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Trader-C01"
+    }
+  ]
+}
