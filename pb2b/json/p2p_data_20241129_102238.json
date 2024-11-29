@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-29T10:22:37.968974",
+  "bybit": [
+    {
+      "price": 1728.0,
+      "timestamp": "2024-11-29T10:22:37.346722",
+      "available_amount": "115.7587 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1729.0,
+      "timestamp": "2024-11-29T10:22:37.401334",
+      "available_amount": "130.952 USDT\n4,500 ~ 6,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1729.0,
+      "timestamp": "2024-11-29T10:22:37.446178",
+      "available_amount": "47.5986 USDT\n4,500 ~ 20,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1729.0,
+      "timestamp": "2024-11-29T10:22:37.491444",
+      "available_amount": "40.0618 USDT\n5,000 ~ 9,800 NGN",
+      "payment_methods": "Carbon microfinance bankKuda Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1729.0,
+      "timestamp": "2024-11-29T10:22:37.540241",
+      "available_amount": "29.826 USDT\n5,000 ~ 10,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 656.0,
+      "timestamp": "2024-11-29T10:22:37.968929",
+      "available_amount": "12.39",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "Terry-exchange"
+    },
+    {
+      "price": 656.85,
+      "timestamp": "2024-11-29T10:22:37.968943",
+      "available_amount": "52.68",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "noutci-trade"
+    },
+    {
+      "price": 656.86,
+      "timestamp": "2024-11-29T10:22:37.968946",
+      "available_amount": "52.71",
+      "payment_methods": "MoMoNew, MTNMobileMoney",
+      "merchant_name": "AlienTech237"
+    },
+    {
+      "price": 656.86,
+      "timestamp": "2024-11-29T10:22:37.968949",
+      "available_amount": "460.23",
+      "payment_methods": "MTNMobileMoney, MoMoNew, MTNMobileMoney",
+      "merchant_name": "Blacky-Crypto"
+    }
+  ]
+}
