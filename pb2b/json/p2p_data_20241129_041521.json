@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "timestamp": "2024-11-29T04:15:21.073310",
+  "bybit": [
+    {
+      "price": 1729.0,
+      "timestamp": "2024-11-29T04:15:20.315975",
+      "available_amount": "44.9134 USDT\n4,500 ~ 8,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1729.0,
+      "timestamp": "2024-11-29T04:15:20.371701",
+      "available_amount": "6.6766 USDT\n5,000 ~ 9,900 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1729.0,
+      "timestamp": "2024-11-29T04:15:20.418093",
+      "available_amount": "27.1081 USDT\n4,500 ~ 8,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-29T04:15:20.461599",
+      "available_amount": "1,998.0251 USDT\n4,500 ~ 4,500 NGN",
+      "payment_methods": "bKash",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1730.0,
+      "timestamp": "2024-11-29T04:15:20.507318",
+      "available_amount": "200.2273 USDT\n4,500 ~ 10,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 657.7,
+      "timestamp": "2024-11-29T04:15:21.073256",
+      "available_amount": "215.58",
+      "payment_methods": "MTNMobileMoney",
+      "merchant_name": "fastserviceexchange"
+    },
+    {
+      "price": 658.1,
+      "timestamp": "2024-11-29T04:15:21.073272",
+      "available_amount": "21.70",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "NMP-Trader"
+    },
+    {
+      "price": 658.3,
+      "timestamp": "2024-11-29T04:15:21.073276",
+      "available_amount": "426.12",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Trader-C01"
+    },
+    {
+      "price": 658.35,
+      "timestamp": "2024-11-29T04:15:21.073280",
+      "available_amount": "220.00",
+      "payment_methods": "MTNMobileMoney, MoMoNew",
+      "merchant_name": "Rami_Exchange"
+    }
+  ]
+}
