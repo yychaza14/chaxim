@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-11-30T06:27:13.253458",
+  "bybit": [
+    {
+      "price": 1716.5,
+      "timestamp": "2024-11-30T06:27:12.650570",
+      "available_amount": "322.593 USDT\n300,000 ~ 553,730.88 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1716.6,
+      "timestamp": "2024-11-30T06:27:12.713060",
+      "available_amount": "99.6498 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1717.0,
+      "timestamp": "2024-11-30T06:27:12.767027",
+      "available_amount": "148.4518 USDT\n50,000 ~ 254,891.74 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1717.0,
+      "timestamp": "2024-11-30T06:27:12.821414",
+      "available_amount": "12 USDT\n20,600 ~ 20,604 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1717.0,
+      "timestamp": "2024-11-30T06:27:12.870793",
+      "available_amount": "73.7771 USDT\n100,000 ~ 126,675.28 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.949,
+      "timestamp": "2024-11-30T06:27:13.253392",
+      "available_amount": "1763.33",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "CoinClan - 大额交易"
+    },
+    {
+      "price": 0.95,
+      "timestamp": "2024-11-30T06:27:13.253407",
+      "available_amount": "44174.00",
+      "payment_methods": "SEPAinstant, SEPA, BANK",
+      "merchant_name": "SmartOTC"
+    },
+    {
+      "price": 0.95,
+      "timestamp": "2024-11-30T06:27:13.253410",
+      "available_amount": "21428.87",
+      "payment_methods": "BANK, SEPAinstant, SEPA",
+      "merchant_name": "HanarsOTC"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-11-30T06:27:13.253413",
+      "available_amount": "5257.79",
+      "payment_methods": "ZEN",
+      "merchant_name": "Xchangeer-Ltd"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-11-30T06:27:13.253416",
+      "available_amount": "6437.48",
+      "payment_methods": "ZEN, BANK, SEPAinstant, SEPA",
+      "merchant_name": "SO_Exchange"
+    },
+    {
+      "price": 0.954,
+      "timestamp": "2024-11-30T06:27:13.253419",
+      "available_amount": "38675.65",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "Crypto-Simple"
+    }
+  ]
+}
