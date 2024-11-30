@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-11-30T14:10:42.506870",
+  "bybit": [
+    {
+      "price": 1716.9,
+      "timestamp": "2024-11-30T14:10:41.700994",
+      "available_amount": "10.1963 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Kuda",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1717.0,
+      "timestamp": "2024-11-30T14:10:41.757731",
+      "available_amount": "61.5591 USDT\n50,000 ~ 80,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1717.0,
+      "timestamp": "2024-11-30T14:10:41.803424",
+      "available_amount": "125.4891 USDT\n50,000 ~ 80,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1717.8,
+      "timestamp": "2024-11-30T14:10:41.848532",
+      "available_amount": "1,007.4631 USDT\n5,000 ~ 50,000 NGN",
+      "payment_methods": "PalmPayKuda BankBank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1718.0,
+      "timestamp": "2024-11-30T14:10:41.893596",
+      "available_amount": "477.8857 USDT\n5,000 ~ 10,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.945,
+      "timestamp": "2024-11-30T14:10:42.506793",
+      "available_amount": "515.87",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "FutureProPlus2"
+    },
+    {
+      "price": 0.946,
+      "timestamp": "2024-11-30T14:10:42.506810",
+      "available_amount": "650.00",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "Father_Of_Future"
+    },
+    {
+      "price": 0.947,
+      "timestamp": "2024-11-30T14:10:42.506817",
+      "available_amount": "186255.35",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "CoinClan - 大额交易"
+    },
+    {
+      "price": 0.948,
+      "timestamp": "2024-11-30T14:10:42.506821",
+      "available_amount": "5785.25",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "Simon"
+    },
+    {
+      "price": 0.948,
+      "timestamp": "2024-11-30T14:10:42.506824",
+      "available_amount": "67650.88",
+      "payment_methods": "SEPAinstant, SEPA, BANK",
+      "merchant_name": "SmartOTC"
+    },
+    {
+      "price": 0.949,
+      "timestamp": "2024-11-30T14:10:42.506828",
+      "available_amount": "11794.63",
+      "payment_methods": "SEPAinstant, N26, BANK",
+      "merchant_name": "Crypto-Eli"
+    }
+  ]
+}
