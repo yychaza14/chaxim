@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-11-30T13:39:19.267041",
+  "bybit": [
+    {
+      "price": 1716.48,
+      "timestamp": "2024-11-30T13:39:18.599672",
+      "available_amount": "20 USDT\n20,000 ~ 34,329.6 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1716.5,
+      "timestamp": "2024-11-30T13:39:18.653783",
+      "available_amount": "13.3959 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Kuda",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1716.9,
+      "timestamp": "2024-11-30T13:39:18.700432",
+      "available_amount": "190.836 USDT\n4,500 ~ 4,600 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1717.0,
+      "timestamp": "2024-11-30T13:39:18.745677",
+      "available_amount": "173.8795 USDT\n50,000 ~ 80,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1717.0,
+      "timestamp": "2024-11-30T13:39:18.790223",
+      "available_amount": "125.4891 USDT\n50,000 ~ 80,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.945,
+      "timestamp": "2024-11-30T13:39:19.266976",
+      "available_amount": "407.18",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "exchang-smart"
+    },
+    {
+      "price": 0.945,
+      "timestamp": "2024-11-30T13:39:19.266991",
+      "available_amount": "200.00",
+      "payment_methods": "SEPA",
+      "merchant_name": "MoMoh15"
+    },
+    {
+      "price": 0.946,
+      "timestamp": "2024-11-30T13:39:19.266995",
+      "available_amount": "7110.20",
+      "payment_methods": "BANK, SEPAinstant, SEPA",
+      "merchant_name": "HanarsOTC"
+    },
+    {
+      "price": 0.948,
+      "timestamp": "2024-11-30T13:39:19.266998",
+      "available_amount": "5785.25",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "Simon"
+    },
+    {
+      "price": 0.948,
+      "timestamp": "2024-11-30T13:39:19.267001",
+      "available_amount": "67650.88",
+      "payment_methods": "SEPAinstant, SEPA, BANK",
+      "merchant_name": "SmartOTC"
+    },
+    {
+      "price": 0.948,
+      "timestamp": "2024-11-30T13:39:19.267004",
+      "available_amount": "187733.13",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "CoinClan - 大额交易"
+    }
+  ]
+}
