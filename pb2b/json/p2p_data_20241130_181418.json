@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-11-30T18:14:18.239110",
+  "bybit": [
+    {
+      "price": 1718.0,
+      "timestamp": "2024-11-30T18:14:17.635974",
+      "available_amount": "213.9723 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1718.8,
+      "timestamp": "2024-11-30T18:14:17.694952",
+      "available_amount": "11.0829 USDT\n5,000 ~ 19,049.28 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1718.99,
+      "timestamp": "2024-11-30T18:14:17.807315",
+      "available_amount": "6.7614 USDT\n10,000 ~ 11,622.77 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-30T18:14:17.857644",
+      "available_amount": "10.5 USDT\n15,000 ~ 18,049.5 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-11-30T18:14:17.913144",
+      "available_amount": "84.1767 USDT\n10,000 ~ 20,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.946,
+      "timestamp": "2024-11-30T18:14:18.239035",
+      "available_amount": "1600.00",
+      "payment_methods": "BANK",
+      "merchant_name": "Instat_Exchange_24_7"
+    },
+    {
+      "price": 0.948,
+      "timestamp": "2024-11-30T18:14:18.239050",
+      "available_amount": "67650.88",
+      "payment_methods": "SEPAinstant, SEPA, BANK",
+      "merchant_name": "SmartOTC"
+    },
+    {
+      "price": 0.948,
+      "timestamp": "2024-11-30T18:14:18.239054",
+      "available_amount": "189917.52",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "CoinClan - 大额交易"
+    },
+    {
+      "price": 0.949,
+      "timestamp": "2024-11-30T18:14:18.239058",
+      "available_amount": "32869.44",
+      "payment_methods": "SEPAinstant, N26, BANK",
+      "merchant_name": "Crypto-Eli"
+    },
+    {
+      "price": 0.951,
+      "timestamp": "2024-11-30T18:14:18.239061",
+      "available_amount": "3000.51",
+      "payment_methods": "ZEN",
+      "merchant_name": "Everia_FastTrade"
+    },
+    {
+      "price": 0.951,
+      "timestamp": "2024-11-30T18:14:18.239065",
+      "available_amount": "535.00",
+      "payment_methods": "SEPAinstant, BANK, SEPA",
+      "merchant_name": "Sashok"
+    }
+  ]
+}
