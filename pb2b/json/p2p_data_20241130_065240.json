@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-11-30T06:52:40.689661",
+  "bybit": [
+    {
+      "price": 1715.5,
+      "timestamp": "2024-11-30T06:52:39.553022",
+      "available_amount": "10.4914 USDT\n17,500 ~ 17,997.99 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1715.6,
+      "timestamp": "2024-11-30T06:52:39.731148",
+      "available_amount": "91.434 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1717.0,
+      "timestamp": "2024-11-30T06:52:39.796432",
+      "available_amount": "43.399 USDT\n50,000 ~ 74,516.08 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1717.5,
+      "timestamp": "2024-11-30T06:52:39.847881",
+      "available_amount": "44.6123 USDT\n75,000 ~ 76,621.62 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1717.7,
+      "timestamp": "2024-11-30T06:52:39.905655",
+      "available_amount": "16.4766 USDT\n20,000 ~ 28,301.85 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.95,
+      "timestamp": "2024-11-30T06:52:40.689596",
+      "available_amount": "41858.22",
+      "payment_methods": "SEPAinstant, SEPA, BANK",
+      "merchant_name": "SmartOTC"
+    },
+    {
+      "price": 0.95,
+      "timestamp": "2024-11-30T06:52:40.689612",
+      "available_amount": "21428.87",
+      "payment_methods": "BANK, SEPAinstant, SEPA",
+      "merchant_name": "HanarsOTC"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-11-30T06:52:40.689616",
+      "available_amount": "5257.79",
+      "payment_methods": "ZEN",
+      "merchant_name": "Xchangeer-Ltd"
+    },
+    {
+      "price": 0.954,
+      "timestamp": "2024-11-30T06:52:40.689619",
+      "available_amount": "38675.65",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "Crypto-Simple"
+    },
+    {
+      "price": 0.954,
+      "timestamp": "2024-11-30T06:52:40.689621",
+      "available_amount": "34043.25",
+      "payment_methods": "SEPAinstant, SEPA, BANK, ZEN",
+      "merchant_name": "AlteWay"
+    },
+    {
+      "price": 0.955,
+      "timestamp": "2024-11-30T06:52:40.689624",
+      "available_amount": "4130.00",
+      "payment_methods": "ZEN",
+      "merchant_name": "DERYBOS"
+    }
+  ]
+}
