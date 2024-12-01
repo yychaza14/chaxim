@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-12-01T09:47:13.770976",
+  "bybit": [
+    {
+      "price": 1718.8,
+      "timestamp": "2024-12-01T09:47:13.209647",
+      "available_amount": "160.5001 USDT\n4,500 ~ 9,500 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.58,
+      "timestamp": "2024-12-01T09:47:13.270982",
+      "available_amount": "5 USDT\n4,500 ~ 8,597.9 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.85,
+      "timestamp": "2024-12-01T09:47:13.322929",
+      "available_amount": "261.9105 USDT\n100,000 ~ 450,446.77 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.9,
+      "timestamp": "2024-12-01T09:47:13.374138",
+      "available_amount": "69.6113 USDT\n5,000 ~ 9,800 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.95,
+      "timestamp": "2024-12-01T09:47:13.427003",
+      "available_amount": "212.9239 USDT\n200,000 ~ 250,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.948,
+      "timestamp": "2024-12-01T09:47:13.770909",
+      "available_amount": "80364.89",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "CoinClan - 大额交易"
+    },
+    {
+      "price": 0.948,
+      "timestamp": "2024-12-01T09:47:13.770924",
+      "available_amount": "1434.18",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "Only_wise_to_wise"
+    },
+    {
+      "price": 0.949,
+      "timestamp": "2024-12-01T09:47:13.770928",
+      "available_amount": "33643.02",
+      "payment_methods": "SEPAinstant, N26, BANK",
+      "merchant_name": "Crypto-Eli"
+    },
+    {
+      "price": 0.952,
+      "timestamp": "2024-12-01T09:47:13.770933",
+      "available_amount": "3500.44",
+      "payment_methods": "ZEN",
+      "merchant_name": "Everia_FastTrade"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-12-01T09:47:13.770936",
+      "available_amount": "77546.20",
+      "payment_methods": "SEPAinstant, SEPA, BANK",
+      "merchant_name": "SmartOTC"
+    },
+    {
+      "price": 0.954,
+      "timestamp": "2024-12-01T09:47:13.770939",
+      "available_amount": "28278.10",
+      "payment_methods": "SEPAinstant, SEPA, BANK, ZEN",
+      "merchant_name": "AlteWay"
+    }
+  ]
+}
