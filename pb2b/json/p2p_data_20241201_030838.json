@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-12-01T03:08:38.569074",
+  "bybit": [
+    {
+      "price": 1720.0,
+      "timestamp": "2024-12-01T03:08:37.956542",
+      "available_amount": "19.0292 USDT\n10,000 ~ 32,730.22 NGN",
+      "payment_methods": "Access BankKuda BankOpay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1721.4,
+      "timestamp": "2024-12-01T03:08:38.015823",
+      "available_amount": "83.1355 USDT\n100,000 ~ 143,109.44 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1721.5,
+      "timestamp": "2024-12-01T03:08:38.062808",
+      "available_amount": "93.8866 USDT\n100,000 ~ 161,625.78 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1721.9,
+      "timestamp": "2024-12-01T03:08:38.108138",
+      "available_amount": "300 USDT\n100,000 ~ 150,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1721.99,
+      "timestamp": "2024-12-01T03:08:38.154826",
+      "available_amount": "82 USDT\n4,500 ~ 141,203.18 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.952,
+      "timestamp": "2024-12-01T03:08:38.568997",
+      "available_amount": "129351.53",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "CoinClan - 大额交易"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-12-01T03:08:38.569011",
+      "available_amount": "76186.61",
+      "payment_methods": "SEPAinstant, SEPA, BANK",
+      "merchant_name": "SmartOTC"
+    },
+    {
+      "price": 0.954,
+      "timestamp": "2024-12-01T03:08:38.569018",
+      "available_amount": "30898.63",
+      "payment_methods": "SEPAinstant, SEPA, BANK, ZEN",
+      "merchant_name": "AlteWay"
+    },
+    {
+      "price": 0.954,
+      "timestamp": "2024-12-01T03:08:38.569022",
+      "available_amount": "30036.41",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "Crypto-Simple"
+    },
+    {
+      "price": 0.964,
+      "timestamp": "2024-12-01T03:08:38.569026",
+      "available_amount": "200.00",
+      "payment_methods": "SEPAinstant, SEPA",
+      "merchant_name": "CIH-MOROCCO"
+    },
+    {
+      "price": 0.967,
+      "timestamp": "2024-12-01T03:08:38.569030",
+      "available_amount": "3789.08",
+      "payment_methods": "BANK",
+      "merchant_name": "COSME-FULANITO"
+    }
+  ]
+}
