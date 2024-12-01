@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-12-01T04:48:45.832802",
+  "bybit": [
+    {
+      "price": 1722.0,
+      "timestamp": "2024-12-01T04:48:45.240123",
+      "available_amount": "12.073 USDT\n4,500 ~ 5,500 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.0,
+      "timestamp": "2024-12-01T04:48:45.300813",
+      "available_amount": "380.4951 USDT\n100,000 ~ 655,593.05 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.8,
+      "timestamp": "2024-12-01T04:48:45.354383",
+      "available_amount": "36.15 USDT\n4,500 ~ 10,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1724.0,
+      "timestamp": "2024-12-01T04:48:45.408176",
+      "available_amount": "150 USDT\n50,000 ~ 258,600 NGN",
+      "payment_methods": "PalmPay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1724.0,
+      "timestamp": "2024-12-01T04:48:45.459100",
+      "available_amount": "9.8354 USDT\n16,500 ~ 16,956.22 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.952,
+      "timestamp": "2024-12-01T04:48:45.832738",
+      "available_amount": "69035.87",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "CoinClan - 大额交易"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-12-01T04:48:45.832752",
+      "available_amount": "76700.78",
+      "payment_methods": "SEPAinstant, SEPA, BANK",
+      "merchant_name": "SmartOTC"
+    },
+    {
+      "price": 0.954,
+      "timestamp": "2024-12-01T04:48:45.832756",
+      "available_amount": "30898.63",
+      "payment_methods": "SEPAinstant, SEPA, BANK, ZEN",
+      "merchant_name": "AlteWay"
+    },
+    {
+      "price": 0.954,
+      "timestamp": "2024-12-01T04:48:45.832759",
+      "available_amount": "30036.41",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "Crypto-Simple"
+    },
+    {
+      "price": 0.966,
+      "timestamp": "2024-12-01T04:48:45.832761",
+      "available_amount": "948.25",
+      "payment_methods": "VISADirect",
+      "merchant_name": "Kiventurello"
+    },
+    {
+      "price": 0.967,
+      "timestamp": "2024-12-01T04:48:45.832764",
+      "available_amount": "3789.08",
+      "payment_methods": "BANK",
+      "merchant_name": "COSME-FULANITO"
+    }
+  ]
+}
