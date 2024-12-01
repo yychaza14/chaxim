@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-12-01T05:43:34.978539",
+  "bybit": [
+    {
+      "price": 1721.0,
+      "timestamp": "2024-12-01T05:43:34.399197",
+      "available_amount": "458.8447 USDT\n5,000 ~ 9,900 NGN",
+      "payment_methods": "Paycom or Opay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1722.0,
+      "timestamp": "2024-12-01T05:43:34.454228",
+      "available_amount": "32.749 USDT\n10,000 ~ 56,393.77 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.0,
+      "timestamp": "2024-12-01T05:43:34.498374",
+      "available_amount": "62.8986 USDT\n5,500 ~ 20,000 NGN",
+      "payment_methods": "Opay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.0,
+      "timestamp": "2024-12-01T05:43:34.542923",
+      "available_amount": "267.1403 USDT\n10,000 ~ 20,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.8,
+      "timestamp": "2024-12-01T05:43:34.589377",
+      "available_amount": "28 USDT\n15,000 ~ 48,266.4 NGN",
+      "payment_methods": "PalmPayBank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.952,
+      "timestamp": "2024-12-01T05:43:34.978474",
+      "available_amount": "15786.94",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "CoinClan - 大额交易"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-12-01T05:43:34.978489",
+      "available_amount": "76700.78",
+      "payment_methods": "SEPAinstant, SEPA, BANK",
+      "merchant_name": "SmartOTC"
+    },
+    {
+      "price": 0.954,
+      "timestamp": "2024-12-01T05:43:34.978493",
+      "available_amount": "30374.53",
+      "payment_methods": "SEPAinstant, SEPA, BANK, ZEN",
+      "merchant_name": "AlteWay"
+    },
+    {
+      "price": 0.954,
+      "timestamp": "2024-12-01T05:43:34.978496",
+      "available_amount": "30036.41",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "Crypto-Simple"
+    },
+    {
+      "price": 0.958,
+      "timestamp": "2024-12-01T05:43:34.978499",
+      "available_amount": "16168.32",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "CoinClan - 大额交易"
+    },
+    {
+      "price": 0.966,
+      "timestamp": "2024-12-01T05:43:34.978502",
+      "available_amount": "948.25",
+      "payment_methods": "VISADirect",
+      "merchant_name": "Kiventurello"
+    }
+  ]
+}
