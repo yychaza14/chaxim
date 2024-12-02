@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-12-02T15:19:35.213645",
+  "bybit": [
+    {
+      "price": 1722.9,
+      "timestamp": "2024-12-02T15:19:34.598610",
+      "available_amount": "18.7506 USDT\n4,500 ~ 7,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.0,
+      "timestamp": "2024-12-02T15:19:34.652099",
+      "available_amount": "424.3964 USDT\n4,500 ~ 4,900 NGN",
+      "payment_methods": "PalmPayBank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.0,
+      "timestamp": "2024-12-02T15:19:34.700710",
+      "available_amount": "8.8564 USDT\n4,500 ~ 4,800 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.4,
+      "timestamp": "2024-12-02T15:19:34.755532",
+      "available_amount": "111.5777 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.5,
+      "timestamp": "2024-12-02T15:19:34.799954",
+      "available_amount": "24.038 USDT\n5,000 ~ 9,950 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.95,
+      "timestamp": "2024-12-02T15:19:35.213580",
+      "available_amount": "3160.00",
+      "payment_methods": "ZEN",
+      "merchant_name": "CriptoMcLaren"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-12-02T15:19:35.213595",
+      "available_amount": "2500.00",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "Father_Of_Future"
+    },
+    {
+      "price": 0.955,
+      "timestamp": "2024-12-02T15:19:35.213598",
+      "available_amount": "1986.74",
+      "payment_methods": "BANK, SEPAinstant, SEPA",
+      "merchant_name": "HanarsOTC"
+    },
+    {
+      "price": 0.956,
+      "timestamp": "2024-12-02T15:19:35.213601",
+      "available_amount": "21316.58",
+      "payment_methods": "ZEN",
+      "merchant_name": "Crypto-Eli"
+    },
+    {
+      "price": 0.956,
+      "timestamp": "2024-12-02T15:19:35.213604",
+      "available_amount": "2557.99",
+      "payment_methods": "SEPAinstant, N26, Bunq, Paysera, ING",
+      "merchant_name": "TEZER_EUROPE"
+    },
+    {
+      "price": 0.956,
+      "timestamp": "2024-12-02T15:19:35.213607",
+      "available_amount": "2233.72",
+      "payment_methods": "BANK, SEPAinstant, SEPA, N26, Bunq",
+      "merchant_name": "TEZER_EUROPE"
+    }
+  ]
+}
