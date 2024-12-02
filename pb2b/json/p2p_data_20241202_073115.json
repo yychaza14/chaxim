@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-12-02T07:31:15.288555",
+  "bybit": [
+    {
+      "price": 1720.99,
+      "timestamp": "2024-12-02T07:31:14.669558",
+      "available_amount": "52.8172 USDT\n5,000 ~ 9,900 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1720.99,
+      "timestamp": "2024-12-02T07:31:14.724181",
+      "available_amount": "70.5129 USDT\n4,500 ~ 9,950 NGN",
+      "payment_methods": "PalmPay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1721.0,
+      "timestamp": "2024-12-02T07:31:14.773833",
+      "available_amount": "199 USDT\n142,000 ~ 342,479 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1721.0,
+      "timestamp": "2024-12-02T07:31:14.819225",
+      "available_amount": "24.8 USDT\n4,500 ~ 9,900 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1721.0,
+      "timestamp": "2024-12-02T07:31:14.865889",
+      "available_amount": "40 USDT\n8,000 ~ 10,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.955,
+      "timestamp": "2024-12-02T07:31:15.288477",
+      "available_amount": "190071.27",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "CoinClan - 大额交易"
+    },
+    {
+      "price": 0.955,
+      "timestamp": "2024-12-02T07:31:15.288495",
+      "available_amount": "35526.38",
+      "payment_methods": "SEPAinstant, N26, BANK",
+      "merchant_name": "Crypto-Eli"
+    },
+    {
+      "price": 0.956,
+      "timestamp": "2024-12-02T07:31:15.288499",
+      "available_amount": "51988.98",
+      "payment_methods": "ZEN, SEPA, SEPAinstant, BANK, Paysera",
+      "merchant_name": "Fiat_EX"
+    },
+    {
+      "price": 0.957,
+      "timestamp": "2024-12-02T07:31:15.288503",
+      "available_amount": "66294.76",
+      "payment_methods": "SEPAinstant, SEPA, BANK",
+      "merchant_name": "SmartOTC"
+    },
+    {
+      "price": 0.957,
+      "timestamp": "2024-12-02T07:31:15.288507",
+      "available_amount": "1545.85",
+      "payment_methods": "ZEN, BANK, SEPAinstant, SEPA",
+      "merchant_name": "SO_Exchange"
+    },
+    {
+      "price": 0.959,
+      "timestamp": "2024-12-02T07:31:15.288511",
+      "available_amount": "3029.68",
+      "payment_methods": "SEPA, SEPAinstant",
+      "merchant_name": "KITTROWGROUP"
+    }
+  ]
+}
