@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-12-02T13:44:57.717797",
+  "bybit": [
+    {
+      "price": 1722.99,
+      "timestamp": "2024-12-02T13:44:56.893500",
+      "available_amount": "239.3355 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.0,
+      "timestamp": "2024-12-02T13:44:56.978835",
+      "available_amount": "8.1805 USDT\n4,500 ~ 5,500 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.0,
+      "timestamp": "2024-12-02T13:44:57.032498",
+      "available_amount": "50 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Kuda Bank",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.0,
+      "timestamp": "2024-12-02T13:44:57.087282",
+      "available_amount": "5 USDT\n4,500 ~ 8,615 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.0,
+      "timestamp": "2024-12-02T13:44:57.160188",
+      "available_amount": "78.2061 USDT\n4,500 ~ 6,000 NGN",
+      "payment_methods": "PalmPay",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.951,
+      "timestamp": "2024-12-02T13:44:57.717701",
+      "available_amount": "1000.00",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "MoMoh15"
+    },
+    {
+      "price": 0.954,
+      "timestamp": "2024-12-02T13:44:57.717722",
+      "available_amount": "125610.60",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "CoinClan - 大额交易"
+    },
+    {
+      "price": 0.955,
+      "timestamp": "2024-12-02T13:44:57.717727",
+      "available_amount": "37716.77",
+      "payment_methods": "SEPAinstant, SEPA, BANK",
+      "merchant_name": "SmartOTC"
+    },
+    {
+      "price": 0.955,
+      "timestamp": "2024-12-02T13:44:57.717732",
+      "available_amount": "8387.58",
+      "payment_methods": "SEPA",
+      "merchant_name": "daZyyy-"
+    },
+    {
+      "price": 0.955,
+      "timestamp": "2024-12-02T13:44:57.717736",
+      "available_amount": "700.00",
+      "payment_methods": "Paysera",
+      "merchant_name": "WiseRevolutExpress"
+    },
+    {
+      "price": 0.956,
+      "timestamp": "2024-12-02T13:44:57.717741",
+      "available_amount": "25000.00",
+      "payment_methods": "BANK, SEPA, SEPAinstant",
+      "merchant_name": "SatoshiDeals"
+    }
+  ]
+}
