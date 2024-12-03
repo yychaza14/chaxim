@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-12-03T05:23:16.739964",
+  "bybit": [
+    {
+      "price": 1723.0,
+      "timestamp": "2024-12-03T05:23:15.795541",
+      "available_amount": "1,000 USDT\n1,723,000 ~ 1,723,000 NGN",
+      "payment_methods": "PalmPayOpay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.0,
+      "timestamp": "2024-12-03T05:23:15.870215",
+      "available_amount": "1,394.6723 USDT\n2,403,000 ~ 2,403,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.17,
+      "timestamp": "2024-12-03T05:23:15.932946",
+      "available_amount": "831.106 USDT\n1,000,000 ~ 1,432,136.92 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.2,
+      "timestamp": "2024-12-03T05:23:15.997801",
+      "available_amount": "216.7673 USDT\n300,000 ~ 373,533.41 NGN",
+      "payment_methods": "PalmPay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.21,
+      "timestamp": "2024-12-03T05:23:16.057107",
+      "available_amount": "886.5451 USDT\n600,000 ~ 1,500,000.2 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.95,
+      "timestamp": "2024-12-03T05:23:16.739897",
+      "available_amount": "600.00",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "Instat_Exchange_24_7"
+    },
+    {
+      "price": 0.958,
+      "timestamp": "2024-12-03T05:23:16.739912",
+      "available_amount": "163903.99",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "CoinClan - 大额交易"
+    },
+    {
+      "price": 0.959,
+      "timestamp": "2024-12-03T05:23:16.739916",
+      "available_amount": "18955.32",
+      "payment_methods": "ZEN",
+      "merchant_name": "Crypto-Eli"
+    },
+    {
+      "price": 0.959,
+      "timestamp": "2024-12-03T05:23:16.739919",
+      "available_amount": "98739.04",
+      "payment_methods": "SEPAinstant, SEPA, BANK",
+      "merchant_name": "SmartOTC"
+    },
+    {
+      "price": 0.96,
+      "timestamp": "2024-12-03T05:23:16.739922",
+      "available_amount": "1799.23",
+      "payment_methods": "ZEN",
+      "merchant_name": "DERYBOS"
+    },
+    {
+      "price": 0.96,
+      "timestamp": "2024-12-03T05:23:16.739924",
+      "available_amount": "243.95",
+      "payment_methods": "N26, BBVABank, Bunq, BancoSantanderSpain, BancoSabadellSpain",
+      "merchant_name": "Finanzfy"
+    }
+  ]
+}
