@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-12-03T09:09:24.523478",
+  "bybit": [
+    {
+      "price": 1723.0,
+      "timestamp": "2024-12-03T09:09:23.652693",
+      "available_amount": "6.1807 USDT\n4,500 ~ 9,500 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.0,
+      "timestamp": "2024-12-03T09:09:23.724843",
+      "available_amount": "102.896 USDT\n4,500 ~ 6,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.0,
+      "timestamp": "2024-12-03T09:09:23.779854",
+      "available_amount": "232.1849 USDT\n4,500 ~ 6,000 NGN",
+      "payment_methods": "KudaBank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.0,
+      "timestamp": "2024-12-03T09:09:23.841108",
+      "available_amount": "27.098 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.3,
+      "timestamp": "2024-12-03T09:09:23.892915",
+      "available_amount": "33.3814 USDT\n5,000 ~ 9,500 NGN",
+      "payment_methods": "Opay",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.952,
+      "timestamp": "2024-12-03T09:09:24.523372",
+      "available_amount": "121827.79",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "CoinClan - 大额交易"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-12-03T09:09:24.523391",
+      "available_amount": "21619.13",
+      "payment_methods": "SEPA, SEPAinstant, BANK",
+      "merchant_name": "OneTwoCrypto"
+    },
+    {
+      "price": 0.954,
+      "timestamp": "2024-12-03T09:09:24.523396",
+      "available_amount": "97271.54",
+      "payment_methods": "SEPAinstant, SEPA, BANK",
+      "merchant_name": "SmartOTC"
+    },
+    {
+      "price": 0.954,
+      "timestamp": "2024-12-03T09:09:24.523400",
+      "available_amount": "8622.19",
+      "payment_methods": "BANK, SEPAinstant, SEPA, N26, Bunq",
+      "merchant_name": "TEZER_EUROPE"
+    },
+    {
+      "price": 0.954,
+      "timestamp": "2024-12-03T09:09:24.523404",
+      "available_amount": "8622.19",
+      "payment_methods": "SEPAinstant, N26, Bunq, Paysera, ING",
+      "merchant_name": "TEZER_EUROPE"
+    },
+    {
+      "price": 0.955,
+      "timestamp": "2024-12-03T09:09:24.523408",
+      "available_amount": "19123.25",
+      "payment_methods": "ZEN, SEPA, SEPAinstant, BANK, Paysera",
+      "merchant_name": "Fiat_EX"
+    }
+  ]
+}
