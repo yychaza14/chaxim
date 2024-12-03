@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-12-03T11:30:19.305634",
+  "bybit": [
+    {
+      "price": 1722.8,
+      "timestamp": "2024-12-03T11:30:18.655840",
+      "available_amount": "21.2931 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.0,
+      "timestamp": "2024-12-03T11:30:18.713181",
+      "available_amount": "921.58 USDT\n1,000,000 ~ 1,587,882.34 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.5,
+      "timestamp": "2024-12-03T11:30:18.766129",
+      "available_amount": "142.6038 USDT\n5,500 ~ 20,000 NGN",
+      "payment_methods": "Opay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.65,
+      "timestamp": "2024-12-03T11:30:18.817280",
+      "available_amount": "22.1577 USDT\n4,500 ~ 5,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.74,
+      "timestamp": "2024-12-03T11:30:18.868999",
+      "available_amount": "10 USDT\n4,500 ~ 9,900 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.952,
+      "timestamp": "2024-12-03T11:30:19.305563",
+      "available_amount": "600.00",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "FutureProPlus2"
+    },
+    {
+      "price": 0.952,
+      "timestamp": "2024-12-03T11:30:19.305579",
+      "available_amount": "2100.00",
+      "payment_methods": "BANK, SEPAinstant",
+      "merchant_name": "WHITE_CHANGE"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-12-03T11:30:19.305584",
+      "available_amount": "7000.00",
+      "payment_methods": "SEPA",
+      "merchant_name": "maikatran1311"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-12-03T11:30:19.305587",
+      "available_amount": "83634.82",
+      "payment_methods": "SEPAinstant, SEPA, BANK",
+      "merchant_name": "SmartOTC"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-12-03T11:30:19.305591",
+      "available_amount": "227.64",
+      "payment_methods": "BANK",
+      "merchant_name": "Paloma1"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-12-03T11:30:19.305594",
+      "available_amount": "2300.00",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "Father_Of_Future"
+    }
+  ]
+}
