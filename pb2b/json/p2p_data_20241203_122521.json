@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-12-03T12:25:21.422043",
+  "bybit": [
+    {
+      "price": 1722.0,
+      "timestamp": "2024-12-03T12:25:20.876935",
+      "available_amount": "87.1905 USDT\n4,500 ~ 9,900 NGN",
+      "payment_methods": "PalmPay",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1722.7,
+      "timestamp": "2024-12-03T12:25:20.941509",
+      "available_amount": "35.0958 USDT\n15,000 ~ 60,459.53 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1722.9,
+      "timestamp": "2024-12-03T12:25:20.993418",
+      "available_amount": "36.368 USDT\n4,500 ~ 9,900 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1722.99,
+      "timestamp": "2024-12-03T12:25:21.046627",
+      "available_amount": "24.435 USDT\n5,000 ~ 9,900 NGN",
+      "payment_methods": "PalmPayBank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1723.0,
+      "timestamp": "2024-12-03T12:25:21.100459",
+      "available_amount": "5.2235 USDT\n9,000 ~ 9,000.09 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.95,
+      "timestamp": "2024-12-03T12:25:21.421970",
+      "available_amount": "520.01",
+      "payment_methods": "VISADirect, Paysend",
+      "merchant_name": "SOKRAT-777"
+    },
+    {
+      "price": 0.951,
+      "timestamp": "2024-12-03T12:25:21.421986",
+      "available_amount": "1750.00",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "WiseRevolutExpress"
+    },
+    {
+      "price": 0.952,
+      "timestamp": "2024-12-03T12:25:21.421990",
+      "available_amount": "2105.00",
+      "payment_methods": "BANK, SEPAinstant",
+      "merchant_name": "WHITE_CHANGE"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-12-03T12:25:21.421994",
+      "available_amount": "48989.85",
+      "payment_methods": "SEPAinstant, SEPA, BANK",
+      "merchant_name": "SmartOTC"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-12-03T12:25:21.421997",
+      "available_amount": "70.20",
+      "payment_methods": "BANK",
+      "merchant_name": "Paloma1"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-12-03T12:25:21.422001",
+      "available_amount": "143516.56",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "CoinClan - 大额交易"
+    }
+  ]
+}
