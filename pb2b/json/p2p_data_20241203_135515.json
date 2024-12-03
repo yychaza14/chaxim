@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-12-03T13:55:14.747448",
+  "bybit": [
+    {
+      "price": 1720.0,
+      "timestamp": "2024-12-03T13:55:13.736587",
+      "available_amount": "1,050.0027 USDT\n300,000 ~ 1,806,004.64 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1720.7,
+      "timestamp": "2024-12-03T13:55:13.794412",
+      "available_amount": "82.2329 USDT\n7,000 ~ 9,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1720.7,
+      "timestamp": "2024-12-03T13:55:13.843716",
+      "available_amount": "136.395 USDT\n200,000 ~ 234,694.87 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1720.78,
+      "timestamp": "2024-12-03T13:55:13.892633",
+      "available_amount": "282.1655 USDT\n20,000 ~ 485,544.74 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1720.9,
+      "timestamp": "2024-12-03T13:55:13.969962",
+      "available_amount": "884.004 USDT\n200,000 ~ 1,521,282.48 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.95,
+      "timestamp": "2024-12-03T13:55:14.747374",
+      "available_amount": "255.00",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "CriptoMcLaren"
+    },
+    {
+      "price": 0.952,
+      "timestamp": "2024-12-03T13:55:14.747392",
+      "available_amount": "141288.08",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "CoinClan - 大额交易"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-12-03T13:55:14.747396",
+      "available_amount": "85745.72",
+      "payment_methods": "SEPAinstant, SEPA, BANK",
+      "merchant_name": "SmartOTC"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-12-03T13:55:14.747400",
+      "available_amount": "2106.00",
+      "payment_methods": "ZEN",
+      "merchant_name": "CriptoMcLaren"
+    },
+    {
+      "price": 0.954,
+      "timestamp": "2024-12-03T13:55:14.747403",
+      "available_amount": "16378.04",
+      "payment_methods": "SEPA, SEPAinstant, BANK",
+      "merchant_name": "OneTwoCrypto"
+    },
+    {
+      "price": 0.954,
+      "timestamp": "2024-12-03T13:55:14.747406",
+      "available_amount": "6117.29",
+      "payment_methods": "BANK, SEPAinstant, SEPA",
+      "merchant_name": "HanarsOTC"
+    }
+  ]
+}
