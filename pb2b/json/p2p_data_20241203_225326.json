@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-12-03T22:53:26.785809",
+  "bybit": [
+    {
+      "price": 1698.0,
+      "timestamp": "2024-12-03T22:53:26.072044",
+      "available_amount": "709.7347 USDT\n100,000 ~ 1,205,129.52 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1698.72,
+      "timestamp": "2024-12-03T22:53:26.155033",
+      "available_amount": "816.7263 USDT\n200,000 ~ 1,387,389.3 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1698.85,
+      "timestamp": "2024-12-03T22:53:26.210075",
+      "available_amount": "242.9471 USDT\n100,000 ~ 412,730.68 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1699.0,
+      "timestamp": "2024-12-03T22:53:26.265481",
+      "available_amount": "1,086.4726 USDT\n200,000 ~ 1,845,916.94 NGN",
+      "payment_methods": "PalmPayBank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1699.5,
+      "timestamp": "2024-12-03T22:53:26.318701",
+      "available_amount": "134.0708 USDT\n200,000 ~ 227,853.32 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.954,
+      "timestamp": "2024-12-03T22:53:26.785745",
+      "available_amount": "142559.09",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "CoinClan - 大额交易"
+    },
+    {
+      "price": 0.955,
+      "timestamp": "2024-12-03T22:53:26.785758",
+      "available_amount": "4682.68",
+      "payment_methods": "BANK, SEPAinstant, SEPA",
+      "merchant_name": "HanarsOTC"
+    },
+    {
+      "price": 0.955,
+      "timestamp": "2024-12-03T22:53:26.785761",
+      "available_amount": "92660.61",
+      "payment_methods": "SEPAinstant, SEPA, BANK",
+      "merchant_name": "SmartOTC"
+    },
+    {
+      "price": 0.957,
+      "timestamp": "2024-12-03T22:53:26.785764",
+      "available_amount": "252.12",
+      "payment_methods": "ZEN, SEPA, BANK",
+      "merchant_name": "FidesCapital"
+    },
+    {
+      "price": 0.959,
+      "timestamp": "2024-12-03T22:53:26.785769",
+      "available_amount": "6864.21",
+      "payment_methods": "SEPA, BANK",
+      "merchant_name": "NIMLAB"
+    },
+    {
+      "price": 0.959,
+      "timestamp": "2024-12-03T22:53:26.785772",
+      "available_amount": "2660.56",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "SINAZeXchange"
+    }
+  ]
+}
