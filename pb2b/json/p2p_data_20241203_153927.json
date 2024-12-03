@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-12-03T15:39:27.716852",
+  "bybit": [
+    {
+      "price": 1719.0,
+      "timestamp": "2024-12-03T15:39:27.034258",
+      "available_amount": "218.5124 USDT\n375,622 ~ 375,622 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-12-03T15:39:27.101115",
+      "available_amount": "519.3081 USDT\n300,000 ~ 892,690.62 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-12-03T15:39:27.152664",
+      "available_amount": "2,000 USDT\n500,000 ~ 3,438,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-12-03T15:39:27.203149",
+      "available_amount": "307.6315 USDT\n528,000 ~ 528,818.54 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1719.0,
+      "timestamp": "2024-12-03T15:39:27.257309",
+      "available_amount": "128.1176 USDT\n200,000 ~ 220,234.15 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.945,
+      "timestamp": "2024-12-03T15:39:27.716703",
+      "available_amount": "1376.85",
+      "payment_methods": "VISADirect, Paysend, ZEN",
+      "merchant_name": "GIPPOKRAT-777"
+    },
+    {
+      "price": 0.951,
+      "timestamp": "2024-12-03T15:39:27.716724",
+      "available_amount": "350.00",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "MoMoh15"
+    },
+    {
+      "price": 0.952,
+      "timestamp": "2024-12-03T15:39:27.716730",
+      "available_amount": "1200.00",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "WiseRevolutExpress"
+    },
+    {
+      "price": 0.952,
+      "timestamp": "2024-12-03T15:39:27.716735",
+      "available_amount": "1250.00",
+      "payment_methods": "SEPAinstant",
+      "merchant_name": "Father_Of_Future"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-12-03T15:39:27.716740",
+      "available_amount": "4199.00",
+      "payment_methods": "SEPAinstant, BANK, SEPA",
+      "merchant_name": "Sashok"
+    },
+    {
+      "price": 0.953,
+      "timestamp": "2024-12-03T15:39:27.716745",
+      "available_amount": "859.00",
+      "payment_methods": "SEPAinstant, BANK, SEPA",
+      "merchant_name": "Sashok"
+    }
+  ]
+}
