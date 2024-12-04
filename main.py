@@ -862,9 +862,9 @@ class DataSaver:
             if bybit_data and bybit_data.get("success") and bybit_data.get("BYBIT"):
                 for listing in bybit_data["BYBIT"]:
                     self.cursor.execute('''
-                        INSERT INTO bybit_listings 
+                        '''INSERT INTO bybit_listings 
                         (price, timestamp, available_amount, payment_methods, merchant_name) 
-                        VALUES (?, ?, ?, ?, ?)
+                        VALUES (?, ?, ?, ?, ?)'''
                     ''', (
                         listing.get('price'),
                         listing.get('timestamp'),
@@ -877,9 +877,9 @@ class DataSaver:
             if binance_data and binance_data.get("success") and binance_data.get("BINANCE"):
                 for listing in binance_data["BINANCE"]:
                     self.cursor.execute('''
-                        INSERT INTO binance_listings 
+                        '''INSERT INTO binance_listings 
                         (price, timestamp, available_amount, payment_methods, merchant_name) 
-                        VALUES (?, ?, ?, ?, ?)
+                        VALUES (?, ?, ?, ?, ?)'''
                     ''', (
                         listing.get('price'),
                         listing.get('timestamp'),
@@ -891,9 +891,9 @@ class DataSaver:
             # Save exchange rate if provided
             if exchange_rate is not None:
                 self.cursor.execute('''
-                    INSERT INTO exchange_rates 
+                    '''INSERT INTO exchange_rates 
                     (from_currency, to_currency, rate, timestamp) 
-                    VALUES (?, ?, ?, ?)
+                    VALUES (?, ?, ?, ?)'''
                 ''', (
                     from_currency,
                     to_currency,
