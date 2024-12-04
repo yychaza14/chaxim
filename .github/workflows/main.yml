@@ -75,6 +75,7 @@ jobs:
         
         # Add all new files and changes
         git add -f pb2b/excel/*.xlsx
+        git add -f pb2b/*.db
         git add -f pb2b/json/*.json
         git add -f pb2b/screenshots/*.png
         git add -f pb2b/logs/*.log
