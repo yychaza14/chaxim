@@ -1069,7 +1069,7 @@ def main():
 
         # Demonstrate data retrieval
         print("\nRetrieving Bybit Listings:")
-        bybit_listings = data_saver.retrieve_listings(source='bybit', limit=5)
+        bybit_listings = data_saver.retrieve_listings(source='bybit', limit=15)
         for listing in bybit_listings:
             print(listing)
 
