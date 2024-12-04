@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-12-04T07:48:30.169780",
+  "bybit": [
+    {
+      "price": 1693.0,
+      "timestamp": "2024-12-04T07:48:29.571087",
+      "available_amount": "95.0813 USDT\n60,000 ~ 160,972.64 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1693.0,
+      "timestamp": "2024-12-04T07:48:29.624895",
+      "available_amount": "23.1 USDT\n39,000 ~ 39,108.3 NGN",
+      "payment_methods": "PalmPayBank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1693.57,
+      "timestamp": "2024-12-04T07:48:29.670094",
+      "available_amount": "4.7238 USDT\n4,500 ~ 8,000.08 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1693.9,
+      "timestamp": "2024-12-04T07:48:29.716166",
+      "available_amount": "60 USDT\n101,000 ~ 101,634 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1693.98,
+      "timestamp": "2024-12-04T07:48:29.760721",
+      "available_amount": "45.5071 USDT\n50,000 ~ 77,088.11 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.955,
+      "timestamp": "2024-12-04T07:48:30.169713",
+      "available_amount": "171892.27",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "CoinClan - 大额交易"
+    },
+    {
+      "price": 0.956,
+      "timestamp": "2024-12-04T07:48:30.169729",
+      "available_amount": "38960.76",
+      "payment_methods": "ZEN, SEPA, SEPAinstant, BANK, Paysera",
+      "merchant_name": "Fiat_EX"
+    },
+    {
+      "price": 0.956,
+      "timestamp": "2024-12-04T07:48:30.169733",
+      "available_amount": "3450.54",
+      "payment_methods": "ZEN",
+      "merchant_name": "Everia_FastTrade"
+    },
+    {
+      "price": 0.957,
+      "timestamp": "2024-12-04T07:48:30.169736",
+      "available_amount": "17749.92",
+      "payment_methods": "SEPA, ZEN, BANK",
+      "merchant_name": "MakSton_P2P"
+    },
+    {
+      "price": 0.959,
+      "timestamp": "2024-12-04T07:48:30.169739",
+      "available_amount": "4465.89",
+      "payment_methods": "SEPA, BANK",
+      "merchant_name": "NIMLAB"
+    },
+    {
+      "price": 0.959,
+      "timestamp": "2024-12-04T07:48:30.169742",
+      "available_amount": "7988.75",
+      "payment_methods": "ZEN, BANK, SEPAinstant, SEPA",
+      "merchant_name": "SO_Exchange"
+    }
+  ]
+}
