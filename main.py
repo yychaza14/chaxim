@@ -678,6 +678,40 @@ def main():
 
 if __name__ == "__main__":
     main()'''
+
+def get_exchange_rate(from_currency='EUR', to_currency='XAF'):
+    try:
+        url = f'https://www.xe.com/currencyconverter/convert/?Amount=1&From={from_currency}&To={to_currency}'
+        
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+        
+        response = requests.get(url, headers=headers)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        
+        # Target the specific paragraph with the rate
+        rate_element = soup.select_one('p.sc-63d8b7e3-1.bMdPIi')
+        
+        if rate_element:
+            # Extract the whole number part
+            whole_number = rate_element.contents[0].strip()
+            
+            # Extract the decimal part from the span
+            decimal_span = rate_element.find('span', class_='faded-digits')
+            decimal_part = decimal_span.text.strip() if decimal_span else ''
+            
+            # Combine and return full rate
+            full_rate = f"{whole_number}{decimal_part}"
+            return full_rate
+        
+        print("No rate found")
+        return None
+    
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
+
 import sqlite3
 import logging
 from datetime import datetime
