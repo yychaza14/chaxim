@@ -833,7 +833,7 @@ class DataSaver:
             self.logger.error(f"Error creating tables: {e}")
             raise
 
-    def save_data(
+    '''def save_data(
         self, 
         bybit_data: Dict[str, Union[bool, List[Dict], str]] = None,
         binance_data: Dict[str, Union[bool, List[Dict], str]] = None,
@@ -903,9 +903,9 @@ class DataSaver:
 
             # Save metadata
             self.cursor.execute('''
-                INSERT INTO metadata 
+                '''INSERT INTO metadata 
                 (token, fiat, action_type, total_bybit_listings, total_binance_listings, timestamp) 
-                VALUES (?, ?, ?, ?, ?, ?)
+                VALUES (?, ?, ?, ?, ?, ?)'''
             ''', (
                 bybit_data.get('metadata', {}).get('token', ''),
                 bybit_data.get('metadata', {}).get('fiat', ''),
@@ -925,6 +925,143 @@ class DataSaver:
                 "database_path": str(self.db_path)
             }
 
+        except sqlite3.Error as e:
+            # Rollback in case of error
+            self.conn.rollback()
+            self.logger.error(f"Error saving data to SQLite database: {e}")
+            return {
+                "success": False,
+                "message": f"Error saving data: {str(e)}",
+                "database_path": str(self.db_path)
+            }'''
+    def save_data(
+        self, 
+        bybit_data: Dict[str, Union[bool, List[Dict], str]] = None,
+        binance_data: Dict[str, Union[bool, List[Dict], str]] = None,
+        exchange_rate: Optional[float] = None,
+        from_currency: str = 'EUR',
+        to_currency: str = 'XAF'
+    ) -> Dict[str, Union[bool, str]]:
+        """
+        Save data from Bybit and Binance to SQLite database, preventing duplicate entries.
+        
+        Args:
+            bybit_data (Dict): Bybit scraper data
+            binance_data (Dict): Binance API data
+            exchange_rate (Optional[float]): Exchange rate to save
+            from_currency (str): Source currency for exchange rate
+            to_currency (str): Target currency for exchange rate
+            
+        Returns:
+            Dict[str, Union[bool, str]]: Result of save operation
+        """
+        try:
+            # Start a transaction
+            self.conn.execute('BEGIN TRANSACTION')
+    
+            new_listings_count = {
+                'bybit': 0,
+                'binance': 0
+            }
+    
+            # Save Bybit listings
+            if bybit_data and bybit_data.get("success") and bybit_data.get("BYBIT"):
+                for listing in bybit_data["BYBIT"]:
+                    # Check for existing listing to prevent duplicates
+                    self.cursor.execute('''
+                        SELECT id FROM bybit_listings 
+                        WHERE price = ? 
+                        AND timestamp = ? 
+                        AND merchant_name = ?
+                    ''', (
+                        listing.get('price'),
+                        listing.get('timestamp'),
+                        listing.get('merchant_name')
+                    ))
+                    
+                    # Only insert if no duplicate exists
+                    if not self.cursor.fetchone():
+                        self.cursor.execute('''
+                            INSERT INTO bybit_listings 
+                            (price, timestamp, available_amount, payment_methods, merchant_name) 
+                            VALUES (?, ?, ?, ?, ?)
+                        ''', (
+                            listing.get('price'),
+                            listing.get('timestamp'),
+                            listing.get('available_amount'),
+                            listing.get('payment_methods'),
+                            listing.get('merchant_name')
+                        ))
+                        new_listings_count['bybit'] += 1
+    
+            # Save Binance listings
+            if binance_data and binance_data.get("success") and binance_data.get("BINANCE"):
+                for listing in binance_data["BINANCE"]:
+                    # Check for existing listing to prevent duplicates
+                    self.cursor.execute('''
+                        SELECT id FROM binance_listings 
+                        WHERE price = ? 
+                        AND timestamp = ? 
+                        AND merchant_name = ?
+                    ''', (
+                        listing.get('price'),
+                        listing.get('timestamp'),
+                        listing.get('merchant_name')
+                    ))
+                    
+                    # Only insert if no duplicate exists
+                    if not self.cursor.fetchone():
+                        self.cursor.execute('''
+                            INSERT INTO binance_listings 
+                            (price, timestamp, available_amount, payment_methods, merchant_name) 
+                            VALUES (?, ?, ?, ?, ?)
+                        ''', (
+                            listing.get('price'),
+                            listing.get('timestamp'),
+                            listing.get('available_amount'),
+                            listing.get('payment_methods'),
+                            listing.get('merchant_name')
+                        ))
+                        new_listings_count['binance'] += 1
+    
+            # Save exchange rate if provided
+            if exchange_rate is not None:
+                self.cursor.execute('''
+                    INSERT INTO exchange_rates 
+                    (from_currency, to_currency, rate, timestamp) 
+                    VALUES (?, ?, ?, ?)
+                ''', (
+                    from_currency,
+                    to_currency,
+                    exchange_rate,
+                    datetime.now().isoformat()
+                ))
+    
+            # Save metadata
+            self.cursor.execute('''
+                INSERT INTO metadata 
+                (token, fiat, action_type, total_bybit_listings, total_binance_listings, timestamp) 
+                VALUES (?, ?, ?, ?, ?, ?)
+            ''', (
+                bybit_data.get('metadata', {}).get('token', ''),
+                bybit_data.get('metadata', {}).get('fiat', ''),
+                bybit_data.get('metadata', {}).get('action_type', ''),
+                new_listings_count['bybit'],
+                new_listings_count['binance'],
+                datetime.now().isoformat()
+            ))
+    
+            # Commit the transaction
+            self.conn.commit()
+            self.logger.info(f"Data successfully saved to SQLite database. New listings - Bybit: {new_listings_count['bybit']}, Binance: {new_listings_count['binance']}")
+            
+            return {
+                "success": True,
+                "message": "Data saved to SQLite database",
+                "database_path": str(self.db_path),
+                "new_listings": new_listings_count
+            }
+    
         except sqlite3.Error as e:
             # Rollback in case of error
             self.conn.rollback()
