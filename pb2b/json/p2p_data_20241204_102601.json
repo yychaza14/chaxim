@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "timestamp": "2024-12-04T10:26:01.510314",
+  "bybit": [
+    {
+      "price": 1688.0,
+      "timestamp": "2024-12-04T10:26:00.960847",
+      "available_amount": "8.9572 USDT\n4,500 ~ 5,100 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1688.0,
+      "timestamp": "2024-12-04T10:26:01.022071",
+      "available_amount": "35.1835 USDT\n4,500 ~ 9,000 NGN",
+      "payment_methods": "PalmPayBank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1689.0,
+      "timestamp": "2024-12-04T10:26:01.071899",
+      "available_amount": "3.3078 USDT\n5,000 ~ 5,586.87 NGN",
+      "payment_methods": "PalmPayBank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1689.0,
+      "timestamp": "2024-12-04T10:26:01.122554",
+      "available_amount": "300 USDT\n300,000 ~ 500,000 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    },
+    {
+      "price": 1689.5,
+      "timestamp": "2024-12-04T10:26:01.173205",
+      "available_amount": "260.4772 USDT\n10,000 ~ 440,076.22 NGN",
+      "payment_methods": "Bank Transfer",
+      "merchant_name": "Buy USDT"
+    }
+  ],
+  "binance": [
+    {
+      "price": 0.949,
+      "timestamp": "2024-12-04T10:26:01.510248",
+      "available_amount": "100.00",
+      "payment_methods": "SEPAinstant, BANK",
+      "merchant_name": "wise-rev-sepa-myfin"
+    },
+    {
+      "price": 0.954,
+      "timestamp": "2024-12-04T10:26:01.510263",
+      "available_amount": "11189.10",
+      "payment_methods": "SEPA, SEPAinstant, Bunq, N26, BANK",
+      "merchant_name": "YYGroup"
+    },
+    {
+      "price": 0.955,
+      "timestamp": "2024-12-04T10:26:01.510267",
+      "available_amount": "16248.19",
+      "payment_methods": "SEPA, SEPAinstant, BANK",
+      "merchant_name": "OneTwoCrypto"
+    },
+    {
+      "price": 0.955,
+      "timestamp": "2024-12-04T10:26:01.510270",
+      "available_amount": "25314.43",
+      "payment_methods": "BANK, SEPAinstant",
+      "merchant_name": "ChaosOTC"
+    },
+    {
+      "price": 0.955,
+      "timestamp": "2024-12-04T10:26:01.510272",
+      "available_amount": "660.00",
+      "payment_methods": "ZEN",
+      "merchant_name": "matchish"
+    },
+    {
+      "price": 0.955,
+      "timestamp": "2024-12-04T10:26:01.510275",
+      "available_amount": "167086.34",
+      "payment_methods": "SEPA, BANK, SEPAinstant",
+      "merchant_name": "CoinClan - 大额交易"
+    }
+  ]
+}
