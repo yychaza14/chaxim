@@ -304,7 +304,7 @@ class BinanceP2PAPI:
                 "message": error_msg
             }
 
-
+'''
 class DataSaver:
     """A class responsible for saving data in different formats with continuous JSON storage."""
     
@@ -677,43 +677,44 @@ def main():
         scraper.close()
 
 if __name__ == "__main__":
-    main()
-'''
+    main()'''
+import sqlite3
+import logging
+from datetime import datetime
+from typing import Dict, List, Union, Optional
+from pathlib import Path
+import json
+
 class DataSaver:
-    """A class responsible for saving data in different formats with continuous file appending."""
+    """A class responsible for saving and retrieving data using SQLite3."""
     
-    def __init__(self, 
-                 base_directory: Union[str, Path] = 'pb2b', 
-                 excel_filename: str = 'continuous_data.xlsx', 
-                 json_filename: str = 'continuous_data.json'):
+    def __init__(self, base_directory: Union[str, Path] = 'pb2b', db_filename: str = 'p2p_listings.db'):
         """
-        Initialize the DataSaver with a base directory and continuous file names.
+        Initialize the DataSaver with a base directory and database filename.
         
         Args:
-            base_directory (Union[str, Path]): Base directory for storing all data files
-            excel_filename (str): Name of the continuous Excel file
-            json_filename (str): Name of the continuous JSON file
+            base_directory (Union[str, Path]): Base directory for storing database
+            db_filename (str): Name of the SQLite database file
         """
         self.base_dir = Path(base_directory)
         self._setup_directories()
         self._setup_logging()
         
-        # Set up the continuous file paths
-        self.continuous_excel_path = self.excel_dir / excel_filename
-        self.continuous_json_path = self.json_dir / json_filename
+        # Set up the database path
+        self.db_path = self.base_dir / db_filename
+        
+        # Create database connection and tables
+        self._create_connection()
+        self._create_tables()
 
     def _setup_directories(self) -> None:
-        """Create necessary directories for storing different types of data."""
+        """Create necessary directories for storing data."""
         # Create base directory if it doesn't exist
         self.base_dir.mkdir(exist_ok=True)
         
         # Create subdirectories for different data types
         self.logs_dir = self.base_dir / 'logs'
-        self.excel_dir = self.base_dir / 'excel'
-        self.json_dir = self.base_dir / 'json'
-        
-        for directory in [self.logs_dir, self.excel_dir, self.json_dir]:
-            directory.mkdir(exist_ok=True)
+        self.logs_dir.mkdir(exist_ok=True)
 
     def _setup_logging(self) -> None:
         """Set up logging configuration."""
@@ -731,164 +732,276 @@ class DataSaver:
         self.logger = logging.getLogger(__name__)
         self.logger.info(f"DataSaver logging initialized. Log file: {log_file}")
 
-    def save_to_continuous_excel(
-        self, 
-        data: Dict[str, List[Dict]],
-        sheet_name: str = "Sheet1"
-    ) -> Optional[Path]:
-        """
-        Append data to a continuous Excel file, creating it if it doesn't exist.
-        
-        Args:
-            data (Dict[str, List[Dict]]): Data to save with 'bybit' and 'binance' keys
-            sheet_name (str): Name of the Excel sheet
-            
-        Returns:
-            Optional[Path]: Path to saved file if successful, None otherwise
-        """
+    def _create_connection(self) -> None:
+        """Create a connection to the SQLite database."""
         try:
-            # Create separate DataFrames for Bybit and Binance data
-            dfs = []
-            
-            if 'bybit' in data:
-                bybit_df = pd.DataFrame(data['bybit'])
-                bybit_df['source'] = 'Bybit'
-                dfs.append(bybit_df)
-            
-            if 'binance' in data:
-                binance_df = pd.DataFrame(data['binance'])
-                binance_df['source'] = 'Binance'
-                dfs.append(binance_df)
-            
-            # Combine the DataFrames
-            if dfs:
-                combined_df = pd.concat(dfs, ignore_index=True)
-                
-                # Check if file exists
-                if self.continuous_excel_path.exists():
-                    # Read existing data
-                    existing_df = pd.read_excel(self.continuous_excel_path)
-                    
-                    # Combine existing and new data
-                    final_df = pd.concat([existing_df, combined_df], ignore_index=True)
-                else:
-                    # If file doesn't exist, use the new data
-                    final_df = combined_df
-                
-                # Save to the continuous file
-                final_df.to_excel(self.continuous_excel_path, sheet_name=sheet_name, index=False)
-                
-                self.logger.info(f"Data successfully {'appended to' if self.continuous_excel_path.exists() else 'created in'} continuous Excel: {self.continuous_excel_path}")
-                return self.continuous_excel_path
-            else:
-                self.logger.warning("No data to save to Excel")
-                return None
-                
-        except Exception as e:
-            self.logger.error(f"Error saving to continuous Excel: {str(e)}")
-            return None
+            self.conn = sqlite3.connect(self.db_path)
+            self.cursor = self.conn.cursor()
+            self.logger.info(f"Connected to SQLite database: {self.db_path}")
+        except sqlite3.Error as e:
+            self.logger.error(f"Error connecting to SQLite database: {e}")
+            raise
 
-    def save_to_continuous_json(
-        self, 
-        data: Dict,
-        indent: int = 2
-    ) -> Optional[Path]:
-        """
-        Safely append data to a continuous JSON file, creating it if it doesn't exist.
-        
-        Args:
-            data (Dict): Data to save
-            indent (int): Number of spaces for JSON indentation
-            
-        Returns:
-            Optional[Path]: Path to saved file if successful, None otherwise
-        """
+    def _create_tables(self) -> None:
+        """Create necessary tables if they don't exist."""
         try:
-            # Ensure the directory exists
-            self.continuous_json_path.parent.mkdir(parents=True, exist_ok=True)
-            
-            # Read existing data or initialize an empty list
-            if self.continuous_json_path.exists() and os.path.getsize(self.continuous_json_path) > 0:
-                try:
-                    with open(self.continuous_json_path, 'r', encoding='utf-8') as f:
-                        existing_data = json.load(f)
-                except json.JSONDecodeError:
-                    # If file is corrupted or empty, start with an empty list
-                    existing_data = []
-            else:
-                existing_data = []
-            
-            # Add new data to the list
-            existing_data.append(data)
-            
-            # Write back to the file
-            with open(self.continuous_json_path, 'w', encoding='utf-8') as f:
-                json.dump(existing_data, f, indent=indent, ensure_ascii=False)
-            
-            self.logger.info(f"Data successfully {'appended to' if existing_data else 'created in'} continuous JSON: {self.continuous_json_path}")
-            return self.continuous_json_path
-        except Exception as e:
-            self.logger.error(f"Error saving to continuous JSON: {str(e)}")
-            return None
+            # Create Bybit listings table
+            self.cursor.execute('''
+                CREATE TABLE IF NOT EXISTS bybit_listings (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    price REAL,
+                    timestamp TEXT,
+                    available_amount TEXT,
+                    payment_methods TEXT,
+                    merchant_name TEXT
+                )
+            ''')
+
+            # Create Binance listings table
+            self.cursor.execute('''
+                CREATE TABLE IF NOT EXISTS binance_listings (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    price REAL,
+                    timestamp TEXT,
+                    available_amount TEXT,
+                    payment_methods TEXT,
+                    merchant_name TEXT
+                )
+            ''')
+
+            # Create exchange rates table
+            self.cursor.execute('''
+                CREATE TABLE IF NOT EXISTS exchange_rates (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    from_currency TEXT,
+                    to_currency TEXT,
+                    rate REAL,
+                    timestamp TEXT
+                )
+            ''')
+
+            # Create metadata table for storing combined data metadata
+            self.cursor.execute('''
+                CREATE TABLE IF NOT EXISTS metadata (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    token TEXT,
+                    fiat TEXT,
+                    action_type TEXT,
+                    total_bybit_listings INTEGER,
+                    total_binance_listings INTEGER,
+                    timestamp TEXT
+                )
+            ''')
+
+            self.conn.commit()
+            self.logger.info("Database tables created successfully")
+        except sqlite3.Error as e:
+            self.logger.error(f"Error creating tables: {e}")
+            raise
 
     def save_data(
         self, 
         bybit_data: Dict[str, Union[bool, List[Dict], str]] = None,
-        binance_data: Dict[str, Union[bool, List[Dict], str]] = None
-    ) -> Dict[str, Optional[Path]]:
+        binance_data: Dict[str, Union[bool, List[Dict], str]] = None,
+        exchange_rate: Optional[float] = None,
+        from_currency: str = 'EUR',
+        to_currency: str = 'XAF'
+    ) -> Dict[str, Union[bool, str]]:
         """
-        Save data from Bybit and Binance to both continuous Excel and JSON formats.
+        Save data from Bybit and Binance to SQLite database.
         
         Args:
             bybit_data (Dict): Bybit scraper data
             binance_data (Dict): Binance API data
+            exchange_rate (Optional[float]): Exchange rate to save
+            from_currency (str): Source currency for exchange rate
+            to_currency (str): Target currency for exchange rate
             
         Returns:
-            Dict[str, Optional[Path]]: Paths to saved files
+            Dict[str, Union[bool, str]]: Result of save operation
         """
-        results = {
-            'continuous_excel_path': None,
-            'continuous_json_path': None
-        }
+        try:
+            # Start a transaction
+            self.conn.execute('BEGIN TRANSACTION')
+
+            # Save Bybit listings
+            if bybit_data and bybit_data.get("success") and bybit_data.get("BYBIT"):
+                for listing in bybit_data["BYBIT"]:
+                    self.cursor.execute('''
+                        INSERT INTO bybit_listings 
+                        (price, timestamp, available_amount, payment_methods, merchant_name) 
+                        VALUES (?, ?, ?, ?, ?)
+                    ''', (
+                        listing.get('price'),
+                        listing.get('timestamp'),
+                        listing.get('available_amount'),
+                        listing.get('payment_methods'),
+                        listing.get('merchant_name')
+                    ))
+
+            # Save Binance listings
+            if binance_data and binance_data.get("success") and binance_data.get("BINANCE"):
+                for listing in binance_data["BINANCE"]:
+                    self.cursor.execute('''
+                        INSERT INTO binance_listings 
+                        (price, timestamp, available_amount, payment_methods, merchant_name) 
+                        VALUES (?, ?, ?, ?, ?)
+                    ''', (
+                        listing.get('price'),
+                        listing.get('timestamp'),
+                        listing.get('available_amount'),
+                        listing.get('payment_methods'),
+                        listing.get('merchant_name')
+                    ))
+
+            # Save exchange rate if provided
+            if exchange_rate is not None:
+                self.cursor.execute('''
+                    INSERT INTO exchange_rates 
+                    (from_currency, to_currency, rate, timestamp) 
+                    VALUES (?, ?, ?, ?)
+                ''', (
+                    from_currency,
+                    to_currency,
+                    exchange_rate,
+                    datetime.now().isoformat()
+                ))
+
+            # Save metadata
+            self.cursor.execute('''
+                INSERT INTO metadata 
+                (token, fiat, action_type, total_bybit_listings, total_binance_listings, timestamp) 
+                VALUES (?, ?, ?, ?, ?, ?)
+            ''', (
+                bybit_data.get('metadata', {}).get('token', ''),
+                bybit_data.get('metadata', {}).get('fiat', ''),
+                bybit_data.get('metadata', {}).get('action_type', ''),
+                len(bybit_data.get("BYBIT", [])),
+                len(binance_data.get("BINANCE", [])),
+                datetime.now().isoformat()
+            ))
+
+            # Commit the transaction
+            self.conn.commit()
+            self.logger.info("Data successfully saved to SQLite database")
+            
+            return {
+                "success": True,
+                "message": "Data saved to SQLite database",
+                "database_path": str(self.db_path)
+            }
+
+        except sqlite3.Error as e:
+            # Rollback in case of error
+            self.conn.rollback()
+            self.logger.error(f"Error saving data to SQLite database: {e}")
+            return {
+                "success": False,
+                "message": f"Error saving data: {str(e)}",
+                "database_path": str(self.db_path)
+            }
+
+    def retrieve_listings(
+        self, 
+        source: str = 'bybit', 
+        limit: int = 100, 
+        order_by: str = 'price', 
+        ascending: bool = True
+    ) -> List[Dict]:
+        """
+        Retrieve listings from the database.
         
-        # Prepare combined data dictionary
-        combined_data = {
-            "success": False,
-            "timestamp": datetime.now().isoformat(),
-            "bybit": [],
-            "binance": []
-        }
+        Args:
+            source (str): Source of listings ('bybit' or 'binance')
+            limit (int): Maximum number of listings to retrieve
+            order_by (str): Column to order by
+            ascending (bool): Sort in ascending or descending order
         
-        # Add Bybit data if available
-        if bybit_data and bybit_data.get("success") and bybit_data.get("BYBIT"):
-            combined_data["success"] = True
-            combined_data["bybit"] = bybit_data["BYBIT"]
+        Returns:
+            List[Dict]: Retrieved listings
+        """
+        try:
+            table = 'bybit_listings' if source.lower() == 'bybit' else 'binance_listings'
+            order_direction = 'ASC' if ascending else 'DESC'
+            
+            query = f'''
+                SELECT * FROM {table} 
+                ORDER BY {order_by} {order_direction} 
+                LIMIT ?
+            '''
+            
+            self.cursor.execute(query, (limit,))
+            columns = [column[0] for column in self.cursor.description]
+            
+            return [dict(zip(columns, row)) for row in self.cursor.fetchall()]
         
-        # Add Binance data if available
-        if binance_data and binance_data.get("success") and binance_data.get("BINANCE"):
-            combined_data["success"] = True
-            combined_data["binance"] = binance_data["BINANCE"]
+        except sqlite3.Error as e:
+            self.logger.error(f"Error retrieving listings: {e}")
+            return []
+
+    def retrieve_exchange_rates(
+        self, 
+        from_currency: Optional[str] = None, 
+        to_currency: Optional[str] = None, 
+        limit: int = 10
+    ) -> List[Dict]:
+        """
+        Retrieve exchange rates from the database.
         
-        # Save data if any source is successful
-        if combined_data["success"]:
-            results['continuous_excel_path'] = self.save_to_continuous_excel(
-                {"bybit": combined_data["bybit"], "binance": combined_data["binance"]}
-            )
-            results['continuous_json_path'] = self.save_to_continuous_json(combined_data)
+        Args:
+            from_currency (Optional[str]): Source currency
+            to_currency (Optional[str]): Target currency
+            limit (int): Maximum number of rates to retrieve
         
-        return results
+        Returns:
+            List[Dict]: Retrieved exchange rates
+        """
+        try:
+            query = 'SELECT * FROM exchange_rates'
+            conditions = []
+            params = []
+            
+            if from_currency:
+                conditions.append('from_currency = ?')
+                params.append(from_currency)
+            
+            if to_currency:
+                conditions.append('to_currency = ?')
+                params.append(to_currency)
+            
+            if conditions:
+                query += ' WHERE ' + ' AND '.join(conditions)
+            
+            query += ' ORDER BY timestamp DESC LIMIT ?'
+            params.append(limit)
+            
+            self.cursor.execute(query, params)
+            columns = [column[0] for column in self.cursor.description]
+            
+            return [dict(zip(columns, row)) for row in self.cursor.fetchall()]
+        
+        except sqlite3.Error as e:
+            self.logger.error(f"Error retrieving exchange rates: {e}")
+            return []
+
+    def close(self) -> None:
+        """Close database connection."""
+        try:
+            if hasattr(self, 'conn'):
+                self.conn.close()
+                self.logger.info("SQLite database connection closed")
+        except Exception as e:
+            self.logger.error(f"Error closing database connection: {e}")
 
 def main():
     scraper = BybitScraper(headless=True)
     binance = BinanceP2PAPI()
-    # Use specific filenames for continuous storage
-    data_saver = DataSaver(
-        base_directory='pb2b', 
-        excel_filename='continuous_p2p_data.xlsx', 
-        json_filename='continuous_p2p_data.json'
-    )
+    
+    # Use DataSaver with SQLite
+    data_saver = DataSaver(base_directory='pb2b', db_filename='p2p_listings.db')
 
     try:
+        # Fetch P2P listings
         resultbyb = scraper.get_p2p_listings(
             token="USDT",
             fiat="NGN",
@@ -897,65 +1010,45 @@ def main():
         
         resultbnb = binance.get_p2p_listings(
             token="USDT",
-            fiat="XAF",
+            fiat="EUR",
             action_type="1"
         )
         
-        rate_xaf = 1000/resultbnb['BINANCE'][0]['price']
-        rate_ngn = rate_xaf * resultbyb['BYBIT'][0]['price']
-        resultbyb["RATE"] = rate_ngn
+        # Get exchange rate
+        rate = get_exchange_rate()
+        rate = float(rate) if rate else None
 
-        # Save both Bybit and Binance data
-        saved_files = data_saver.save_data(
+        # Save data to SQLite
+        saved_result = data_saver.save_data(
             bybit_data=resultbyb, 
-            binance_data=resultbnb
+            binance_data=resultbnb,
+            exchange_rate=rate
         )
 
-        # Print summary
+        # Print results
         print("\nP2P Listing Scraping Results:")
         print(f"Time of scraping: {datetime.now().isoformat()}")
         
-        # Bybit results
-        if resultbyb["success"] and resultbyb.get("BYBIT"):
-            print("\nBybit Results:")
-            print(f"Number of listings: {len(resultbyb['BYBIT'])}")
-            print(f"Lowest Bybit price: {resultbyb['BYBIT'][0]['price']} NGN")
-            print(f"Highest Bybit price: {resultbyb['BYBIT'][-1]['price']} NGN")
-            print(f"Highest Bybit price: {resultbyb['RATE']} NGN")
-        else:
-            print("\nBybit scraping failed or returned no data")
-        
-        # Binance results
-        if resultbnb["success"] and resultbnb.get("BINANCE"):
-            print("\nBinance Results:")
-            print(f"Number of listings: {len(resultbnb['BINANCE'])}")
-            print(f"Lowest Binance price: {resultbnb['BINANCE'][0]['price']} XAF")
-            print(f"Highest Binance price: {resultbnb['BINANCE'][-1]['price']} XAF")
-        else:
-            print("\nBinance API call failed or returned no data")
+        # Print saved result
+        print(f"\nDatabase Save Result: {saved_result['success']}")
+        print(f"Database Path: {saved_result['database_path']}")
 
-        # Saved files
-        if saved_files['excel_path']:
-            print(f"\nData saved to Excel: {saved_files['excel_path']}")
-        if saved_files['json_path']:
-            print(f"Data saved to JSON: {saved_files['json_path']}")
+        # Demonstrate data retrieval
+        print("\nRetrieving Bybit Listings:")
+        bybit_listings = data_saver.retrieve_listings(source='bybit', limit=5)
+        for listing in bybit_listings:
+            print(listing)
 
-        # Save both Bybit and Binance data
-        saved_files = data_saver.save_data(
-            bybit_data=resultbyb, 
-            binance_data=resultbnb
-        )
-
-        # Print saved file paths
-        if saved_files['continuous_excel_path']:
-            print(f"Data appended to Excel: {saved_files['continuous_excel_path']}")
-        if saved_files['continuous_json_path']:
-            print(f"Data appended to JSON: {saved_files['continuous_json_path']}")
+        print("\nRetrieving Exchange Rates:")
+        exchange_rates = data_saver.retrieve_exchange_rates()
+        for rate in exchange_rates:
+            print(rate)
 
     except Exception as e:
         print(f"Error in main execution: {str(e)}")
     finally:
         scraper.close()
+        data_saver.close()
 
 if __name__ == "__main__":
-    main()'''
+    main()
