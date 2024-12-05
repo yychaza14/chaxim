@@ -974,7 +974,7 @@ class DataSaver:
     def retrieve_listings(
         self, 
         source: str = 'bybit', 
-        limit: int = 100, 
+        limit: int = 1000, 
         order_by: str = 'price', 
         ascending: bool = True
     ) -> List[Dict]:
@@ -1013,7 +1013,7 @@ class DataSaver:
         self, 
         from_currency: Optional[str] = None, 
         to_currency: Optional[str] = None, 
-        limit: int = 10
+        limit: int = 100
     ) -> List[Dict]:
         """
         Retrieve exchange rates from the database.
@@ -1105,7 +1105,12 @@ def main():
 
         # Demonstrate data retrieval
         print("\nRetrieving Bybit Listings:")
-        bybit_listings = data_saver.retrieve_listings(source='bybit', limit=100)
+        bybit_listings = data_saver.retrieve_listings(source='bybit', limit=1000)
+        for listing in bybit_listings:
+            print(listing)
+            
+        print("\nRetrieving binance Listings:")
+        bybit_listings = data_saver.retrieve_listings(source='binance_listings', limit=1000)
         for listing in bybit_listings:
             print(listing)
 
