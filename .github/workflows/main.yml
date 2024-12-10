@@ -71,7 +71,7 @@ jobs:
         git fetch origin main
         
         # Add all new files and changes
-        git add -f pb2b/p2p_trading_data.db  # Specific database file
+        git add -f pb2b/p2p_listings.db  # Specific database file
         git add -f pb2b/excel/*.xlsx
         git add -f pb2b/json/*.json
         git add -f pb2b/screenshots/*.png
