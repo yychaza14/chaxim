@@ -85,5 +85,5 @@ jobs:
           git commit -m "Update P2P data: ${timestamp}"
           git push origin main
         fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.PAT }}
