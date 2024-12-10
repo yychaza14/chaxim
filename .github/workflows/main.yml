@@ -64,18 +64,15 @@ jobs:
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         
-        # Create pb2b directories if they don't exist
+        # Create directories if they don't exist
         mkdir -p pb2b/excel pb2b/json pb2b/screenshots pb2b/logs
         
         # Fetch the latest changes
         git fetch origin main
         
-        # Reset to match remote main branch
-        git reset --hard origin/main
-        
         # Add all new files and changes
+        git add -f pb2b/p2p_trading_data.db  # Specific database file
         git add -f pb2b/excel/*.xlsx
-        git add -f pb2b/*.db
         git add -f pb2b/json/*.json
         git add -f pb2b/screenshots/*.png
         git add -f pb2b/logs/*.log
@@ -85,9 +82,8 @@ jobs:
           echo "No changes to commit"
         else
           timestamp=$(date -u +'%Y-%m-%d %H:%M:%S UTC')
-          git commit -m "Update P2P data ${timestamp}"
+          git commit -m "Update P2P data: ${timestamp}"
           git push origin main
         fi
-
-      env:
-        GITHUB_TOKEN: ${{ secrets.PAT }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
