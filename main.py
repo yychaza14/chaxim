@@ -971,42 +971,47 @@ class DataSaver:
                 "database_path": str(self.db_path)
             }
 
-    def retrieve_listings(
+    def retrieve_last_listings(
         self, 
         source: str = 'bybit', 
-        limit: int = 1000, 
-        order_by: str = 'price', 
-        ascending: bool = True
+        limit: int = 6
     ) -> List[Dict]:
         """
-        Retrieve listings from the database.
+        Retrieve the last n listings from the database.
         
         Args:
             source (str): Source of listings ('bybit' or 'binance')
-            limit (int): Maximum number of listings to retrieve
-            order_by (str): Column to order by
-            ascending (bool): Sort in ascending or descending order
+            limit (int): Number of last listings to retrieve (defaults to 6)
         
         Returns:
-            List[Dict]: Retrieved listings
+            List[Dict]: Retrieved last listings
         """
         try:
+            # Select the appropriate table based on source
             table = 'bybit_listings' if source.lower() == 'bybit' else 'binance_listings'
-            order_direction = 'ASC' if ascending else 'DESC'
             
+            # Query to select the last n rows ordered by id in descending order
             query = f'''
-                SELECT * FROM {table} 
-                ORDER BY {order_by} {order_direction} 
+                SELECT * FROM {table}
+                ORDER BY id DESC
                 LIMIT ?
             '''
             
             self.cursor.execute(query, (limit,))
+            
+            # Get column names 
             columns = [column[0] for column in self.cursor.description]
             
-            return [dict(zip(columns, row)) for row in self.cursor.fetchall()]
+            # Convert to list of dictionaries
+            listings = []
+            for row in self.cursor.fetchall():
+                listing_dict = dict(zip(columns, row))
+                listings.append(listing_dict)
+            
+            return listings
         
         except sqlite3.Error as e:
-            self.logger.error(f"Error retrieving listings: {e}")
+            self.logger.error(f"Error retrieving last listings: {e}")
             return []
 
     def retrieve_exchange_rates(
@@ -1105,12 +1110,12 @@ def main():
 
         # Demonstrate data retrieval
         print("\nRetrieving Bybit Listings:")
-        bybit_listings = data_saver.retrieve_listings(source='bybit', limit=1000)
+        bybit_listings = data_saver.retrieve_last_listings(source='bybit', limit=4)
         for listing in bybit_listings:
             print(listing)
             
         print("\nRetrieving binance Listings:")
-        bybit_listings = data_saver.retrieve_listings(source='binance_listings', limit=1000)
+        bybit_listings = data_saver.retrieve_last_listings(source='binance_listings', limit=6)
         for listing in bybit_listings:
             print(listing)
 
