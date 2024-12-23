@@ -735,7 +735,7 @@ def main():
 
         # Demonstrate data retrieval
         print("\nRetrieving Bybit Listings:")
-        bybit_listings = data_saver.retrieve_last_listings(source='bybit', limit=10000)
+        bybit_listings = data_saver.retrieve_last_listings(source='bybit', limit=1000)
         for listing in bybit_listings:
             print(listing)
             
