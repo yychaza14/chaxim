@@ -736,12 +736,13 @@ def main():
         # Demonstrate data retrieval
         print("\nRetrieving Bybit Listings:")
         bybit_listings = data_saver.retrieve_last_listings(source='bybit', limit=1000)
-        #for listing in bybit_listings:
-        #   print(listing)
+        bybit_listings_rate = bybit_listings[-4:]
+        for listing in bybit_listings_rate:
+           print(listing)
             
         print("\nRetrieving binance Listings:")
         binance_listings = data_saver.retrieve_last_listings(source='binance_listings', limit=6)
-        for listing in bybit_listings:
+        for listing in binance_listings:
             print(listing)
 
         # Convert the data to DataFrame
