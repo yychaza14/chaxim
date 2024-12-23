@@ -735,19 +735,37 @@ def main():
 
         # Demonstrate data retrieval
         print("\nRetrieving Bybit Listings:")
-        bybit_listings = data_saver.retrieve_last_listings(source='bybit', limit=4)
+        bybit_listings = data_saver.retrieve_last_listings(source='bybit', limit=10000)
         for listing in bybit_listings:
             print(listing)
             
         print("\nRetrieving binance Listings:")
-        bybit_listings = data_saver.retrieve_last_listings(source='binance_listings', limit=6)
+        binance_listings = data_saver.retrieve_last_listings(source='binance_listings', limit=6)
         for listing in bybit_listings:
             print(listing)
 
-        print("\nRetrieving Exchange Rates:")
-        exchange_rates = data_saver.retrieve_exchange_rates()
-        for rate in exchange_rates:
-            print(rate)
+        # Convert the data to DataFrame
+        df = pd.DataFrame(bybit_listings)
+
+        # Convert timestamp to datetime for proper sorting
+        df['timestamp'] = pd.to_datetime(df['timestamp'])
+
+        # Round timestamp to seconds to group similar timestamps
+        df['timestamp_rounded'] = df['timestamp'].dt.floor('min')
+
+        # Group by rounded timestamp and keep first price
+        result = df.groupby('timestamp_rounded').agg({
+            'price': 'first',
+            'timestamp': 'first'
+        }).reset_index()
+
+        # Sort by timestamp
+        result = result.sort_values('timestamp', ascending=False)
+
+        # Drop the rounded timestamp column and keep only timestamp and price
+        final_result = result[['timestamp', 'price']]
+
+        print(final_result)
 
     except Exception as e:
         print(f"Error in main execution: {str(e)}")
