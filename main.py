@@ -19,6 +19,8 @@ from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
 import requests
 from bs4 import BeautifulSoup
+import matplotlib.pyplot as plt
+
 
 class BybitScraper:
     def __init__(self, headless: bool = True, timeout: int = 30):
@@ -718,7 +720,7 @@ class P2PDataProcessor:
                    
         return result[['timestamp', 'price']]
 
-def main():
+'''def main():
     scraper = None
     data_saver = None
     
@@ -808,6 +810,166 @@ def main():
                 data_saver.close()
             except Exception as e:
                 print(f"Error closing data saver: {str(e)}")
+
+if __name__ == "__main__":
+    main()'''
+
+
+class P2PGraphGenerator:
+    def __init__(self):
+        plt.style.use('classic')
+        
+    def process_data(self, listings_data: List[Dict[str, Any]]) -> pd.DataFrame:
+        """Convert listings data to DataFrame and process timestamps."""
+        df = pd.DataFrame(listings_data)
+        df['timestamp'] = pd.to_datetime(df['timestamp'])
+        return df.sort_values('timestamp')
+        
+    def create_combined_graph(self, 
+                            bybit_data: List[Dict[str, Any]], 
+                            binance_data: List[Dict[str, Any]], 
+                            save_path: Optional[str] = None,
+                            figure_size: tuple = (12, 6)):
+        """Create a single graph showing both exchanges' data."""
+        try:
+            plt.figure(figsize=figure_size)
+            
+            if bybit_data:
+                bybit_df = self.process_data(bybit_data)
+                plt.plot(bybit_df['timestamp'], 
+                        bybit_df['price'], 
+                        'b-o',
+                        label='Bybit (NGN)', 
+                        markersize=4, 
+                        linewidth=1.5)
+                
+            if binance_data:
+                binance_df = self.process_data(binance_data)
+                plt.plot(binance_df['timestamp'], 
+                        binance_df['price'], 
+                        'r-s',
+                        label='Binance (EUR)', 
+                        markersize=4, 
+                        linewidth=1.5)
+                
+            plt.title('P2P USDT Price Over Time', pad=20, size=12)
+            plt.xlabel('Time', labelpad=10)
+            plt.ylabel('Price', labelpad=10)
+            plt.xticks(rotation=45)
+            plt.grid(True, linestyle=':', alpha=0.6)
+            plt.legend(loc='upper right')
+            plt.tight_layout()
+            
+            if save_path:
+                plt.savefig(save_path, dpi=300, bbox_inches='tight')
+                print(f"Combined graph saved to: {save_path}")
+                
+            plt.show()
+            
+        except Exception as e:
+            print(f"Error creating combined graph: {str(e)}")
+        finally:
+            plt.close()
+
+    def create_separate_graphs(self, 
+                             data: List[Dict[str, Any]], 
+                             exchange: str,
+                             currency: str,
+                             color: str = 'b',
+                             save_path: Optional[str] = None,
+                             figure_size: tuple = (12, 6)):
+        """Create a separate graph for a single exchange."""
+        try:
+            plt.figure(figsize=figure_size)
+            
+            if data:
+                df = self.process_data(data)
+                
+                # Plot price data
+                plt.plot(df['timestamp'], 
+                        df['price'], 
+                        f'{color}-o',
+                        label=f'{exchange} Price', 
+                        markersize=4, 
+                        linewidth=1.5)
+                
+                # Add statistics
+                avg_price = df['price'].mean()
+                min_price = df['price'].min()
+                max_price = df['price'].max()
+                
+                plt.axhline(y=avg_price, color='r', linestyle='--', alpha=0.5, label=f'Average: {avg_price:.2f}')
+                plt.axhline(y=min_price, color='g', linestyle=':', alpha=0.5, label=f'Min: {min_price:.2f}')
+                plt.axhline(y=max_price, color='y', linestyle=':', alpha=0.5, label=f'Max: {max_price:.2f}')
+                
+                plt.title(f'{exchange} P2P USDT Price ({currency})', pad=20, size=12)
+                plt.xlabel('Time', labelpad=10)
+                plt.ylabel(f'Price ({currency})', labelpad=10)
+                plt.xticks(rotation=45)
+                plt.grid(True, linestyle=':', alpha=0.6)
+                plt.legend(loc='upper right')
+                plt.tight_layout()
+                
+                if save_path:
+                    plt.savefig(save_path, dpi=300, bbox_inches='tight')
+                    print(f"{exchange} graph saved to: {save_path}")
+                
+                plt.show()
+            else:
+                print(f"No data available for {exchange}")
+                
+        except Exception as e:
+            print(f"Error creating {exchange} graph: {str(e)}")
+        finally:
+            plt.close()
+
+def main():
+    scraper = None
+    data_saver = None
+    
+    try:
+        # Initialize components
+        scraper = BybitScraper(headless=True)
+        binance = BinanceP2PAPI()
+        data_saver = DataSaver(base_directory='pb2b', db_filename='p2p_listings.db')
+        graph_generator = P2PGraphGenerator()
+
+        # Retrieve listings from database
+        bybit_listings = data_saver.retrieve_last_listings(source='bybit', limit=1000)
+        binance_listings = data_saver.retrieve_last_listings(source='binance_listings', limit=1000)
+        
+        # Create combined graph
+        graph_generator.create_combined_graph(
+            bybit_data=bybit_listings,
+            binance_data=binance_listings,
+            save_path='combined_price_trends.png'
+        )
+        
+        # Create separate graphs
+        graph_generator.create_separate_graphs(
+            data=bybit_listings,
+            exchange='Bybit',
+            currency='NGN',
+            color='b',
+            save_path='bybit_price_trends.png'
+        )
+        
+        graph_generator.create_separate_graphs(
+            data=binance_listings,
+            exchange='Binance',
+            currency='EUR',
+            color='g',
+            save_path='binance_price_trends.png'
+        )
+
+    except Exception as e:
+        print(f"Error in main execution: {str(e)}")
+        
+    finally:
+        if scraper:
+            scraper.close()
+        if data_saver:
+            data_saver.close()
 
 if __name__ == "__main__":
     main()
