@@ -693,88 +693,121 @@ class DataSaver:
         except Exception as e:
             self.logger.error(f"Error closing database connection: {e}")
 
-def main():
-    scraper = BybitScraper(headless=True)
-    binance = BinanceP2PAPI()
-    
-    # Use DataSaver with SQLite
-    data_saver = DataSaver(base_directory='pb2b', db_filename='p2p_listings.db')
+import pandas as pd
+from datetime import datetime
+from typing import Optional, Dict, List, Any
 
+class P2PDataProcessor:
+    @staticmethod
+    def process_listings_data(listings_data: List[Dict[str, Any]]) -> pd.DataFrame:
+        """Process raw listings data into a cleaned DataFrame with consistent timestamps."""
+        if not listings_data:
+            return pd.DataFrame()
+            
+        df = pd.DataFrame(listings_data)
+        df['timestamp'] = pd.to_datetime(df['timestamp'])
+        
+        # Round timestamp to minutes for grouping
+        df['timestamp_rounded'] = df['timestamp'].dt.floor('min')
+        
+        # Group and aggregate data
+        result = (df.groupby('timestamp_rounded')
+                   .agg({'price': 'first', 'timestamp': 'first'})
+                   .reset_index()
+                   .sort_values('timestamp', ascending=False))
+                   
+        return result[['timestamp', 'price']]
+
+def main():
+    scraper = None
+    data_saver = None
+    
     try:
-        # Fetch P2P listings
-        resultbyb = scraper.get_p2p_listings(
-            token="USDT",
-            fiat="NGN",
-            action_type="1"
-        )
-        
-        resultbnb = binance.get_p2p_listings(
-            token="USDT",
-            fiat="EUR",
-            action_type="1"
-        )
-        
-        # Get exchange rate
-        rate = get_exchange_rate()
-        rate = float(rate) if rate else None
+        # Initialize components
+        scraper = BybitScraper(headless=True)
+        binance = BinanceP2PAPI()
+        data_saver = DataSaver(base_directory='pb2b', db_filename='p2p_listings.db')
+        processor = P2PDataProcessor()
+
+        # Fetch P2P listings with error handling
+        try:
+            bybit_listings = scraper.get_p2p_listings(
+                token="USDT",
+                fiat="NGN",
+                action_type="1"
+            )
+        except Exception as e:
+            print(f"Error fetching Bybit listings: {str(e)}")
+            bybit_listings = []
+
+        try:
+            binance_listings = binance.get_p2p_listings(
+                token="USDT",
+                fiat="EUR",
+                action_type="1"
+            )
+        except Exception as e:
+            print(f"Error fetching Binance listings: {str(e)}")
+            binance_listings = []
+
+        # Get exchange rate with error handling
+        try:
+            rate = float(get_exchange_rate())
+        except (TypeError, ValueError) as e:
+            print(f"Error getting exchange rate: {str(e)}")
+            rate = None
 
         # Save data to SQLite
-        saved_result = data_saver.save_data(
-            bybit_data=resultbyb, 
-            binance_data=resultbnb,
-            exchange_rate=rate
-        )
+        try:
+            save_result = data_saver.save_data(
+                bybit_data=bybit_listings,
+                binance_data=binance_listings,
+                exchange_rate=rate
+            )
+            print(f"\nDatabase Save Result: {save_result['success']}")
+            print(f"Database Path: {save_result['database_path']}")
+        except Exception as e:
+            print(f"Error saving data: {str(e)}")
+            return
 
-        # Print results
+        # Print scraping metadata
         print("\nP2P Listing Scraping Results:")
         print(f"Time of scraping: {datetime.now().isoformat()}")
-        
-        # Print saved result
-        print(f"\nDatabase Save Result: {saved_result['success']}")
-        print(f"Database Path: {saved_result['database_path']}")
+        print(f"Bybit listings count: {len(bybit_listings)}")
+        print(f"Binance listings count: {len(binance_listings)}")
 
-        # Demonstrate data retrieval
-        print("\nRetrieving Bybit Listings:")
-        bybit_listings = data_saver.retrieve_last_listings(source='bybit', limit=1000)
-        bybit_listings_rate = bybit_listings[:4]
-        for listing in bybit_listings_rate:
-           print(listing)
-            
-        print("\nRetrieving binance Listings:")
-        binance_listings = data_saver.retrieve_last_listings(source='binance_listings', limit=6)
-        for listing in binance_listings:
-            print(listing)
-
-        # Convert the data to DataFrame
-        df = pd.DataFrame(bybit_listings)
-
-        # Convert timestamp to datetime for proper sorting
-        df['timestamp'] = pd.to_datetime(df['timestamp'])
-
-        # Round timestamp to seconds to group similar timestamps
-        df['timestamp_rounded'] = df['timestamp'].dt.floor('min')
-
-        # Group by rounded timestamp and keep first price
-        result = df.groupby('timestamp_rounded').agg({
-            'price': 'first',
-            'timestamp': 'first'
-        }).reset_index()
-
-        # Sort by timestamp
-        result = result.sort_values('timestamp', ascending=False)
-
-        # Drop the rounded timestamp column and keep only timestamp and price
-        final_result = result[['timestamp', 'price']]
-
-        print(final_result)
+        # Retrieve and process data
+        for source, limit in [('bybit', 1000), ('binance_listings', 6)]:
+            print(f"\nProcessing {source} listings:")
+            try:
+                listings = data_saver.retrieve_last_listings(source=source, limit=limit)
+                if not listings:
+                    print(f"No {source} listings found")
+                    continue
+                    
+                processed_df = processor.process_listings_data(listings)
+                print(f"\nProcessed {source} data:")
+                print(processed_df)
+                
+            except Exception as e:
+                print(f"Error processing {source} listings: {str(e)}")
 
     except Exception as e:
-        print(f"Error in main execution: {str(e)}")
+        print(f"Critical error in main execution: {str(e)}")
+        
     finally:
-        scraper.close()
-        data_saver.close()
-
-
+        # Clean up resources
+        if scraper:
+            try:
+                scraper.close()
+            except Exception as e:
+                print(f"Error closing scraper: {str(e)}")
+                
+        if data_saver:
+            try:
+                data_saver.close()
+            except Exception as e:
+                print(f"Error closing data saver: {str(e)}")
 
 if __name__ == "__main__":
     main()
