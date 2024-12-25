@@ -932,44 +932,87 @@ def main():
         scraper = BybitScraper(headless=True)
         binance = BinanceP2PAPI()
         data_saver = DataSaver(base_directory='pb2b', db_filename='p2p_listings.db')
-        graph_generator = P2PGraphGenerator()
+        processor = P2PDataProcessor()
 
-        # Retrieve listings from database
-        bybit_listings = data_saver.retrieve_last_listings(source='bybit', limit=1000)
-        binance_listings = data_saver.retrieve_last_listings(source='binance_listings', limit=1000)
-        
-        # Create combined graph
-        graph_generator.create_combined_graph(
-            bybit_data=bybit_listings,
-            binance_data=binance_listings,
-            save_path='combined_price_trends.png'
-        )
-        
-        # Create separate graphs
-        graph_generator.create_separate_graphs(
-            data=bybit_listings,
-            exchange='Bybit',
-            currency='NGN',
-            color='b',
-            save_path='bybit_price_trends.png'
-        )
-        
-        graph_generator.create_separate_graphs(
-            data=binance_listings,
-            exchange='Binance',
-            currency='EUR',
-            color='g',
-            save_path='binance_price_trends.png'
-        )
+        # Fetch P2P listings with error handling
+        try:
+            bybit_listings = scraper.get_p2p_listings(
+                token="USDT",
+                fiat="NGN",
+                action_type="1"
+            )
+        except Exception as e:
+            print(f"Error fetching Bybit listings: {str(e)}")
+            bybit_listings = []
+
+        try:
+            binance_listings = binance.get_p2p_listings(
+                token="USDT",
+                fiat="EUR",
+                action_type="1"
+            )
+        except Exception as e:
+            print(f"Error fetching Binance listings: {str(e)}")
+            binance_listings = []
+
+        # Get exchange rate with error handling
+        try:
+            rate = float(get_exchange_rate())
+        except (TypeError, ValueError) as e:
+            print(f"Error getting exchange rate: {str(e)}")
+            rate = None
+
+        # Save data to SQLite
+        try:
+            save_result = data_saver.save_data(
+                bybit_data=bybit_listings,
+                binance_data=binance_listings,
+                exchange_rate=rate
+            )
+            print(f"\nDatabase Save Result: {save_result['success']}")
+            print(f"Database Path: {save_result['database_path']}")
+        except Exception as e:
+            print(f"Error saving data: {str(e)}")
+            return
+
+        # Print scraping metadata
+        print("\nP2P Listing Scraping Results:")
+        print(f"Time of scraping: {datetime.now().isoformat()}")
+        print(f"Bybit listings count: {len(bybit_listings)}")
+        print(f"Binance listings count: {len(binance_listings)}")
+
+        # Retrieve and process data
+        for source, limit in [('bybit', 1000), ('binance_listings', 6)]:
+            print(f"\nProcessing {source} listings:")
+            try:
+                listings = data_saver.retrieve_last_listings(source=source, limit=limit)
+                if not listings:
+                    print(f"No {source} listings found")
+                    continue
+                    
+                processed_df = processor.process_listings_data(listings)
+                print(f"\nProcessed {source} data:")
+                print(processed_df)
+                
+            except Exception as e:
+                print(f"Error processing {source} listings: {str(e)}")
 
     except Exception as e:
-        print(f"Error in main execution: {str(e)}")
+        print(f"Critical error in main execution: {str(e)}")
         
     finally:
+        # Clean up resources
         if scraper:
-            scraper.close()
+            try:
+                scraper.close()
+            except Exception as e:
+                print(f"Error closing scraper: {str(e)}")
+                
         if data_saver:
-            data_saver.close()
+            try:
+                data_saver.close()
+            except Exception as e:
+                print(f"Error closing data saver: {str(e)}")
 
 if __name__ == "__main__":
     main()
