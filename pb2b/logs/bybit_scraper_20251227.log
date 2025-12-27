@@ -1120,3 +1120,36 @@ Stacktrace:
 2025-12-27 16:15:33 - INFO - Data successfully saved to SQLite database. New listings - Bybit: 4, Binance: 6
 2025-12-27 16:15:33 - INFO - Browser session closed
 2025-12-27 16:15:33 - INFO - SQLite database connection closed
+2025-12-27 16:45:59 - INFO - Logging initialized. Log file: pb2b/logs/bybit_scraper_20251227.log
+2025-12-27 16:46:00 - INFO - DataSaver logging initialized. Log file: pb2b/logs/data_saver_20251227.log
+2025-12-27 16:46:00 - INFO - Connected to SQLite database: pb2b/p2p_listings.db
+2025-12-27 16:46:00 - INFO - Database tables created successfully
+2025-12-27 16:46:00 - INFO - Attempt 1/10: Loading https://www.bybit.com/fiat/trade/otc?actionType=1&token=USDT&fiat=NGN
+2025-12-27 16:46:10 - INFO - Screenshot saved as 'pb2b/screenshots/bybit_page_20251227_164610.png'
+2025-12-27 16:46:10 - WARNING - Error parsing row: Message: no such element: Unable to locate element: {"method":"css selector","selector":"td:nth-child(2)"}
+  (Session info: chrome=143.0.7499.169); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+#0 0x55604293e19a <unknown>
+#1 0x5560423bbc4b <unknown>
+#2 0x55604240d318 <unknown>
+#3 0x55604240d551 <unknown>
+#4 0x556042401586 <unknown>
+#5 0x556042401477 <unknown>
+#6 0x556042458bee <unknown>
+#7 0x5560423ffc42 <unknown>
+#8 0x5560424008f1 <unknown>
+#9 0x556042906f39 <unknown>
+#10 0x556042909e7d <unknown>
+#11 0x5560428efc81 <unknown>
+#12 0x55604290aa5b <unknown>
+#13 0x5560428d6a50 <unknown>
+#14 0x55604292baa8 <unknown>
+#15 0x55604292bc79 <unknown>
+#16 0x55604293d4f3 <unknown>
+#17 0x7f3690e9caa4 <unknown>
+#18 0x7f3690f29c6c <unknown>
+
+2025-12-27 16:46:10 - INFO - Fetching BUY listings for USDT/EUR
+2025-12-27 16:46:11 - INFO - Data successfully saved to SQLite database. New listings - Bybit: 4, Binance: 6
+2025-12-27 16:46:11 - INFO - Browser session closed
+2025-12-27 16:46:11 - INFO - SQLite database connection closed
