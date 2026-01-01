@@ -240,3 +240,36 @@ Stacktrace:
 2026-01-01 07:21:24 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=50777): Read timed out. (read timeout=120)")': /session/5e67f1cdfacbf9287514d7cf1c2eee2d
 2026-01-01 07:21:25 - INFO - Browser session closed
 2026-01-01 07:21:25 - INFO - SQLite database connection closed
+2026-01-01 07:42:56 - INFO - Logging initialized. Log file: pb2b/logs/bybit_scraper_20260101.log
+2026-01-01 07:42:57 - INFO - DataSaver logging initialized. Log file: pb2b/logs/data_saver_20260101.log
+2026-01-01 07:42:57 - INFO - Connected to SQLite database: pb2b/p2p_listings.db
+2026-01-01 07:42:57 - INFO - Database tables created successfully
+2026-01-01 07:42:57 - INFO - Attempt 1/10: Loading https://www.bybit.com/fiat/trade/otc?actionType=1&token=USDT&fiat=NGN
+2026-01-01 07:43:07 - INFO - Screenshot saved as 'pb2b/screenshots/bybit_page_20260101_074306.png'
+2026-01-01 07:43:07 - WARNING - Error parsing row: Message: no such element: Unable to locate element: {"method":"css selector","selector":"td:nth-child(2)"}
+  (Session info: chrome=143.0.7499.169); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+#0 0x56183afe219a <unknown>
+#1 0x56183aa5fc4b <unknown>
+#2 0x56183aab1318 <unknown>
+#3 0x56183aab1551 <unknown>
+#4 0x56183aaa5586 <unknown>
+#5 0x56183aaa5477 <unknown>
+#6 0x56183aafcbee <unknown>
+#7 0x56183aaa3c42 <unknown>
+#8 0x56183aaa48f1 <unknown>
+#9 0x56183afaaf39 <unknown>
+#10 0x56183afade7d <unknown>
+#11 0x56183af93c81 <unknown>
+#12 0x56183afaea5b <unknown>
+#13 0x56183af7aa50 <unknown>
+#14 0x56183afcfaa8 <unknown>
+#15 0x56183afcfc79 <unknown>
+#16 0x56183afe14f3 <unknown>
+#17 0x7f4d1549caa4 <unknown>
+#18 0x7f4d15529c6c <unknown>
+
+2026-01-01 07:43:07 - INFO - Fetching BUY listings for USDT/EUR
+2026-01-01 07:43:07 - INFO - Data successfully saved to SQLite database. New listings - Bybit: 5, Binance: 6
+2026-01-01 07:43:08 - INFO - Browser session closed
+2026-01-01 07:43:08 - INFO - SQLite database connection closed
