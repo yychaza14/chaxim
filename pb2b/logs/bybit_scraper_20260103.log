@@ -1813,3 +1813,14 @@ Stacktrace:
 2026-01-03 23:46:47 - INFO - Data successfully saved to SQLite database. New listings - Bybit: 5, Binance: 6
 2026-01-03 23:46:47 - INFO - Browser session closed
 2026-01-03 23:46:47 - INFO - SQLite database connection closed
+2026-01-03 23:59:36 - INFO - Logging initialized. Log file: pb2b/logs/bybit_scraper_20260103.log
+2026-01-03 23:59:37 - INFO - DataSaver logging initialized. Log file: pb2b/logs/data_saver_20260103.log
+2026-01-03 23:59:37 - INFO - Connected to SQLite database: pb2b/p2p_listings.db
+2026-01-03 23:59:37 - INFO - Database tables created successfully
+2026-01-03 23:59:37 - INFO - Attempt 1/10: Loading https://www.bybit.com/fiat/trade/otc?actionType=1&token=USDT&fiat=NGN
+2026-01-04 00:01:37 - ERROR - Unexpected error: HTTPConnectionPool(host='localhost', port=53245): Read timed out. (read timeout=120)
+2026-01-04 00:01:37 - INFO - Fetching BUY listings for USDT/EUR
+2026-01-04 00:01:38 - INFO - Data successfully saved to SQLite database. New listings - Bybit: 0, Binance: 6
+2026-01-04 00:03:38 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=53245): Read timed out. (read timeout=120)")': /session/37ba60caabd9206abe8a3644f4c65dc4
+2026-01-04 00:04:37 - INFO - Browser session closed
+2026-01-04 00:04:37 - INFO - SQLite database connection closed
