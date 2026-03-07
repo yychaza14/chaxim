@@ -2294,3 +2294,59 @@ Stacktrace:
 2026-03-07 23:39:44 - INFO - Data successfully saved to SQLite database. New listings - Bybit: 4, Binance: 6
 2026-03-07 23:39:44 - INFO - Browser session closed
 2026-03-07 23:39:44 - INFO - SQLite database connection closed
+2026-03-07 23:58:24 - INFO - Logging initialized. Log file: pb2b/logs/bybit_scraper_20260307.log
+2026-03-07 23:58:25 - INFO - DataSaver logging initialized. Log file: pb2b/logs/data_saver_20260307.log
+2026-03-07 23:58:25 - INFO - Connected to SQLite database: pb2b/p2p_listings.db
+2026-03-07 23:58:25 - INFO - Database tables created successfully
+2026-03-07 23:58:25 - INFO - Attempt 1/10: Loading https://www.bybit.com/fiat/trade/otc?actionType=1&token=USDT&fiat=NGN
+2026-03-07 23:58:33 - INFO - Screenshot saved as 'pb2b/screenshots/bybit_page_20260307_235833.png'
+2026-03-07 23:58:33 - WARNING - Error parsing row: Message: no such element: Unable to locate element: {"method":"css selector","selector":"td:nth-child(2)"}
+  (Session info: chrome=145.0.7632.159); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+#0 0x55a76bb7ab6a <unknown>
+#1 0x55a76b58da32 <unknown>
+#2 0x55a76b5e2d66 <unknown>
+#3 0x55a76b5e2fa1 <unknown>
+#4 0x55a76b5d6736 <unknown>
+#5 0x55a76b5d6617 <unknown>
+#6 0x55a76b62b369 <unknown>
+#7 0x55a76b5d4c0f <unknown>
+#8 0x55a76b5d59d1 <unknown>
+#9 0x55a76bb3f6b9 <unknown>
+#10 0x55a76bb425c1 <unknown>
+#11 0x55a76bb2be29 <unknown>
+#12 0x55a76bb4317e <unknown>
+#13 0x55a76bb124b0 <unknown>
+#14 0x55a76bb67578 <unknown>
+#15 0x55a76bb6774b <unknown>
+#16 0x55a76bb791a3 <unknown>
+#17 0x7f620ee9caa4 <unknown>
+#18 0x7f620ef29c6c <unknown>
+
+2026-03-07 23:58:33 - WARNING - Error parsing row: Message: no such element: Unable to locate element: {"method":"css selector","selector":"td:nth-child(2)"}
+  (Session info: chrome=145.0.7632.159); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+#0 0x55a76bb7ab6a <unknown>
+#1 0x55a76b58da32 <unknown>
+#2 0x55a76b5e2d66 <unknown>
+#3 0x55a76b5e2fa1 <unknown>
+#4 0x55a76b5d6736 <unknown>
+#5 0x55a76b5d6617 <unknown>
+#6 0x55a76b62b369 <unknown>
+#7 0x55a76b5d4c0f <unknown>
+#8 0x55a76b5d59d1 <unknown>
+#9 0x55a76bb3f6b9 <unknown>
+#10 0x55a76bb425c1 <unknown>
+#11 0x55a76bb2be29 <unknown>
+#12 0x55a76bb4317e <unknown>
+#13 0x55a76bb124b0 <unknown>
+#14 0x55a76bb67578 <unknown>
+#15 0x55a76bb6774b <unknown>
+#16 0x55a76bb791a3 <unknown>
+#17 0x7f620ee9caa4 <unknown>
+#18 0x7f620ef29c6c <unknown>
+
+2026-03-07 23:58:33 - INFO - Fetching BUY listings for USDT/EUR
+2026-03-07 23:58:34 - INFO - Data successfully saved to SQLite database. New listings - Bybit: 4, Binance: 6
+2026-03-07 23:58:34 - INFO - Browser session closed
+2026-03-07 23:58:34 - INFO - SQLite database connection closed
